@@ -1,0 +1,16 @@
+﻿flight - полет, рейс
+join - присоединяться, объединение, соединение 
+insect - насекомое
+low-level language — язык низкого уровня
+member — участник
+programming language — язык программирования
+query language — язык запросов
+quorum — кворум
+random number — случайное число
+replica — точная копия
+static variable — статическая переменная
+risky - рискованный
+high-speed - скоростной
+honest - честный
+noise - шум
+observation - наблюдение

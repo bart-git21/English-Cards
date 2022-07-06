@@ -1,0 +1,16 @@
+﻿bandwidth	пропускная способность (канала передачи данных)
+broadband	широкополосный доступ в интернет
+client-server architecture	клиент-серверная архитектура
+cloud computing	облачные вычисления
+cloud storage	облачное хранилище данных
+dynamic host configuration protocol (DHCP)	протокол динамической настройки узла
+domain name system (DNS)	система доменных имен
+instant messaging (IM)	обмен мгновенными сообщениями
+Internet service provider (ISP)	интернет-провайдер
+local area network (LAN)	локальная сеть
+latency	задержка, период ожидания
+media access control (MAC) address	аппаратный адрес, MAC-адрес
+peer-to-peer (P2P)	одноранговая сеть, пиринговая сеть
+twisted pair	витая пара
+voice over IP (VoIP)	голосовая связь через интернет, IP-телефония
+wide area network (WAN)	глобальная сеть, широкомасштабная сеть

@@ -1,0 +1,16 @@
+﻿version control system (VCS)	система контроля версий
+web application is launched. веб-приложение запускается
+I have lived in a village. Я жил в деревне
+Simple and powerful text editor	Простой и мощный текстовый редактор
+utility |juːˈtɪlətɪ| dog — служебная собака 
+Acceptance Testing is the last phase of software testing Приемочное тестирование — это последний этап тестирования программного обеспечения
+agile methodology breaking a project up into several phases	гибкая методология разработки разбивает проект на несколько этапов
+Algorithm |ˈælɡərɪðəm| installed. Алгоритм установлен
+An array is an indexed collection of data elements - Массив — это индексированная коллекция элементов данных
+Configure default encoding Настроить кодировку по умолчанию
+This is where enterprise applications come in. вот где на помощь приходят корпоративные приложения
+An executable (exe) file used to perform functions Исполняемый файл, используемый для выполнения функций
+How to Become an Interpreter - Как стать интерпретатором (переводчиком)
+An operating system is system software - Операционная система — это системное программное обеспечение.
+Application software, or app for short - прикладное программное обеспечение или app коротко говоря
+Aspect-oriented programming gives you a way to... Аспектно-ориентированное программирование дает вам возможность...

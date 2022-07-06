@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat english words</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../style/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    
+</head>
+<body>
+
+    <div class="sidebar english__sidebar">
+        <textarea id="myTextarea" class="txtArea wr__area" placeholder="вопросы" rows="5"></textarea>
+        <div class="english__buttons__wrapper">
+            <div class="english__buttons"></div>
+            <span class="english__shuffle" onclick="newDesk.shuffleButtons();">
+                <i class="fa-solid fa-rotate"></i>
+            </span>
+            <button class="btn-small btn-aa wr__btn-clear">Очистить и указать свой список</button>
+        </div>
+
+        <button class="btn_css wr__btn-remember">повторять</button>
+        <button class="btn_css wr__btn-shuffle-words">перемешать слова</button>
+        
+        <div class="wr__pause">
+            <label for="pause">Пауза между карточками (секунд):</label>
+            <input id="pause" class="wr__pause-btn" type="text" placeholder="pause duration">
+        </div>
+    </div>
+
+    <div class="sidebar english__sidebar__settings">
+        <i class="fa-solid fa-gear"></i>
+    </div>
+
+    <div class="sidebar english__sidebar__info">
+        <i class="icon fa-solid fa-circle-info"></i>
+        <div class="sidebar__info__numberOfList"></div>
+    </div>
+
+    <main>
+        <div class="wr__questions">
+            <span class="questions" ></span>
+            <span class="questions_answer" ></span>
+        </div>
+
+        <button class="backToTop__btn"></button>
+    </main>
+
+
+    <script src="../app/backtotop.js"></script>
+    <script src="../app/sidebarButtons.js"></script>
+    <script src="../app/script.js"></script>
+
+</body>
+</html>

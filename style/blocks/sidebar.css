@@ -1,0 +1,133 @@
+
+.sidebar {
+    width: 400px;
+    height: 100vh;
+    padding: 50px 10px 10px 30px;
+    position: absolute;
+    box-shadow: 5px 0 2px var(--bg-dark-color);
+    z-index: 10;
+    background-color: var(--bg-dark-color);
+    transform: translateX(-100%);
+    transition: all 0.5s, visibility 0.5s 0.5s;
+}
+.sidebar::before {
+    position: absolute;
+    transform: translate(0, -50%);
+    right: -40px;
+    width: 40px;
+    border-left-color: var(--bg-dark-color);
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--bg-dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transition: all 1.5s;
+}
+
+.sidebar:hover {
+    transform: translateX(0%);
+    position: fixed;
+    z-index: 11;
+}
+
+.sidebar:hover::before {
+    opacity: 0;
+    transform: translate(0, -50%) rotateY(90deg);
+    transform-origin: left;
+    transition: all 1s;
+}
+
+/* ========================== english buttons ===========================*/
+.english__sidebar {    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.english__sidebar::before {
+    content: "\2261";
+    top: 50%;
+    font-size: 40px;
+    height: 250px;
+}
+
+
+.wr__area {
+    height: 180px;
+    width: 100%;
+}
+
+.english__buttons__wrapper {
+    margin: 30px 0;
+    position: relative;
+}
+
+.english__buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.english__shuffle {
+    display: none;
+    position: absolute;
+    top: -55px;
+    right: -5px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--button-color);
+    color: white;
+}
+.english__shuffle:hover {
+    cursor: pointer;
+}
+.english__buttons__wrapper:hover .english__shuffle {    
+    display: block;
+}
+
+.wr__pause {
+    display: inline-block;
+    margin: 30px 0;
+    font-size: 22px;
+}
+.wr__pause-btn {
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* ========================== settings sidebar ===========================*/
+
+.english__sidebar__settings::before {    
+    font-family: "Font Awesome 5 Free";
+    content: "\f013";
+    font-weight: 800;
+    top: 20%;
+    font-size: 25px;
+    height: 150px;
+}
+
+/* ========================== info sidebar ===========================*/
+
+
+.english__sidebar__info::before {    
+    font-family: "Font Awesome 5 Free";
+    content: "\f05a";
+    font-weight: 800;
+    top: 80%;
+    font-size: 25px;
+    height: 150px;
+}
+
+.english__sidebar__info .icon {
+    color: white;
+    font-size: 33px;
+}
+.english__sidebar__info .sidebar__info__numberOfList {
+    color: white;
+    font-size: 33px;
+}

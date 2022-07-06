@@ -1,0 +1,16 @@
+﻿event — событие (программное)
+example of honesty — пример искренности
+fault-tolerant — отказоустойчивость
+arge folder — большая папка (на компьютере)
+access — доступ
+board — плата
+cluster — кластер
+computing — вычисление
+customization — настройка
+database — база данных
+debugger — отладчик (программа для отладки кода)
+international - международный
+main - главный, основной
+move - двигать, шаг, движение
+late in the evening — поздно вечером
+motion - двигаться, движение, жест
