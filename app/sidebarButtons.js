@@ -11,7 +11,7 @@ class deskWithButtons {
     createButtons = () => {
         for (let i = 1; i<=this.howManyButtonsAreThere; i++) {
             whereButtonsShouldBeCreated.innerHTML += `
-            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./../public/list${i}.txt');">${i}</button>
+            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./public/list${i}.txt');">${i}</button>
             `
         }
     }
