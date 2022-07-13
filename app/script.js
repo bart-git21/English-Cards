@@ -64,7 +64,7 @@ function showQuestions(url) {
     })
 }
 
-// ============================ кнопка "Очстить" ===============================
+// ============================ кнопка "Очистить" ===============================
 const wr__btn_clear = document.querySelector(".wr__btn-clear");
 wr__btn_clear.addEventListener("click", clearContext);
 function clearContext() {

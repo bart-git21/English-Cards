@@ -34,5 +34,5 @@ class deskWithButtons {
     }
 }
 
-let newDesk = new deskWithButtons(18);
+let newDesk = new deskWithButtons(50);
 newDesk.createButtons();
