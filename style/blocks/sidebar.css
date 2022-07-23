@@ -1,6 +1,6 @@
 
 .sidebar {
-    width: 400px;
+    width: 250px;
     height: 100vh;
     padding: 50px 10px 10px 30px;
     position: absolute;
@@ -8,8 +8,15 @@
     z-index: 10;
     background-color: var(--bg-dark-color);
     transform: translateX(-100%);
-    transition: all 0.5s, visibility 0.5s 0.5s;
+    transition: all 0.3s, visibility 0.5s 0.5s;
 }
+.sidebar:hover {
+    transform: translateX(0%);
+    transition: all 0.6s, visibility 0.5s 0.5s;
+    position: fixed;
+    z-index: 11;
+}
+
 .sidebar::before {
     position: absolute;
     transform: translate(0, -50%);
@@ -26,13 +33,6 @@
     opacity: 0.6;
     transition: all 1.5s;
 }
-
-.sidebar:hover {
-    transform: translateX(0%);
-    position: fixed;
-    z-index: 11;
-}
-
 .sidebar:hover::before {
     opacity: 0;
     transform: translate(0, -50%) rotateY(90deg);
@@ -67,6 +67,7 @@
 
 .english__buttons {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
