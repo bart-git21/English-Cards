@@ -47,6 +47,7 @@ function chooseThisList(elem) {
     originListOfWords = [];
     howManyQuestionsIsNow__repeatGame = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
+    howManyQuestionsIsNow__writingGame = 0;
     document.querySelector(".questions").classList.remove("green");
     elem.style.display = "none";
     document.querySelector(".txtArea").outerHTML = '<textarea id="myTextarea" class="txtArea wr__area" placeholder="вопросы" rows="5"></textarea>';
@@ -71,16 +72,19 @@ function clearContext() {
     originListOfWords = [];
     howManyQuestionsIsNow__repeatGame = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
+    howManyQuestionsIsNow__writingGame = 0;
     document.querySelector(".txtArea").value = "";
     document.querySelector(".txtArea").innerHTML = "";
 }
 
-// ============================ кнопка "Повторять" ===============================
+
+
+// ============================ кнопка "переводить карточки" ===============================
 
 let howManyQuestionsIsNow__repeatGame = 0;
 let repeatGame__timer;
-document.querySelector(".wr__btn-remember").addEventListener("click", rememberButton);
-function rememberButton() {
+document.querySelector(".wr__btn-remember").addEventListener("click", translateGame);
+function translateGame() {
     // если показ вопросов будет начат во время предыдщей итерации, предыдущая будет остановлена
     clearInterval(repeatGame__timer);
 
@@ -126,7 +130,7 @@ function rememberButton() {
 let howManyQuestionsIsNow__shuffleGame = 0;
 document.querySelector(".wr__btn-shuffle-words").addEventListener("click", shuffleGameButton);
 function shuffleGameButton() {
-    // если игра "Перемешать слова" будет вызвана во время показа вопросов из кнопки "повторить", показ будет остановлен
+    // если эта игра будет вызвана во время игры "переводить карточки", показ будет остановлен
     clearInterval(repeatGame__timer);
 
     // список вопросов
@@ -229,4 +233,71 @@ function shuffleGameButton() {
             shuffleGame__checkResult_btn.textContent = "no, it's wrong! try again!";
         }
     }
+}
+
+
+
+// ============================ кнопка "написание" ===========
+
+let howManyQuestionsIsNow__writingGame = 0;
+document.querySelector(".wr__btn-writing").addEventListener("click", writingGame);
+function writingGame() {
+    // если эта игра будет вызвана во время игры "переводить карточки", показ будет остановлен
+    clearInterval(repeatGame__timer);
+
+    // список вопросов
+    if (!originListOfWords.length) createListOfQuestion();
+
+    // если закончились вопросы, Well done
+    if (howManyQuestionsIsNow__writingGame === originListOfWords.length) {
+        QUESTIONS.innerHTML = "Well done!";
+        questions_answer.innerHTML = null;
+        howManyQuestionsIsNow__writingGame = 0;
+        return;
+    }
+
+    // разбиваем вопрос на рус. и англ. части
+    let i = howManyQuestionsIsNow__writingGame++;
+    let russianText = "";
+    let englishText = "";
+    if (originListOfWords[i].search(/[а-яА-Я]/g) > originListOfWords[i].search(/[a-zA-Z]/g)) {
+        russianText = originListOfWords[i].slice(originListOfWords[i].search(/[а-яА-Я]/g));
+        englishText = originListOfWords[i].slice(0,originListOfWords[i].search(/[а-яА-Я]/g));
+    }
+    else {
+        englishText = originListOfWords[i].slice(originListOfWords[i].search(/[a-zA-Z]/g));
+        russianText = originListOfWords[i].slice(0,originListOfWords[i].search(/[a-zA-Z]/g));
+    }
+    englishText = englishText.replace(/[^a-zA-Z ]/g, "");
+    englishText = englishText.replace(/\s+$/, "");
+    russianText = russianText.replace(/[(),\.\d]/g, "");
+
+    // ask a question
+    QUESTIONS.innerHTML = englishText;    
+    let input_writing = document.createElement("input");
+    input_writing.classList.add("wr__pause-btn");
+    input_writing.addEventListener("keyup", listenEnter);
+    let div = document.createElement("div");
+    div.classList.add("parent");
+    div.append(input_writing);
+    QUESTIONS.append(div);
+    input_writing.focus();
+
+    // check result
+    function listenEnter(e) {
+        if (e.key === "Enter") checkWords();
+    }
+    function checkWords() {
+        if (input_writing.value.toLowerCase() == englishText.toLowerCase()) {
+            writingGame();
+        }
+    }
+
+    // next button function
+    questions_answer.innerHTML = `
+    <button class="shuffleGame__checkResult-btn nextButton">next</button>
+    <span>${russianText}</span>
+    `;
+    const nextButton = document.querySelector(".nextButton");
+    nextButton.addEventListener("click", function() {writingGame()});
 }
