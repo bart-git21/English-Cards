@@ -1,0 +1,16 @@
+﻿debt - долг
+malicious software (malware)	вредоносное программное обеспечение
+music - музыка
+nation - нация
+object-oriented programming (OOP)	объектно-ориентированное программирование
+open source software	программное обеспечение с открытым исходным кодом
+prototyping	создание прототипа, прототипирование
+rapid application development (RAD)	быстрая разработка приложений (методология)
+regression testing	регрессионное тестирование
+runtime (runtime environment)	среда выполнения кода
+server software	серверное программное обеспечение
+spiral спираль
+spyware	программа-шпион, шпионское программное обеспечение
+system software	системное программное обеспечение
+unit testing	модульное (блочное, компонентное) тестирование
+waterfall model	каскадная модель разработки
