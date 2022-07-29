@@ -1,16 +1,16 @@
-﻿flight - полет, рейс
-join - присоединяться, объединение, соединение 
-insect - насекомое
+﻿I hope my flight is not delayed.  Надеюсь, мой рейс не задержали
+I have recently joined several clubs.  Недавно я вступил в несколько клубов
+The ant is a form of insect. Муравей — это вид насекомых
 low-level language — язык низкого уровня
-member — участник
+The project members did not know each other.  Участники проекта не знали друг друга
 programming language — язык программирования
 query language — язык запросов
-quorum — кворум
-random number — случайное число
-replica — точная копия
+The decision was made by the quorum - Решение было принято кворумом
+get a random number from a pool of numbers — получить случайное число из набора чисел
+a replica of the ship. точная копия этого корабля
 static variable — статическая переменная
-risky - рискованный
-high-speed - скоростной
-honest - честный
-noise - шум
-observation - наблюдение
+too risky for me. слишком рискованно для меня
+He was driving at high speed.  Он ехал на большой скорости
+He has an honest face. У него искреннее выражение лица
+My dog is not scared of loud noises.  Моя собака не боится громких звуков
+observations of the wildlife.  наблюдения за миром животных
