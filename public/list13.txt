@@ -5,12 +5,12 @@ diskette — дискета
 distributed system — распределенная система
 hard disk — жесткий диск
 leaf node — вершина дерева, не имеющая дочерних вершин
-Least Significant Bit — младший (наименее значащий) бит байта или машинного слова
 LED — светодиод
 ledger — программа финансового учёта
 line switching — коммутация каналов (линий связи)
 line terminator — завершитель строки
 links bar — панель ссылок
 high availability — высокая доступность
-month - месяц
-a clear night — ясная ночь 
+from month to month — из месяца в месяц
+a clear night — ясная ночь
+silver - серебряный
