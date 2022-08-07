@@ -1,4 +1,4 @@
-﻿# Hi, I'm Frontend Developer and this is my English Pproject
+﻿# Hi, I'm Frontend Developer and this is my English Project
 
 
 ### Description:
