@@ -12,6 +12,21 @@ function shuffle(array) {
     };
 }
 
+document.querySelector("html").addEventListener("keyup", changePause);
+function changePause(event) {
+    const pause = document.querySelector(".wr__pause-btn");
+    pause.value ? true : pause.value = 2;
+    switch (event.key) {
+        case "ArrowUp": 
+            pause.value = (+parseFloat(pause.value) + 0.1).toFixed(1);
+            break;
+        case "ArrowDown": 
+            event.preventDefault();
+            pause.value = (+parseFloat(pause.value) - 0.1).toFixed(1);
+            break;
+    }
+}
+
 
 // создать исходный массив вопросов
 function createListOfQuestion() {
