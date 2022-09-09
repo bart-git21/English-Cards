@@ -1,0 +1,16 @@
+﻿go - идти
+travel - ехать
+    stand - стоять
+    to jump - прыгать
+    think – думать
+    walk - ходить
+    go in - заходить
+    go out - выходить
+    clap - хлопать
+    whistle - свистеть
+    scream - кричать
+    cook - готовить
+    write- писать
+    read- читать
+    speak- говорить
+    persuade- уговаривать
