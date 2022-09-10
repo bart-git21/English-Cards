@@ -1,0 +1,16 @@
+﻿strok - гладить
+eat - есть
+drink - пить
+Threaten - угрожать
+Leave - оставить
+win - выиграть
+lose - проиграть
+choose - выбрать
+take - взять
+give - дать
+choose - выбрать 
+praying - молиться
+apply - ходатайствовать
+beg - умолять
+look for - искать
+find - находить
