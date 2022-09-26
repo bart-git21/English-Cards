@@ -89,25 +89,59 @@
 }
 
 .wr__pause {
+    position: relative;
     display: inline-block;
     margin: 30px 0;
     font-size: 22px;
 }
+
+/* Remove Arrows/Spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .wr__pause-btn {
     width: 100%;
+    display: block;
     font-size: 22px;
     text-align: center;
     padding: 10px;
-    margin: 50px 0;
+    margin: 0 0 50px;
     appearance: none;
     outline: none;
     border-radius: 10px;
 }
 .wr__pause-btn:focus {
     border: 2px solid white;
-    box-shadow: inset 2px 2px 15px var(--dark-active-color),
-    inset -5px -5px 5px white;
-    background-color: var(--active-color);
+    background-color: var(--dark-active-color);
+}
+
+.pausePopup {
+    opacity: 0;
+    color: var(--text-color);
+    font-weight: 700;
+    animation: moveR 3s;
+    position: absolute;
+    top: 30%;
+}
+@keyframes moveR {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        transform: translateX(400px) scale(5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(200px) scale(1);
+        opacity: 0;
+    }
 }
 
 /* ========================== settings sidebar ===========================*/

@@ -15,16 +15,25 @@ function shuffle(array) {
 document.querySelector("html").addEventListener("keyup", changePause);
 function changePause(event) {
     const pause = document.querySelector(".wr__pause-btn");
-    pause.value ? true : pause.value = 2;
+    pause.value ||= 2; // если нет значения, пауза по-умолчанию = 2 сек
     switch (event.key) {
-        case "ArrowUp": 
+        case "ArrowUp":
             pause.value = (+parseFloat(pause.value) + 0.1).toFixed(1);
+            addPausePopup(pause.value);
             break;
         case "ArrowDown": 
             event.preventDefault();
             pause.value = (+parseFloat(pause.value) - 0.1).toFixed(1);
+            addPausePopup(pause.value);
             break;
     }
+}
+function addPausePopup(text) {
+    const div = document.createElement("div");
+    div.textContent = text + " s";
+    div.classList = "pausePopup";
+    document.querySelector(".wr__pause").appendChild(div);
+    setTimeout(()=> div.remove(), 2000);
 }
 
 
