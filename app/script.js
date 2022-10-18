@@ -13,20 +13,29 @@ function shuffle(array) {
 }
 
 document.querySelector("html").addEventListener("keyup", changePause);
-function changePause(event) {
+let isChangingPause = false;
+async function changePause(event) {
+    if (isChangingPause) return;
     const pause = document.querySelector(".wr__pause-btn");
-    // pause.value ||= 2; // если нет значения, пауза по-умолчанию = 2 сек
     switch (event.key) {
-        case "ArrowUp":
-            pause.value = (+parseFloat(pause.value) + 0.1).toFixed(1);
-            addPausePopup(pause.value);
-            break;
-        case "ArrowDown": 
-            event.preventDefault();
-            pause.value = (+parseFloat(pause.value) - 0.1).toFixed(1);
-            addPausePopup(pause.value);
-            break;
+        case "ArrowUp": pause.value = await fetchPause(true); break;
+        case "ArrowDown": pause.value = await fetchPause(false); break;
     }
+    isChangingPause = false;
+}
+function fetchPause(direction) {
+    isChangingPause = true;    
+    let pauseValue = +pause.value || 2;
+    direction ? pauseValue += 0.1 : pauseValue -= 0.1;
+    pauseValue = parseInt(pauseValue * 10) / 10;
+    addPausePopup(pauseValue);
+    return new Promise(
+        resolve => {
+            setTimeout(()=>{
+                resolve(pauseValue)
+            },2000)
+        }
+    )
 }
 function addPausePopup(text) {
     const div = document.createElement("div");
