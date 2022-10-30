@@ -48,27 +48,55 @@ function addPausePopup(text) {
 
 // создать исходный массив вопросов
 function createListOfQuestion() {
-    originListOfWords = document.querySelector(".wr__area").value.split("\n"); // текст стал массивом
+    let textareaArray = document.querySelector(".wr__area").value.split("\n"); // текст стал массивом
 
     // удалить пустые строки
-    for (let i = 0; i<originListOfWords.length; i++) {
-        if(!originListOfWords[i]) originListOfWords.splice(i,1);
+    for (let i = 0; i<textareaArray.length; i++) {
+        if(!textareaArray[i]) textareaArray.splice(i,1);
     }
 
     // если англ и рус фразы разбиты на абзацы - преобразовать два абзаца в один (англ+рус)
-    for (let i = 1; i<originListOfWords.length; i++) {
-        if(originListOfWords[i].search(/[а-яА-Я]/g) == 0 && originListOfWords[i-1].search(/[а-яА-Я]/g) == -1) {
-            originListOfWords[i-1] = originListOfWords[i-1].concat(originListOfWords[i]);
-            originListOfWords.splice(i,1);
+    for (let i = 1; i<textareaArray.length; i++) {
+        if(textareaArray[i].search(/[а-яА-Я]/g) == 0 && textareaArray[i-1].search(/[а-яА-Я]/g) == -1) {
+            textareaArray[i-1] = textareaArray[i-1].concat(textareaArray[i]);
+            textareaArray.splice(i,1);
         }
-        else if(originListOfWords[i].search(/[a-zA-Z]/g) == 0 && originListOfWords[i-1].search(/[a-zA-Z]/g) == -1) {
-            originListOfWords[i-1] = originListOfWords[i-1].concat(originListOfWords[i]);
-            originListOfWords.splice(i,1);
+        else if(textareaArray[i].search(/[a-zA-Z]/g) == 0 && textareaArray[i-1].search(/[a-zA-Z]/g) == -1) {
+            textareaArray[i-1] = textareaArray[i-1].concat(textareaArray[i]);
+            textareaArray.splice(i,1);
         }
 
     }
+
+    // преобразовываем каждую строку в массив [рус, англ]
+    let newList = [];
+    textareaArray.map(
+        e => {
+            const {russianExpression, engExpression} = getRussianAndEnglishExpressions(e);
+            e = [russianExpression, engExpression];
+            newList.push(e);
+        }
+    )
     
-    shuffle(originListOfWords);
+    shuffle(newList);
+    return newList;
+}
+function getRussianAndEnglishExpressions(string) {
+    let russianExpression = "";
+    let engExpression = "";
+    let rusExpressionIndex = string.search(/[а-яА-Я]/g);
+    let engExpressionIndex = string.search(/[a-zA-Z]/g);
+    // находим, где русская фраза - и показываем ее
+    // а остаток - вниз, в подсказку
+    if (rusExpressionIndex > engExpressionIndex) {
+        russianExpression = string.slice(rusExpressionIndex);
+        engExpression = string.slice(0,rusExpressionIndex);
+    }
+    else {
+        russianExpression = string.slice(0,engExpressionIndex);
+        engExpression = string.slice(engExpressionIndex);
+    }
+    return {russianExpression, engExpression};
 }
 
 
@@ -122,7 +150,7 @@ function translateGame() {
     clearInterval(repeatGame__timer);
 
     // create questions list
-    if (originListOfWords.length === 0) createListOfQuestion();
+    if (originListOfWords.length === 0) originListOfWords = createListOfQuestion();
 
     // take first N questions
     (howManyQuestionsIsNow__repeatGame === originListOfWords.length) ? document.querySelector(".questions").classList.add("green") : howManyQuestionsIsNow__repeatGame++;
@@ -141,16 +169,8 @@ function translateGame() {
             clearInterval(repeatGame__timer);
         }
         else {
-            // находим, где русская фраза - и показываем ее
-            // а остаток - вниз, в подсказку
-            if (arr_for_asking[i].search(/[а-яА-Я]/g) > arr_for_asking[i].search(/[a-zA-Z]/g)) {
-                QUESTIONS.textContent = arr_for_asking[i].slice(arr_for_asking[i].search(/[а-яА-Я]/g));
-                questions_answer.textContent = arr_for_asking[i].slice(0,arr_for_asking[i].search(/[а-яА-Я]/g));
-            }
-            else {
-                questions_answer.textContent = arr_for_asking[i].slice(arr_for_asking[i].search(/[a-zA-Z]/g));
-                QUESTIONS.textContent = arr_for_asking[i].slice(0,arr_for_asking[i].search(/[a-zA-Z]/g));
-            }
+            QUESTIONS.textContent = arr_for_asking[i][0];
+            questions_answer.textContent = arr_for_asking[i][1];
         }
         i++;
     }
