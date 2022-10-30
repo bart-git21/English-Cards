@@ -4,6 +4,7 @@
 @import url(blocks/buttons.css);
 @import url(blocks/sidebar.css);
 @import url(blocks/shuffleGame.css);
+@import url(blocks/icons.css);
 
 
 *,
@@ -33,6 +34,7 @@ main {
 }
 
 .wr__questions {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

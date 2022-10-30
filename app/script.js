@@ -179,6 +179,19 @@ function translateGame() {
         i++;
     }
 }
+const trashBtn = document.querySelector('.fa-trash-can');
+trashBtn.addEventListener("click", deleteQuestion);
+function deleteQuestion() {
+    let i = 0;
+    originListOfWords.forEach(
+        (e, index) => {
+            if (e[0] === QUESTIONS.textContent) i = index;
+        }
+    )
+    originListOfWords.splice(i, 1);
+    howManyQuestionsIsNow__repeatGame--;
+    document.querySelector(".wr__btn-remember").focus();
+}
 
 
 
