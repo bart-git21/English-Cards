@@ -96,6 +96,10 @@ function getRussianAndEnglishExpressions(string) {
         russianExpression = string.slice(0,engExpressionIndex);
         engExpression = string.slice(engExpressionIndex);
     }
+    engExpression = engExpression.replace(/\s{2,}/g, "");
+    engExpression = engExpression.replace(/\s+$/g, "");
+    engExpression = engExpression.replace(/[-—.,]/g, "");
+    russianExpression = russianExpression.replace(/[(),\.\d]/g, "");
     return {russianExpression, engExpression};
 }
 
@@ -187,7 +191,7 @@ function shuffleGameButton() {
     clearInterval(repeatGame__timer);
 
     // список вопросов
-    if (originListOfWords.length == 0) createListOfQuestion();
+    if (originListOfWords.length == 0) originListOfWords = createListOfQuestion();
 
     // если закончились вопросы - Well done
     if (howManyQuestionsIsNow__shuffleGame === originListOfWords.length) {
@@ -199,16 +203,9 @@ function shuffleGameButton() {
 
     // разбиваем вопрос на рус. и англ. части
     let i = howManyQuestionsIsNow__shuffleGame++;
-    let russianText = "";
-    let englishText = "";
-    if (originListOfWords[i].search(/[а-яА-Я]/g) > originListOfWords[i].search(/[a-zA-Z]/g)) {
-        russianText = originListOfWords[i].slice(originListOfWords[i].search(/[а-яА-Я]/g));
-        englishText = originListOfWords[i].slice(0,originListOfWords[i].search(/[а-яА-Я]/g));
-    }
-    else {
-        englishText = originListOfWords[i].slice(originListOfWords[i].search(/[a-zA-Z]/g));
-        russianText = originListOfWords[i].slice(0,originListOfWords[i].search(/[a-zA-Z]/g));
-    }
+    let russianText = originListOfWords[i][0];
+    let englishText = originListOfWords[i][1];
+    englishText = englishText.replace(/[^a-zA-Z]$/g, "");
 
     // рисуем на экране перевод и англиские слова
     QUESTIONS.innerHTML = russianText;
@@ -217,15 +214,10 @@ function shuffleGameButton() {
     let div = document.createElement("div");
     div.classList.add("parent");
     QUESTIONS.append(div);
-    englishText = englishText.split(" "); // текст стал массивом
-    let englishTextWithoutTrash = [];
-    for (let i = 0; i<englishText.length; i++) {
-        if (englishText[i].search(/[a-zA-Z0-9]/g) > -1) englishTextWithoutTrash.push(englishText[i]);
-    }
-    englishText = [...englishTextWithoutTrash];
-    shuffle(englishText);
-    for (let i = 0; i<englishText.length; i++) {
-        if (englishText[i].search(/[a-zA-Z0-9]/g) > -1) div.innerHTML += `<button class="shuffleGame__moveIt-btn">${englishText[i]}</button>`;
+    let englishTextArray = englishText.split(" ");
+    shuffle(englishTextArray);
+    for (let i = 0; i<englishTextArray.length; i++) {
+        if (englishTextArray[i].search(/[a-zA-Z0-9]/g) > -1) div.innerHTML += `<button class="shuffleGame__moveIt-btn">${englishTextArray[i]}</button>`;
     }
 
     // move buttons
@@ -268,14 +260,14 @@ function shuffleGameButton() {
             buttonsArray.push(aa);
         }
         buttonsArray.sort((a,b)=>{return a[0]-b[0]});
-        let string = [];
+        let checkingString = [];
         for (let i =0; i<buttonsArray.length; i++) {
-            string.push(buttonsArray[i][1]);
+            checkingString.push(buttonsArray[i][1]);
         }
         
         shuffleGame__checkResult_btn.removeEventListener("click", checkWords);
 
-        if (englishTextWithoutTrash.join(" ") == string.join(" ")) {
+        if (englishText === checkingString.join(" ")) {
             shuffleGame__checkResult_btn.textContent = "it'correct! next question?";
             shuffleGame__checkResult_btn.classList.toggle("shuffleGame__correct-btn");
             shuffleGame__checkResult_btn.addEventListener("click", shuffleGameButton);
@@ -299,7 +291,7 @@ function writingGame() {
     clearInterval(repeatGame__timer);
 
     // список вопросов
-    if (!originListOfWords.length) createListOfQuestion();
+    if (!originListOfWords.length) originListOfWords = createListOfQuestion();
 
     // если закончились вопросы, Well done
     if (howManyQuestionsIsNow__writingGame === originListOfWords.length) {
@@ -311,19 +303,8 @@ function writingGame() {
 
     // разбиваем вопрос на рус. и англ. части
     let i = howManyQuestionsIsNow__writingGame++;
-    let russianText = "";
-    let englishText = "";
-    if (originListOfWords[i].search(/[а-яА-Я]/g) > originListOfWords[i].search(/[a-zA-Z]/g)) {
-        russianText = originListOfWords[i].slice(originListOfWords[i].search(/[а-яА-Я]/g));
-        englishText = originListOfWords[i].slice(0,originListOfWords[i].search(/[а-яА-Я]/g));
-    }
-    else {
-        englishText = originListOfWords[i].slice(originListOfWords[i].search(/[a-zA-Z]/g));
-        russianText = originListOfWords[i].slice(0,originListOfWords[i].search(/[a-zA-Z]/g));
-    }
-    englishText = englishText.replace(/[^a-zA-Z ]/g, "");
-    englishText = englishText.replace(/\s+$/, "");
-    russianText = russianText.replace(/[(),\.\d]/g, "");
+    let russianText = originListOfWords[i][0];
+    let englishText = originListOfWords[i][1];
 
     // ask a question
     QUESTIONS.innerHTML = englishText;    
