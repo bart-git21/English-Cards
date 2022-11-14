@@ -122,12 +122,8 @@ function chooseThisList(elem) {
 // заполнить textArea
 function showQuestions(url) {
     fetch(url)
-    .then(response => {
-        return response.text();
-    })
-    .then(data => {
-        document.querySelector(".txtArea").innerHTML = data;
-    })
+    .then(response => response.text())
+    .then(data => document.querySelector(".txtArea").innerHTML = data)
 }
 
 // ============================ кнопка "Очистить" ===============================
