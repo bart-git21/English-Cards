@@ -1,5 +1,5 @@
 
-const QUESTIONS = document.querySelector(".questions"); // one of the questions
+const questionsScene = document.querySelector(".questions");
 const questions_answer = document.querySelector(".questions_answer"); // his answer
 let originListOfWords = [];
 let arr_for_asking = [];
@@ -154,12 +154,12 @@ function translateGame() {
 
     // create questions list
     if (originListOfWords.length === 0) {
-        QUESTIONS.classList.remove("green");
+        questionsScene.classList.remove("green");
         originListOfWords = createListOfQuestion();
     }
 
     // take first N questions
-    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? QUESTIONS.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
+    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? questionsScene.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
     arr_for_asking = originListOfWords.slice(0, howManyQuestionsIsNow__repeatGame);
     shuffle(arr_for_asking);
     
@@ -170,12 +170,12 @@ function translateGame() {
     repeatGame__timer = setInterval(repeatGame__show, pause * 1000);
     function repeatGame__show() {
         if (i == arr_for_asking.length) {
-            QUESTIONS.textContent = "well done!";
+            questionsScene.textContent = "well done!";
             questions_answer.textContent = null;
             clearInterval(repeatGame__timer);
         }
         else {
-            QUESTIONS.textContent = arr_for_asking[i][0];
+            questionsScene.textContent = arr_for_asking[i][0];
             questions_answer.textContent = arr_for_asking[i][1];
         }
         i++;
@@ -184,11 +184,11 @@ function translateGame() {
 const trashBtn = document.querySelector('.fa-trash-can');
 trashBtn.addEventListener("click", deleteQuestion);
 function deleteQuestion() {
-    QUESTIONS.classList.remove("green");
+    questionsScene.classList.remove("green");
     let i = 0;
     originListOfWords.forEach(
         (e, index) => {
-            if (e[0] === QUESTIONS.textContent) i = index;
+            if (e[0] === questionsScene.textContent) i = index;
         }
     )
     originListOfWords.splice(i, 1);
@@ -211,7 +211,7 @@ function shuffleGameButton() {
 
     // если закончились вопросы - Well done
     if (howManyQuestionsIsNow__shuffleGame === originListOfWords.length) {
-        QUESTIONS.innerHTML = "Well done!";
+        questionsScene.innerHTML = "Well done!";
         questions_answer.innerHTML = null;
         howManyQuestionsIsNow__shuffleGame = 0;
         return;
@@ -224,12 +224,12 @@ function shuffleGameButton() {
     englishText = englishText.replace(/[^a-zA-Z]$/g, "");
 
     // рисуем на экране перевод и англиские слова
-    QUESTIONS.innerHTML = russianText;
+    questionsScene.innerHTML = russianText;
     
     // рисуем на экране англиские слова
     let div = document.createElement("div");
     div.classList.add("parent");
-    QUESTIONS.append(div);
+    questionsScene.append(div);
     let englishTextArray = englishText.split(" ");
     shuffle(englishTextArray);
     for (let i = 0; i<englishTextArray.length; i++) {
@@ -311,7 +311,7 @@ function writingGame() {
 
     // если закончились вопросы, Well done
     if (howManyQuestionsIsNow__writingGame === originListOfWords.length) {
-        QUESTIONS.innerHTML = "Well done!";
+        questionsScene.innerHTML = "Well done!";
         questions_answer.innerHTML = null;
         howManyQuestionsIsNow__writingGame = 0;
         return;
@@ -323,14 +323,14 @@ function writingGame() {
     let englishText = originListOfWords[i][1];
 
     // ask a question
-    QUESTIONS.innerHTML = englishText;    
+    questionsScene.innerHTML = englishText;    
     let input_writing = document.createElement("input");
     input_writing.classList.add("wr__pause-btn");
     input_writing.addEventListener("keyup", listenEnter);
     let div = document.createElement("div");
     div.classList.add("parent");
     div.append(input_writing);
-    QUESTIONS.append(div);
+    questionsScene.append(div);
     input_writing.focus();
 
     // check result
