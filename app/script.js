@@ -148,6 +148,7 @@ function clearContext() {
 
 let howManyQuestionsIsNow__repeatGame = 0;
 let repeatGame__timer;
+const MAX_NUMBERS_OF_WORDS = 11;
 document.querySelector(".wr__btn-remember").addEventListener("click", translateGame);
 function translateGame() {
     // если показ вопросов будет начат во время предыдщей итерации, предыдущая будет остановлена
@@ -157,7 +158,7 @@ function translateGame() {
     if (originListOfWords.length === 0) originListOfWords = createListOfQuestion();
 
     // take first N questions
-    (howManyQuestionsIsNow__repeatGame === originListOfWords.length) ? document.querySelector(".questions").classList.add("green") : howManyQuestionsIsNow__repeatGame++;
+    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? QUESTIONS.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
     arr_for_asking = originListOfWords.slice(0, howManyQuestionsIsNow__repeatGame);
     shuffle(arr_for_asking);
     
