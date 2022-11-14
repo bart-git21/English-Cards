@@ -2,7 +2,7 @@
 .sidebar {
     width: 250px;
     height: 100vh;
-    padding: 50px 10px 10px 30px;
+    padding: 30px 10px 10px 30px;
     position: absolute;
     box-shadow: 5px 0 2px var(--bg-dark-color);
     z-index: 10;
@@ -56,12 +56,12 @@
 
 
 .wr__area {
-    height: 180px;
+    max-height: 180px;
     width: 100%;
 }
 
 .english__buttons__wrapper {
-    margin: 30px 0;
+    margin: 20px 0;
     position: relative;
 }
 
@@ -74,7 +74,7 @@
 .english__shuffle {
     display: none;
     position: absolute;
-    top: -55px;
+    top: -50px;
     right: -5px;
     padding: 20px;
     border-radius: 12px;
