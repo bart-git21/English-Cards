@@ -96,9 +96,11 @@ function getRussianAndEnglishExpressions(string) {
         russianExpression = string.slice(0,engExpressionIndex);
         engExpression = string.slice(engExpressionIndex);
     }
+    // чистим фразы от мусора (лишние пробелы, запятые, точки и проч.)
     engExpression = engExpression.replace(/\s{2,}/g, "");
     engExpression = engExpression.replace(/\s+$/g, "");
-    engExpression = engExpression.replace(/[-—.,]/g, "");
+    engExpression = engExpression.replace(/[—\.,]/g, "");
+    engExpression = engExpression.replace(/(\s-\s)/g, "");
     russianExpression = russianExpression.replace(/[(),\.\d]/g, "");
     return {russianExpression, engExpression};
 }
