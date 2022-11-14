@@ -155,7 +155,10 @@ function translateGame() {
     clearInterval(repeatGame__timer);
 
     // create questions list
-    if (originListOfWords.length === 0) originListOfWords = createListOfQuestion();
+    if (originListOfWords.length === 0) {
+        QUESTIONS.classList.remove("green");
+        originListOfWords = createListOfQuestion();
+    }
 
     // take first N questions
     (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? QUESTIONS.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
@@ -183,6 +186,7 @@ function translateGame() {
 const trashBtn = document.querySelector('.fa-trash-can');
 trashBtn.addEventListener("click", deleteQuestion);
 function deleteQuestion() {
+    QUESTIONS.classList.remove("green");
     let i = 0;
     originListOfWords.forEach(
         (e, index) => {
