@@ -1,0 +1,955 @@
+﻿account - счет, считать
+across [ə’krɒs]s, through - через, по ту сторону
+act - действия
+addition - дополнение
+adjust - регулировать, приспосабливать
+admire [əd’maɪər] восхищаться
+advertisement - реклама
+affectionate - ласковый
+after - после
+again - снова
+against - против
+agree [ə’gri: ] соглашаться
+agreement - соглашение
+air - воздух, проветривать
+alive [ə’laɪv] живой
+along [ə’lɔ:ŋ] prep вдоль, по
+among [ə’mʌŋ] prep между, среди
+amount - количество, означать, составлять
+amusement - развлечение
+anger - злость
+angle - угол, поворачивать
+animal - животное
+another [ə’nʌðər] еще один, другой такой же
+answer - ответ, отвечать
+ant - муравей
+apparatus - аппарат
+appear [ə’pɪər] появляться
+apply - ходатайствовать
+approval - одобрение
+arch - арка, дуга, выгибать;
+area - площадь
+argument - спор, аргумент
+art - искусство, художественный
+asy [’i: zɪ] легко, без труда
+attach прикреплять, присоединять
+attack - нападение, нападать
+attempt - попытка, пытаться
+attention [ə’tenʃən] внимание
+attractive - привлекательный
+awful [’ɔ:fəl] ужасный
+baby - ребёнок, младенец
+bag - умка
+ball - мяч
+ballet - балет
+bank - банк
+bank [bæŋk] берег (реки)
+basket - корзина
+bathe [beɪð] купаться
+be [bi:] (was / were, been) быть
+be afraid of smth / smb бояться чего-л. / кого-л.
+be fond of smth обожать что-л.
+be frightened of smth / smb сильно бояться чего-л. / кого-л.
+be going to do smth собираться что-л. сделать
+be over закончиться
+be surprised удивляться 
+be upset расстраиваться
+bear - медведь
+beautiful - красивый
+beauty - красота
+bed - кровать
+bee - пчела
+beef - говядина
+before - перед
+beg - умолять
+begin [bɪ’gɪn] (began, begun) начинать
+begin- начинать
+behavior - поведение
+belief - вера
+bell - колокольчик
+belong [bɪ’lɔ:ŋ] принадлежать
+bench [bentʃ] скамейка
+berry - ягода
+between - между
+bird - птица
+birth - рождение
+bit - частица, бит
+bite - кусать
+bite - укус, кусать
+bitter - горький
+black - черный
+blade - лезвие
+blanket - одеяло
+blood - кровь
+blow - удар, дуть
+blue - синий
+board - доска
+boat - лодка, судно
+body - тело
+boil- варить
+boiling - кипение
+bone - кость
+book - книга
+bookmark - закладка (в браузере)
+boot [bu: t] ботинок, сапог
+bottle - бутылка
+bottom - нижний
+bow [[baʋ] поклон; v кланяться
+box - коробка
+braided - плетеный
+brain - мозг
+brake - тормоз, тормозить
+branch - ветвь, отделение
+brass - медь, руководство
+brave [breɪv] храбрый
+bread - хлеб
+breath - дыхание
+brick - кирпич
+bridge - мост
+bright - яркий, умный
+broken - сломанный
+brother - брат
+brown - коричневый
+brush - кисть
+bucket - ведро, черпать
+building [bɪldɪŋ] здание
+bulb - луковица, выпирать
+burn - ожог, гореть
+burrow - нора
+burst - взрыв, взрывать
+bus - шина
+business - бизнес, деловой
+butter - масло
+butterfly - бабочка
+button - кнопка, застёгивать
+cable - кабель
+cake - пирог
+camera - камера
+card - карта, чесать
+cardigan - джемпер
+care - забота, лечение
+carriage - вагон
+carriage [kærɪdʒ] карета
+cart - везти
+castle [kɑːsl] замок
+cat - кот
+catch [kætʃ] (caught, caught) ловить, поймать, хватать
+cause - причина, вызывать
+chain - цепь, сеть
+chair - стул
+chalk - мел, рисовать мелом
+chance - шанс, случайный, рисковать
+change into превращаться в
+character [’kærɪktər] герой, характер
+charge - заряжать
+cheap - дешёвый
+cheese - сыр
+chemical - химикат
+chest - грудь, сундук
+chicken - курица
+chief - главный
+children's - детский
+chin - подбородок
+choice [tʃɔɪs] выбор
+choose - выбрать
+church - церковь
+circle - круг
+city - город
+clean - чистый, чистить
+clear - ясный, очищать, оправдываться
+climb [klaɪm] влезать, карабкаться
+clock - часы
+cloth - ткань, одежда
+cloud - облако
+coal - уголь
+coat - пальто, покрывать
+coats - пальто
+coin [kɔɪn] монета
+cold - холодный
+collar - воротник, хватать
+comb - расчёсывать
+come down [kʌm daʋn] спускаться вниз
+comfort - комфорт
+committee - комитет 
+common - общий 
+communicate - общаться
+companion [kəm’pænjən] товарищ; спутник
+comparison - сравнение
+competition - соревнование
+complex - комплекс
+computer case - корпус системного блока
+condition - условие, обуславливать
+connection - связь
+conscious - сознательный
+construction - строительство
+continue [kən’tɪnju: ] продолжать
+control - контроль
+cook - повар
+cooker - плита
+copper - медь
+copy - копия
+cord - шнур, связывать
+cork - пробка
+cough - кашель
+country - страна
+cover - покрытие, покрывать, обложка
+cow - корова
+crack - первоклассный, взламывать
+crawl - ползать
+credit - кредит, верить
+crime - преступление
+crop [krɒp] урожай
+cruel [’kru:əl] жестокий
+crush - давка, сокрушать
+cry - плакать
+cunning [’kʌnɪŋ] хитрый
+cup - чашка
+cupboard - шкаф
+current - текущий, поток
+curtain - занавес, штора, занавешивать
+curtain [’kɜ:rtən] занавеска
+curve - кривая, избегать
+cushion - подушка, смягчать
+damage - повреждение, повреждать
+danger - опасность
+dark - темный
+database - база данных
+daughter - дочь
+day - день
+dead [ded] мертвый
+death - смерть
+debt - долг
+decision - решение
+decrypt - расшифровывать
+deep - глубокий
+defiantly - дерзко
+degree - уровень, градус, степень
+degrees - град
+demand - требовать
+dependent - зависимый
+depth - глубина
+design - намереваться
+desire - желание, желать
+destruction - разрушение
+detail - детализировать, детали
+developing — разработка
+development - развитие
+device - устройство
+difficult to imagine — трудно вообразить
+digestion - вываривание
+dinely - мелко
+direction - управление
+discovery - открытие
+discussion - обсуждение
+disease - болезнь
+disgust - отвращение
+dish [dɪʃ] блюдо
+diskette — дискета
+distance - дистанция
+distribution - распределение
+divide [də’vaɪd] делить (на несколько частей)
+division - подразделение
+doctor - доктор
+dog - собака
+donkey [’dɒŋkɪ] осел
+door - дверь
+doubt - сомнение
+down - вниз
+drain - утечка, истощать
+draw [drɔ:] (drew, drawn) тянуть; затягивать
+drawbridge [drɔ:‚brɪdʒ] подъемный мост
+drawer - ящик
+drawing - рисунок
+dress - платье
+dress up - наряжаться
+drink - напиток
+drink - пить
+drip - капать
+drive [draɪv] (drove, driven) ехать
+driver - водитель
+drop - капля, опускать
+drown [draʋn] тонуть
+dry - сухой
+duck - утка
+ear - ухо
+east - восток
+eat [i: t] (ate, eaten) есть, съесть
+educate - воспитывать
+education - образование
+elastic - эластичный
+elegant [’eləgənt] элегантный, изысканный
+elephant - слон
+elephant [’eləfənt] слон
+end - заканчивать, конец
+engine - двигатель
+enjoy [ɪn’dʒɔɪ] (smth) получать большое удовольствие (от чего-л.)
+enough - достаточно
+equal - равный, равняться
+error - ошибка
+even [’i: vən] даже
+event - случай, событие
+ever - когда-либо, никогда
+exchange - обмен
+exchange - обмен, обменивать
+existence - существование
+expansion - расширение
+experience - опыт, испытывать
+expert - опытный, эксперт
+explanation [‚eksplə’neɪʃən] объяснение, разъяснение
+eye - глаз
+face - лицо
+fact - факт
+factory - завод
+fall - падение, осень
+fan - вентилятор охлаждения, кулер
+fan - поклонник
+far [fa:] далеко
+farm - ферма
+Fast - быстрый
+fat [faet] толстый; жирный
+favourite ['feivarit] любимый
+fear - бояться, страх
+fear - страх
+fear [fia] страх
+feather - перо, украшать
+fee - плата
+feed - кормить
+feeling - чувство
+fiction - беллетристика, фикция
+field - область, поле, выставлять
+find - находить
+finger - палец
+finish- заканчивать
+firewall - брандмауэр, межсетевой экран
+firm - твердый
+first [feist] первый; adv сначала, прежде всего
+fish - рыба
+flag - флаг, сигнализировать
+flame - пылать, пламя
+floor [fb: ] пол; этаж
+flour - мука
+flower - цветок
+fly - муха, лететь
+fold - сгиб, сворачивать
+follow [ˈfɒləʊ] следовать, идти за
+foolish ['fu: hj] глупый
+foot - нога
+football - футбол
+force - сила, вынуждать, вызывать
+forepaw [fo: po:] передняя лапа
+fork - вилка
+form - форма
+forward - отправлять, вперед
+fowl - домашняя птица
+fragrant - ароматный
+Friendship - дружба
+frightened ['fraitnd] испуганный
+frog - лягушка
+front side — передняя сторона
+fry - жарить
+full - полный
+fur [f3:] мех
+fury - ярость
+gate [geit] ворота
+gateway - шлюз
+generation - поколение
+gentleman ['cfcentlman] джентльмен
+giant ['djaiant] великан
+gift - подарок
+gift [gift] подарок
+give - дать
+give birth - рожать
+glass - стакан
+glass [gla: s] стекло
+glory - слава
+gloves - перчатки
+go by [gəʊ bai] v проходить (о времени)
+goat - коза
+golden - золотой
+goose - гусь
+government - государство
+grain - зерно
+gray - серый
+green - зеленый
+ground [graund] земля 
+guard [ga: d] стражник
+gun - оружие
+hair - волосы
+hall [hɔ:l] зал
+hammer - молоток
+hand - рука
+handsome [’hænsəm] красивый (о мужчине)
+hanging - вывешивание, висение
+harbor - приютить, вставать на якорь, гавань
+hard - жесткий
+hat - шляпа
+hate - ненавидеть, очень не хотеть, ненависть
+hay [heɪ] сено
+he is all attention — он весь внимание
+head - голова
+headphones наушники
+hearing - слушание, слух 
+heart - сердце
+heat - нагревать, высокая температура
+heavy - тяжелый
+height - высота
+here - здесь, сюда
+hide [haɪd] (hid, hidden) прятать(ся)
+high [haɪ] высокий
+history - историяisland - остров
+hockey-player — хоккеист 
+hold [həʋld] (held, held) держать
+hole - дыра
+homeland - родина
+honest [’ɒnɪst] честный
+hook - крюк, вербовать
+hope [həʋp] надеяться
+horn - рожок 
+horse - лошадь
+hospital - больница
+hot - горячо
+house - дом
+how - как
+hunger [’hʌŋgər] голод
+husband [’hʌzbənd] муж
+hyperlink - гиперссылка
+if [ɪf] conj если
+implementation — реализация
+impossible [ɪm’pɒsəbəl] невозможный
+in the south — на юге
+In-demand - востребованный
+Individual – индивидуальный
+ink - чернила
+inside [‚ɪn’saɪd] adu внутрь, внутри
+institute - институт
+interest - интерес, процент, доля
+internal - внутренний
+invention - изобретение
+invite [’ɪnvaɪt] приглашать
+iron - железный
+itself [ɪt’self] pron сам, сама, само
+jelly - превращать в желе, желе
+jewel - драгоценный камень
+Joint - совместный
+Journal - журнал
+journey [’dʒɜ:rnɪ] путешествие
+joy - радость
+juice - сок
+just [dʒʌst] как раз; совершенно
+keep [ki: p] (kept, kept) держать(ся); сохранять(ся)
+kettle - чайник
+key - ключ 
+keyboard — клавиатура
+kind - добрый, вид
+king [kɪŋ] король
+kitchen - кухня
+knife - нож 
+knitted - вязаный
+knot - узел
+land - земля
+land [lænd] земля
+laptop - ноутбук, портативный компьютер
+large - большой
+large - крупный
+latex - латексный
+laugh - смеяться, смех
+lead - принуждать, побеждать, вести, лидерство
+leadership - руководство
+leaf - лист, покрывать листвой
+learn- учить
+learning - изучение, обучение
+leather - кожа
+leather - кожаный
+Leave - оставить
+leave- покидать
+LED — светодиод
+legal notes — юридическое заявление
+letter - письмо
+level - уровень, выравнивать, направлять
+library - библиотека
+lie [laɪ] (lay, lain) лежать
+lie down ложиться
+LIFO — последним пришёл — первым обслужен
+lift - поднимать, лифт
+light - освещать, легкий, свет
+light-emitting diode (LED) - светодиод
+lightweight - легкий
+limit - ограничивать
+line - линия, очередь, выравнивать
+line disciplines — протокол линии
+linen - льняной, полотно
+lion [’laɪən] лев
+lip - губа
+liquid - жидкий, жидкость
+list - список, перечислять
+littleness  — ничтожность, мелочность, незначительность
+lock - замок
+long - долго, длинный
+look for - искать
+loop — цикл
+lord [b: d] лорд, вельможа
+lose - проиграть
+loss - потеря
+love - любовь
+luck [lʌk] удача
+machine tool - станок
+make a bow поклониться
+male - мужской
+man - человек
+map - карта
+mark - марка
+marquis [’mɑ:rkwɪs] маркиз
+marry [’mærɪ] жениться, выйти замуж
+mass - масса
+master [’mæstər] хозяин, господин
+match - спичка, сделки, соответствовать
+maximum - максимальный
+meadow [’medəʋ] луг
+meanwhile [’mi: n‚waɪl] тем временем
+meat - мясо
+medicine - лекарство
+medium - средний
+message [’mesɪdʒ] сообщение, послание
+middle [’mɪdəl] середина
+military - военный
+milk - молоко
+mill [mɪl] мельница
+miller [’mɪlər] мельник
+mind [maɪnd] возражать
+minimum - минимальный
+mixed - смешанный
+money [’mʌnɪ] деньги
+monkey - обезьяна
+mood [mu: d] настроение
+moon - луна
+motherboard (mainboard) - материнская плата
+mountain - гора, горный
+mouse - мышь
+mouse [maʋs] (pl mice) мышь
+move [mu: v] двигаться
+movie - фильм
+mower [’məʋər] косарь
+mowers — косари
+muscle |ˈmʌsl| - мускул
+music - музыка
+mysterious - загадочный
+nail - ноготь
+narrow [’nærəʋ] узкий
+nation - нация
+natural blonde. натуральная блондинка
+near - рядом, около
+neck - шея, обниматься
+needle - игла
+nerve - нерв
+net - чистый, сеть
+news - новость
+newspaper - газета
+node - узел сети
+nose - нос
+nothing [’nʌƟɪŋ] pron ничего
+nylon - капроновый
+offer [’ɔ:fər] предлагать
+on a morning — утром
+on the silver market — на рынке серебра 
+open [’əʋpən] открытый; v открывать
+operation - операция, действие
+orange - апельсин, оранжевый
+ourself [jəˈselvz] сам, себе, себя
+out - вне, снаружи
+oven - духовка, печь
+packet of biscuits — пачка печенья
+pain - боль, причинять боль
+paint - краска, рисовать, красить
+palace [’pælɪs] дворец
+paper - бумажный
+parcel - пакет, распределять
+part [pɑ:rt] часть
+participate - участвовать
+partridge [’pɑ:rtrɪdʒ] куропатка
+past [pæst] prep мимо
+paste - приклеивать, паста
+payment - оплата
+peace - мир
+pen - ручка
+pencil - карандаш
+penny [peni] (pi pennies) пенни, пенс
+performance - спектакль
+perhaps [pər’hæps] возможно
+person - персона
+personal - личный
+phrase - фраза
+picture - картина
+pig - свинья
+pillow - подушка
+pin - булавка, прикреплять
+pipe - труба
+place - размещать, помещать, занимать место, место
+plane - самолёт
+plant - завод, растение, прививать, сеять
+plastic - пластиковый
+plate - тарелка
+play - играть
+pleasant - приятный
+pleased [pli: zd] довольный
+pleasure [’pleʒər] удовольствие
+plow - плуг, пахать
+pocket [’pɒkɪt]  - карман, присваивать
+point - пункт, точка, указывать
+poison - яд, отравлять
+polish - полировать
+polite [pə’laɪt] вежливый
+politely [pə’laɪtlɪ] вежливо
+pork - свинина
+port - разъем, порт
+porter - швейцар,носильщик
+position - помещать, позиция
+postman - почтальон
+pot - горшок
+potato - картофель
+potatoes - картофель
+power supply unit (PSU) - блок питания
+practical [’præktɪkəl] практичный
+praying - молиться
+pretend [prɪ’tend] притворяться, делать вид
+price - цена
+pride - гордость
+princess [’prɪnsɪs] принцесса
+print - печатать
+prison - тюрьма
+probable - вероятный
+produce - продукт, производить
+profession - профессия
+profit - прибыль, получать прибыль
+proposal - предложение
+protection - покровительство
+protest - возражать, протест
+prove [pru: v] доказывать
+public building — общественное здание 
+pull [pʋl] тянуть, тащить 
+pull on boots натягивать сапоги
+pump - насос, качать
+punishment - наказание
+pupil - ученик
+purchase - покупка
+put [pʋt] (put, put) класть, помещать
+put on надевать (об одежде)
+put out высовывать 
+put together соединять
+quality - качество
+query - запрос
+quiet - тихий, успокаивать
+quietly - тихо
+rabbit [’ræbɪt] кролик
+rail - рельс, перевозить поездом
+rain - дождь
+range - диапазон, располагаться
+rat - крыса
+rat [ræt] крыса
+rate - норма,разряд
+ray - луч
+reaction - реакция
+reading - чтение
+ready - готовый, готов
+reaper [’ri: pər] жнец
+reapers — жнецы
+reason - рассуждать, причина, разум
+receipt - квитанция
+receive получать, принимать
+recognize [’rekəg‚naɪz] узнавать, признавать
+record - рекордный, отчёт, делать запись
+red - красный
+refrigerator - холодильник
+refuse [’refju: s] отказываться
+regret - сожаление, сожалеть
+regular - регулярный
+relatively – относительно
+religion - религия
+remember [rɪ’membər] помнить
+representative - представитель
+resistance - стойкость
+respect - уважение, уважать
+respectively соответственно
+responsible - ответственный
+rest - отдых, отдыхать, оставаться
+rhythm - ритм
+rich [rɪtʃ] богатый
+ride [raid] (rode, ridden) скакать
+right - верный, право
+ring - кольцо, звонить
+rod - прут
+roof [ru: f] крыша
+root - корень
+rough - грубый
+roughly - грубо
+round - вокруг, круглый, раунд
+router - маршрутизатор
+rub - протирать, тереться  
+run - бег, бегать
+run after [rʌn ’æftər] бегать за (кем-л.)
+sad- грустно
+sadness - грусть
+sail - парус
+same [seɪm] тот же самый
+sand - песок
+saucepan - кастрюля
+scale - измерять, масштаб
+scary - страшный
+schedule — расписание
+school - школа
+science - наука
+scissors - ножницы
+score - забивать
+screw - винт
+sea - море
+seam - шов
+search engine - поисковая система
+seat - сиденье, усаживать, место
+second - секунда, второй
+secretary - секретарь
+seed - семя
+selection - выбор
+self - сам
+selfishness - эгоизм
+separate - отдельный, отделять
+serious - серьёзный
+servant - слуга
+servant [’sɜ:rvənt] слуга
+several [’sevərəl] несколько, некоторые
+shade - оттенок,тень, заштриховывать
+shallow - мелкий
+sharp - острый
+sheep - овцы
+shelf - полка
+ship - корабль
+shirt - рубашка
+shock - шок, потрясать
+shoe - ботинок
+shoemaker [’ʃu:‚meɪkər] сапожник
+shop - магазин
+shout [ʃaʋt] кричать
+show - предъявлять
+sign - знак, признак, подписывать
+sign in — войти, зарегистрироваться
+signature — подпись
+silk - шёлк
+silver [’sɪlvər] серебряный
+sing - петь
+skin - кожа, очищать
+skirt - юбка
+sleep - спать
+slender - стройный
+slope - наклон, клониться
+slow - медленный
+slowly- медленно
+small - маленький
+smash - удар, разбиваться
+smell - запах, пахнуть
+smile - улыбка, улыбаться
+smooth - гладкий, мягкий, приглаживать
+snail - улитка
+snake - змея
+sneeze - чиханье, чихать
+snow - снег
+snow - снег
+so - так
+soap - мыло, мылить
+society - общество
+sock - носок
+socket - гнездо
+socks - носки
+sofa - диван
+soft - мягкий
+software — программное обеспечение
+son - сын
+song - песня
+sounds interesting. звучит интересно. 
+soup - суп
+sour - кислый
+space - пространство, космос
+spade - лопата
+speech — речь
+spider - паук
+spiral спираль
+spoil - портить
+sponge - губка
+spoon - ложка
+sports - спорт
+square - квадрат
+stadium - стадион
+staff — штат
+stage - стадия, сцена, организовывать
+stale - черствый
+stamp - печать, марка, отпечатывать
+stand [stænd] (stood, stood) стоять, находиться
+standard - стандартный
+standing [’stændɪŋ] стоящий
+star - звезда
+start - начинать
+state - состояние
+statement — оператор
+station - станция
+stay [steɪ] оставаться
+steam - пар, париться, двигаться
+stem - стебель, происходить
+step - шаг, шагать
+stick - палка, прикреплять
+sticky - липкий
+stiff - жесткий
+still
+still [stil]  - все еще; ;; неподвижный;
+stitch - стежок, сшивать
+stocking - снабжать
+stomach - живот, смелость, переваривать
+stone - камень
+stop - останавливаться, остановка
+store - магазин, запас
+story - история
+straight - прямой
+street - улица
+stretch - отрезки, протягивать, простираться
+string [strɪŋ] завязка, шнурок
+strok - гладить
+stroller - коляска
+strong - сильный
+strongly - сильно
+structure - структура
+student - студент
+study - учеба
+stupid - тупой
+subdomain
+substance - вещество, сущность
+sudden - внезапный
+suit [su: t] костюм
+summer - летний
+sun - солнце
+surprised [sər’praɪzd] удивленный
+sweet - сладкий
+swim - плавать
+switch - коммутатор
+table - стол
+tablet - таблетка
+tail - хвост, выслеживать
+take - взять
+take off [teɪk ɒf] v снимать (одежду)
+tall grass — высокая трава
+tall trees — высокие деревья
+tax free — свободный от налогов
+teaching - обучение
+tendency - тенденция
+tender - нежный
+terrible - ужасный
+terribly [’terəblɪ] ужасно
+test - проверять, тест
+thank [Ɵæŋk] благодарить
+theory - теория
+there - там, туда
+thermometer - градусник
+thick - толстый
+thick accent — сильный акцент
+thief [Ɵi: f] (pl thieves) вор
+thin - тонкий
+thing - вещь
+this - это, этот
+though - хотя
+thought - мысль
+thread - нить, пронизывать
+Threaten - угрожать
+throat - горло
+through [Ɵru:] через, сквозь
+thumb - листать, большой палец
+thunder - гром, греметь
+ticket - билет
+tight |taɪt| fitting |ˈfɪtɪŋ| - обтягивающий
+till [til] (con) пока, до тех пор пока не
+tin - олово,консервная банка
+tired - усталый
+title [’taɪtəl] титул
+toe - палец ноги
+together - вместе
+tooth - зуб
+top - возглавлять, вершина, главный
+touch - прикосновение, касаться
+tower [’taʋər] башня
+town - город
+trade - торговля, обменивать
+train - поезд
+tranquility - спокойствие
+transport  - транспорт, транспортировать
+traveller [’trævələr] путешественник
+tray - поднос
+treat - лечить
+tree - дерево
+tremble [’trembəl] дрожать
+triangle - треугольник
+trick [trɪk] - уловка, обманывать
+trouble - проблема, беспокоить
+trousers - брюки
+try - пытаться
+turkey - индейка
+turn - поворот, поворачивать
+twist - завихрение, крутить
+twist- крутить
+under - под
+university - университет
+unusual [ʌn’ju:ʒu:əl] необычный, странный
+upper – верхний
+upset [ʌp’set] расстроенный, огорченный
+upstairs [‚ʌp’steərz] наверх (пo лестнице)
+use [ju: z] использовать
+useful [’ju: sfəl] полезный
+vase - ваза
+verse - стих
+very cheap store — очень дешевый магазин
+victory - победа
+violent - сильный, жестокий
+violet - лиловый
+visit [’vɪzɪt] посещать
+visitor [’vɪzɪtər] посетитель
+voice - голос, высказывать
+waiting - ожидание
+wall [wɔ:l] стена
+warm - теплый, нагревать
+wash - мыть
+watch - часы
+water - вода
+weak - слабо
+wear [weər] (wore, worn) носить
+weather - погода
+week - неделя
+weight - вес, нагружать
+well - хорошо, намного
+well-built [ˈwɛlˈbɪlt] крепкий, хорошо сложенный (о человеке)
+wet - мокрый
+wheat [wiːt] пшеница
+wheel - колесо, вертеть
+when - когда
+where - где, куда, откуда
+while - в то время как
+whip - кнут, хлестать
+whistle - свист, свистеть
+white - белый
+whole - целый
+why - почему
+wide - широкий
+wife [[waɪf] жена
+win - выиграть
+wind - ветер
+window - окно
+wine - вино
+wine [waɪn] вино
+wing - крыло
+wire - провод
+wireless network - беспроводная сеть
+wise - мудрый
+wise [waɪz] мудрый
+with due attention — с должным вниманием
+woman - женщина
+wood [wud] лес; дерево (материал)
+wooden - деревянный
+woolen - шерстяной
+word - слово
+work - работа
+worker - рабочий
+worry [ˈwʌrɪ] (worried) волноваться, беспокоиться
+yard [jɑːd] двор
+yellow - желтый

@@ -1,0 +1,206 @@
+﻿The boy is rather tall for his age.  Мальчик весьма высок для своего возраста
+The surface of the lake was completely calm.  Поверхность озера была идеально спокойной
+The child dug a deep hole in the sand.  Ребёнок выкопал глубокую яму в песке
+magnetic attraction — магнитное притяжение
+She has a good sense of balance. У неё хорошее чувство равновесия
+load balancing — балансировка нагрузки
+birds build nests — птицы строят гнёзда
+primary color — основной цвет
+Use the synonyms from the text. — Используй синонимы из текста.
+I can show you how to uninstall the game. Я могу вам показать, как удалить игру
+I'll try to upload the database. Я попытаюсь загрузить базу данных
+Draw a picture and describe it. — Нарисуй картинку и опиши ее.
+Fill in the adjectives from the text. — Вставь прилагательные из текста. 
+A violent storm struck the city last night.  Прошлой ночью в городе разразилась сильная буря
+Fill in the nouns from the text. — Вставь существительные из текста.
+Fill in the prepositions if necessary. — Вставь, если нужно, предлоги.
+Fill in the words from the box. — Вставь слова из рамки. 
+Imagine that you're… — Представь, что ты…
+See page 11. Смотрите на странице 11. 
+Make up sentences. — Составь предложения.
+Put the sentences in the right order. — Расставь предложения в правильном порядке.
+Put the verbs in brackets in the right form. — Поставь глаголы в скобках в нужную форму.
+We have to verify our sources. Мы должны проверять наши источники
+Service is included in the bill. Обслуживание включено в счёт
+Do not reboot system after installation. Не перезагружайте систему после инсталляции
+your hearing can be restored. ваш слух восстановится
+When I am angry, I do not want to talk to anyone.  Когда я сердитый, я не хочу ни с кем разговаривать
+The supplier rejected the company's last offer.  Поставщик отказался от последнего предложения компании
+this requirement must be fulfilled — это условие должно быть выполнено 
+A straw bonnet with pink ribbons. Соломенная шляпка с розовыми лентами
+a suitable candidate for the job. Подходящая кандидатура на эту должность
+I prefer to cook with olive oil.  Я предпочитаю готовить на оливковом масле
+I hope my flight is not delayed.  Надеюсь, мой рейс не задержали
+I have recently joined several clubs.  Недавно я вступил в несколько клубов
+The ant is a form of insect. Муравей — это вид насекомых
+low-level language — язык низкого уровня
+The project members did not know each other.  Участники проекта не знали друг друга
+They can attend to meetings if required. При необходимости они могут присутствовать на встречах
+Take a picture or make a note of - Сфотографируйте или запишите ...
+a change in opinion is possible. возможна смена мнения
+a decent quality of life. достойное качество жизни
+It would press the reset button. Нажал бы кнопку сброса
+What's the purpose of your visit here? Цель вашего приезда? 
+Think green apples - Подумайте о зеленых яблоках
+Remove the pudding basin - Достаньте емкость для пудинга
+I have lived in a village. Я жил в деревне
+utility |juːˈtɪlətɪ| dog — служебная собака
+This approach helps overcome challenges.— Этот подход помогает преодолевать проблемы
+Many companies have a dress code that requires adherence [ədˈhɪə.rəns].— Во многих компаниях существует дресс-код, который требует соблюдения.
+It is necessary to find and eliminate malfunction [ˌmælˈfʌŋk.ʃən].— Необходимо найти и устранить неисправность
+Choose a business model that takes little overhead  [ˈəʊ.və.hed].— Выберите бизнес-модель, которая требует небольших накладных расходов
+the most solid foundation.— самый прочный фундамент
+Recursion [riːˈkɜːʃn]  is a program that calls itself.— Рекурсия - программа, которая вызывает сама себя
+Backport [bækpɔːt] solves security problems.— Бэкпорт решает проблемы безопасности.
+I like this duotone [ˈdjuːəʊtəʊn] design.— Мне нравится этот двухцветный дизайн.
+All interactions between the objects are visible. — Все взаимодействия между объектами видны.
+The sensors detect any motion in the house.  Датчики засекают любое движение в доме
+International laws must be respected.  Международные законы должны соблюдаться
+You can access the beach via the main street.  На пляж можно пройти через главную улицу
+I moved the furniture in my room.  Я передвинул мебель в комнате
+He drove a nail into the board. Он забил в доску гвоздь
+The mice clustered together. Мыши сбились в кучу
+The event takes place in the evening.  Мероприятие пройдёт вечером
+Programming involves tasks - Программирование включает в себя задачи
+A network is a collection of computers - Сеть — это совокупность компьютеров
+She mailed the package to me. Она послала мне посылку. 
+platform for discussing issues - площадка для обсуждения вопросов
+Education is a gradual process. Образование — это постепенный процесс. 
+Describes how you can check log files - Описывает, как вы можете проверить файлы журнала
+A single execution of the loop body - Однократное выполнение тела цикла
+You can delete any of your words - Вы можете удалить любое из ваших слов
+I recently read an excellent book.  Я недавно прочитал отличную книгу
+We loaded our luggage in the car . Мы погрузили наш багаж в машину
+The boat's sails were not fully deployed.Паруса судна были развёрнуты не полностью
+to develop a new product — разрабатывать новый продукт
+Disable this command on your computer.Отключите эту команду на компьютере
+disconnect the power supply. отключите источник питания
+The display of prices on the screen is not correct.  Отображение цен на экране неправильное
+I enabled subtitles.  Я включил субтитры
+encrypt a secret message — зашифровать тайное сообщение
+The download took 40 minutes.  Скачивание заняло 40 минут
+agile methodology breaking a project up into several phases	гибкая методология разработки разбивает проект на несколько этапов
+Algorithm |ˈælɡərɪðəm| installed. Алгоритм установлен
+An array is an indexed collection of data elements - Массив — это индексированная коллекция элементов данных
+Configure default encoding Настроить кодировку по умолчанию
+This is where enterprise applications come in. вот где на помощь приходят корпоративные приложения
+An executable (exe) file used to perform functions Исполняемый файл, используемый для выполнения функций
+How to Become an Interpreter - Как стать интерпретатором (переводчиком)
+An operating system is system software - Операционная система — это системное программное обеспечение.
+Application software, or app for short - прикладное программное обеспечение или app коротко говоря
+Aspect-oriented programming gives you a way to... Аспектно-ориентированное программирование дает вам возможность...
+The decision was made by the quorum - Решение было принято кворумом
+get a random number from a pool of numbers — получить случайное число из набора чисел
+a replica of the ship. точная копия этого корабля
+static variable — статическая переменная
+too risky for me. слишком рискованно для меня
+He was driving at high speed.  Он ехал на большой скорости
+He has an honest face. У него искреннее выражение лица
+My dog is not scared of loud noises.  Моя собака не боится громких звуков
+observations of the wildlife.  наблюдения за миром животных
+object-oriented programming (OOP)	объектно-ориентированное программирование
+open source software	программное обеспечение с открытым исходным кодом
+prototyping	создание прототипа, прототипирование
+rapid application development (RAD)	быстрая разработка приложений (методология)
+regression testing	регрессионное тестирование
+runtime (runtime environment)	среда выполнения кода
+server software	серверное программное обеспечение
+spyware	программа-шпион, шпионское программное обеспечение
+system software	системное программное обеспечение
+unit testing	модульное (блочное, компонентное) тестирование
+waterfall model	каскадная модель разработки
+My sister prefers to drive an automatic car.  Моя сестра предпочитает ездить на машине с коробкой-автоматом
+A path runs along the edge of the field.  Тропинка проходит по краю поля
+Fiona and I have always been close friends. Фиона и я всегда были близкими друзьями
+high hopes for her. большие надежды на неё
+After six months I got a salary increase.  Через шесть месяцев я получил надбавку к зарплате
+I'll order a taxi. Я закажу такси
+rice field — рисовое поле
+He felt shame for his lies. Ему было стыдно за свою ложь
+A retail price is the price per one unit.  Розничная цена — это цена за одну штуку
+Who used this? Кто использовал это?
+at cost value — по себестоимости
+I am waxing the wooden furniture.  Я натираю воском деревянную мебель
+will be able to find - сможет найти	
+What country do you come from? Вы из какой страны? 
+I get it! до меня дошло!
+Give that book to me. Дай мне ту книгу.
+Let it be! Да будет так! 
+to make / prepare breakfast — готовить завтрак 
+Two and two make four. Два плюс два равняется четырём
+Put the book on the table Положи книгу на стол
+it should seem — казалось бы
+to take a bus — сесть на автобус
+What do we have here? Что тут у нас? 
+What did you say to her? Что вы ей сказали? 
+See page 11. Смотрите на странице 11
+I'll send a copy to you. Я пришлю вам копию
+She cooked a great meal. Она приготовила великолепную еду
+you may stay — можете остаться
+I met the owner Я встретил владельца
+Oak bark can be used as a remedy. Кора дуба может использоваться как лекарство
+I bought a gift for my mother.  Я купил подарок для мамы
+Walking is good for your health.  Пешие прогулки полезны для здоровья
+The meeting is arranged for two o'clock.  Встреча назначена на два часа
+Every writer strives for fame.  Каждый писатель стремится к славе
+I felt happy for I had passed my exam.  Я был счастлив, потому что сдал экзамен
+One of - One of who? Одна из... одна из КОГО?
+The bar is open till midnight.  Бар открыт до полуночи
+Till November. до ноября
+He is taller than his older brother.  Он выше, чем его старший брат
+I can cope with any problem at work.  Я могу справиться с любой проблемой на работе
+I take a shower every morning.  Каждое утро я принимаю душ
+Every metal conducts electricity.  Любой металл проводит ток
+The book is full of references to other documents.  В книге много ссылок на другие документы
+Some birds migrate in winter.  Некоторые птицы мигрируют зимой
+The company does not render such services.  Эта компания не предоставляет подобные услуги
+We all have acid in our stomachs - У всех нас есть кислота в желудке
+I have good memories of my childhood.  У меня остались хорошие воспоминания о моём детстве
+My request was granted.  Моя просьба была удовлетворена
+The sound plays through the built-in speaker.  Звук воспроизводится через встроенный динамикThe stars were shining in the sky like diamonds.  Звёзды сияли на небе, как бриллианты	
+My brother married a Frenchwoman.  Мой брат женился на француженке
+There are some medical facilities down the street.  Вниз по улице есть несколько медицинских учреждений
+a new chapter in my life — новый этап в моей жизни
+Parallel straight lines have no point of intersection.  У параллельных прямых нет точки пересечения
+We have achieved a lot in the past year.  Мы многого добились за прошедший год
+They talked about the current political situation.  Они обсуждали современную политическую ситуацию
+the harvest was poor this year.  в этом году был скудный урожай
+The team scored nine out of ten possible points.  Команда набрала девять очков из десяти возможных
+The present situation is better than before.  Текущая ситуация лучше прежней
+He worked as a surgeon in a private hospital.  Он работал хирургом в частной больнице
+He has a tattoo on his left arm. У него татуировка на левой руке
+The dog looked healthy and delighted.  Собака выглядела здоровой и счастливой
+He's younger than me. Он моложе меня
+village among the hills — деревня в горах 
+She can sing beautifully. Она очень красиво поёт
+cook book — поваренная книга 
+Drink up your milk. Допивай своё молоко
+The effect was negligible.Эффект был незначительным
+She fought her fear. Она боролась со своим страхом
+I feel good because I slept well.  Я выспался и теперь чувствую себя хорошо
+I felt like leaving this loud party.  Мне хотелось уйти с этой шумной вечеринки
+washing machine — стиральная машина 
+Nuts contain many vitamins and minerals.  Орехи содержат много витаминов и минералов
+The offices are cleaned daily.  Уборка офисов производится ежедневно
+The boy was pulling a toy car.  Мальчик тянул игрушечную машину
+a quick reply. быстрый ответ
+I recently read an excellent book.  Я недавно прочитал отличную книгу
+take down umbrella — закрыть зонт 
+the widest part of the river — самая широкая часть реки
+My hammer is made of iron.  Мой молоток изготовлен из железа
+This house is really a jewel. Этот дом — настоящее сокровище
+We loaded our luggage |ˈlʌɡɪdʒ|. Мы погрузили наш багаж
+He drove off the road. Он съехал с дороги
+The boy was shaking the tree to make an apple fall.  Мальчик тряс дерево, чтобы яблоко упало
+The vessel |ˈvesl| reached the port.  Судно достигло порта
+who knows what tomorrow holds? — кто знает, что ждёт нас в будущем?
+We're frequently advised - Нам часто советуют
+The gate is made of metal. Эти ворота сделаны из металла
+The guide offers information - путеводитель предоставляет информацию 
+She kicked the ball - Она пнула мяч
+She powdered |ˈpaʊdər| her nose. Она припудрила нос
+Wind power can be used to .. Энергию ветра можно использовать для ...
+The process can be made more effective - Процесс можно сделать более эффективным
+A property is an attribute of an object - Свойство — это атрибут объекта
+What does prose |prəʊz| mean? Что значит проза?
+I sorted the laundry. Я рассортировал бельё для стирки
