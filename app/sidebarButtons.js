@@ -1,17 +1,24 @@
 
 const whereButtonsShouldBeCreated = document.querySelector(".english__buttons");
+const themesArray = [
+    "words",
+    "two words",
+    "it phrases",
+    "cv",
+    "phrases",
+    "the Cat",
+]
 
-class deskWithButtons {
-    constructor(howManyButtonsAreThere) {
-        this.howManyButtonsAreThere = howManyButtonsAreThere;
+class wordsSet {
+    constructor(array) {
+        this.themes = array;
     }
 
     // ***************** create buttons ******************************
-   
     createButtons = () => {
-        for (let i = 1; i<=this.howManyButtonsAreThere; i++) {
+        for (let i = 0; i < this.themes.length; i++) {
             whereButtonsShouldBeCreated.innerHTML += `
-            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./public/list${i}.txt');">${i}</button>
+            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./public/${this.themes[i]}.txt');">${this.themes[i]}</button>
             `
         }
     }
@@ -34,5 +41,5 @@ class deskWithButtons {
     }
 }
 
-let newDesk = new deskWithButtons(50);
+let newDesk = new wordsSet(themesArray);
 newDesk.createButtons();
