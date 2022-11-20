@@ -49,13 +49,9 @@ function addPausePopup(text) {
 // создать исходный массив вопросов
 function createListOfQuestion() {
     let textareaArray = document.querySelector(".wr__area").value.split("\n"); // текст стал массивом
+    textareaArray.forEach((e,index)=> !e && textareaArray.splice(index,1)); // удалить пустые строки
 
-    // удалить пустые строки
-    for (let i = 0; i<textareaArray.length; i++) {
-        if(!textareaArray[i]) textareaArray.splice(i,1);
-    }
-
-    // если англ и рус фразы разбиты на абзацы - преобразовать два абзаца в один (англ+рус)
+    // если каждая из англ и рус фраз записаны в отдельном абзаце - преобразовать два абзаца в один (англ+рус)
     for (let i = 1; i<textareaArray.length; i++) {
         if(textareaArray[i].search(/[а-яА-Я]/g) == 0 && textareaArray[i-1].search(/[а-яА-Я]/g) == -1) {
             textareaArray[i-1] = textareaArray[i-1].concat(textareaArray[i]);
@@ -65,16 +61,13 @@ function createListOfQuestion() {
             textareaArray[i-1] = textareaArray[i-1].concat(textareaArray[i]);
             textareaArray.splice(i,1);
         }
-
     }
 
     // преобразовываем каждую строку в массив [рус, англ]
-    let newList = [];
-    textareaArray.map(
+    let newList = textareaArray.map(
         e => {
             const {russianExpression, engExpression} = getRussianAndEnglishExpressions(e);
-            e = [russianExpression, engExpression];
-            newList.push(e);
+            return [russianExpression, engExpression];
         }
     )
     
@@ -86,8 +79,6 @@ function getRussianAndEnglishExpressions(string) {
     let engExpression = "";
     let rusExpressionIndex = string.search(/[а-яА-Я]/g);
     let engExpressionIndex = string.search(/[a-zA-Z]/g);
-    // находим, где русская фраза - и показываем ее
-    // а остаток - вниз, в подсказку
     if (rusExpressionIndex > engExpressionIndex) {
         russianExpression = string.slice(rusExpressionIndex);
         engExpression = string.slice(0,rusExpressionIndex);
@@ -100,8 +91,8 @@ function getRussianAndEnglishExpressions(string) {
     engExpression = engExpression.replace(/\s{2,}/g, "");
     engExpression = engExpression.replace(/\s+$/g, "");
     engExpression = engExpression.replace(/[—\.,]/g, "");
-    engExpression = engExpression.replace(/(\s-\s)/g, "");
-    russianExpression = russianExpression.replace(/[(),\.\d]/g, "");
+    engExpression = engExpression.replace(/\s-/g, "");
+    russianExpression = russianExpression.replace(/[()\.\d]/g, "");
     return {russianExpression, engExpression};
 }
 
