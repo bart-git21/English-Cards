@@ -16,9 +16,9 @@ class wordsSet {
 
     // ***************** create buttons ******************************
     createButtons = () => {
-        for (let i = 0; i < this.themes.length; i++) {
+        for (let themeName of this.themes) {
             whereButtonsShouldBeCreated.innerHTML += `
-            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./public/${this.themes[i]}.txt');">${this.themes[i]}</button>
+            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./public/${themeName}.txt');">${themeName}</button>
             `
         }
     }
@@ -26,8 +26,7 @@ class wordsSet {
     // ***************** shuffle buttons *****************************
 
     shuffleButtons() {
-        const btns = document.querySelectorAll(".btn-small");
-        let myBtns = [...btns];
+        const myBtns = [...document.querySelectorAll(".btn-small")];
 
         for (let i = myBtns.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
@@ -35,8 +34,8 @@ class wordsSet {
         };
 
         whereButtonsShouldBeCreated.innerHTML = null;
-        for (let i = 0; i<myBtns.length; i++) {
-            whereButtonsShouldBeCreated.innerHTML += myBtns[i].outerHTML;
+        for(let button of myBtns) {
+            whereButtonsShouldBeCreated.innerHTML += button.outerHTML;
         }
     }
 }
