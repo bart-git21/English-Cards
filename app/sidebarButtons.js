@@ -18,7 +18,7 @@ class wordsSet {
     createButtons = () => {
         for (let themeName of this.themes) {
             whereButtonsShouldBeCreated.innerHTML += `
-            <button class="btn-small" onclick="chooseThisList(this); showQuestions('./public/${themeName}.txt');">${themeName}</button>
+            <button class="btn-small">${themeName}</button>
             `
         }
     }
@@ -41,4 +41,12 @@ class wordsSet {
 }
 
 let newDesk = new wordsSet(themesArray);
-newDesk.createButtons();
+function drawButtons() {
+    return new Promise(
+        res => {
+            setTimeout(()=>{res(newDesk.createButtons())}, 100);
+        }
+    );
+}
+
+export {drawButtons};

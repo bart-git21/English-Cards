@@ -1,3 +1,5 @@
+import {drawButtons} from "./sidebarButtons.js";
+
 
 const questionsScene = document.querySelector(".questions");
 const questions_answer = document.querySelector(".questions_answer"); // his answer
@@ -107,9 +109,9 @@ function chooseThisList(elem) {
     howManyQuestionsIsNow__shuffleGame = 0;
     howManyQuestionsIsNow__writingGame = 0;
     document.querySelector(".questions").classList.remove("green");
-    elem.style.display = "none";
     document.querySelector(".txtArea").outerHTML = '<textarea id="myTextarea" class="txtArea wr__area" placeholder="вопросы" rows="5"></textarea>';
     sidebar__info__numberOfList.innerHTML = `this is the list # ${elem.textContent}`;
+    showQuestions(`./public/${elem.textContent}.txt`);
 }
 
 // заполнить textArea
@@ -117,6 +119,12 @@ function showQuestions(url) {
     fetch(url)
     .then(response => response.text())
     .then(data => document.querySelector(".txtArea").innerHTML = data)
+}
+async function addClickListener() {
+    await drawButtons();   
+    document.querySelectorAll(".btn-small").forEach(e => {
+        e.addEventListener("click", function(){chooseThisList(this)});
+    })
 }
 
 // ============================ кнопка "Очистить" ===============================
@@ -342,3 +350,5 @@ function writingGame() {
     const nextButton = document.querySelector(".nextButton");
     nextButton.addEventListener("click", function() {writingGame()});
 }
+
+export {addClickListener};

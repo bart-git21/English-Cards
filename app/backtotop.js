@@ -1,6 +1,7 @@
 document.querySelector(".backToTop__btn").addEventListener("click", backToTop);
 
-document.onscroll = function visibleBactToTopButton() {
+// document.onscroll = function visibleBactToTopButton() {
+function visibleBactToTopButton() {
     if (document.documentElement.scrollTop > 20) document.querySelector(".backToTop__btn").style.display = "inline";
     else document.querySelector(".backToTop__btn").style.display = "none";
 }
@@ -12,3 +13,7 @@ function backToTop() {
     }, 5);
     
 }
+
+export {visibleBactToTopButton, 
+    backToTop
+};
