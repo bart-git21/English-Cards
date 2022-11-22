@@ -271,8 +271,8 @@ function shuffleGameButton() {
         let buttons = document.querySelectorAll(".shuffleGame__moveIt-btn");
         let buttonsArray = [];
         for(let i = 0;i<buttons.length; i++) {
-            let aa = [a,b]=[parseInt(buttons[i].getBoundingClientRect().x),buttons[i].textContent];
-            buttonsArray.push(aa);
+            let [ xCoord, BtnText ] = [parseInt( buttons[i].getBoundingClientRect().x ), buttons[i].textContent];
+            buttonsArray.push([ xCoord, BtnText ]);
         }
         buttonsArray.sort((a,b)=>{return a[0]-b[0]});
         let checkingString = [];
