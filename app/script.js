@@ -1,3 +1,5 @@
+import {shuffle,
+} from "./global.js";
 import {drawButtons} from "./sidebarButtons.js";
 
 
@@ -6,13 +8,6 @@ const questions_answer = document.querySelector(".questions_answer"); // his ans
 let originListOfWords = [];
 let arr_for_asking = [];
 let english__timer; // таймер
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    };
-}
 
 document.querySelector("html").addEventListener("keyup", changePause);
 let isChangingPause = false;
