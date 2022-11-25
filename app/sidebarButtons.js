@@ -1,6 +1,7 @@
 import {shuffle,
         shuffleBtn,
 } from "./global.js";
+import {addClickListener} from "./script.js";
 
 const whereButtonsShouldBeCreated = document.querySelector(".english__buttons");
 const themesArray = [
@@ -19,6 +20,7 @@ class wordsSet {
 
     // ***************** create buttons ******************************
     createButtons = () => {
+        whereButtonsShouldBeCreated.innerHTML = null;
         for (let themeName of this.themes) {
             whereButtonsShouldBeCreated.innerHTML += `
             <button class="btn-small">${themeName}</button>
@@ -28,12 +30,9 @@ class wordsSet {
 
     // ***************** shuffle buttons *****************************
     shuffleButtons() {
-        const myBtns = [...document.querySelectorAll(".btn-small")];
-        shuffle(myBtns);
-        whereButtonsShouldBeCreated.innerHTML = null;
-        for(let button of myBtns) {
-            whereButtonsShouldBeCreated.innerHTML += button.outerHTML;
-        }
+        shuffle(themesArray);
+        this.createButtons();
+        addClickListener();
     }
 }
 
