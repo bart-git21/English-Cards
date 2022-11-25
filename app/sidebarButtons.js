@@ -1,3 +1,6 @@
+import {shuffle,
+        shuffleBtn,
+} from "./global.js";
 
 const whereButtonsShouldBeCreated = document.querySelector(".english__buttons");
 const themesArray = [
@@ -24,15 +27,9 @@ class wordsSet {
     }
 
     // ***************** shuffle buttons *****************************
-
     shuffleButtons() {
         const myBtns = [...document.querySelectorAll(".btn-small")];
-
-        for (let i = myBtns.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-          [myBtns[i], myBtns[j]] = [myBtns[j], myBtns[i]];
-        };
-
+        shuffle(myBtns);
         whereButtonsShouldBeCreated.innerHTML = null;
         for(let button of myBtns) {
             whereButtonsShouldBeCreated.innerHTML += button.outerHTML;
@@ -48,5 +45,7 @@ function drawButtons() {
         }
     );
 }
+
+shuffleBtn.addEventListener("click", () => {newDesk.shuffleButtons()});
 
 export {drawButtons};
