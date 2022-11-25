@@ -5,10 +5,39 @@ function shuffle(arr) {
     };
 }
 
+// buttons
+const clearBtn = document.querySelector(".wr__btn-clear");
+const rememberGameBtn = document.querySelector(".wr__btn-remember");
+const shuffleGameBtn = document.querySelector(".wr__btn-shuffle-words");
+const writingGameBtn = document.querySelector(".wr__btn-writing");
 const shuffleBtn = document.querySelector(".english__shuffle");
+const trashBtn = document.querySelector('.fa-trash-can');
+
+// inputs 
+const pauseInput = document.querySelector(".wr__pause-btn");
+const textArea = document.querySelector(".txtArea");
+
+// areas, containers and etc
+const html = document.querySelector("html");
+const pauseContainer = document.querySelector(".wr__pause");
+const questionContainer = document.querySelector(".questions");
+const answerContainer = document.querySelector(".questions_answer");
+const infoContainer = document.querySelector(".sidebar__info__numberOfList");
 
 
 export {
     shuffle,
+    clearBtn,
+    rememberGameBtn,
+    shuffleGameBtn,
     shuffleBtn,
+    trashBtn,
+    html,
+    pauseInput,
+    pauseContainer,
+    questionContainer,
+    answerContainer,
+    infoContainer,
+    textArea,
+    writingGameBtn,
 };

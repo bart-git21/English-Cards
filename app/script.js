@@ -1,29 +1,37 @@
-import {shuffle,
+import {
+    shuffle,
+    clearBtn,
+    rememberGameBtn,
+    shuffleGameBtn,
+    trashBtn,
+    html,
+    pauseInput,
+    pauseContainer,
+    questionContainer,
+    answerContainer,
+    infoContainer,
+    textArea,
+    writingGameBtn,
 } from "./global.js";
 import {drawButtons} from "./sidebarButtons.js";
 
 
-const questionsScene = document.querySelector(".questions");
-const questions_answer = document.querySelector(".questions_answer"); // his answer
 let originListOfWords = [];
 let arr_for_asking = [];
-let english__timer; // таймер
-
-document.querySelector("html").addEventListener("keyup", changePause);
 let isChangingPause = false;
-async function changePause(event) {
-    if (isChangingPause) return;
-    const pause = document.querySelector(".wr__pause-btn");
-    switch (event.key) {
-        case "ArrowUp": pause.value = await fetchPause(true); break;
-        case "ArrowDown": pause.value = await fetchPause(false); break;
-    }
-    isChangingPause = false;
+
+html.addEventListener("keyup", changePause);
+function addPausePopup(text) {
+    const div = document.createElement("div");
+    div.textContent = `${text} s`;
+    div.classList = "pausePopup";
+    pauseContainer.appendChild(div);
+    setTimeout(()=> div.remove(), 2000);
 }
-function fetchPause(direction) {
+function fetchPause(isPauseUp) {
     isChangingPause = true;    
-    let pauseValue = +pause.value || 2;
-    direction ? pauseValue += 0.1 : pauseValue -= 0.1;
+    let pauseValue = +pauseInput.value || 2;
+    isPauseUp ? pauseValue += 0.1 : pauseValue -= 0.1;
     pauseValue = parseInt(pauseValue * 10) / 10;
     addPausePopup(pauseValue);
     return new Promise(
@@ -34,18 +42,19 @@ function fetchPause(direction) {
         }
     )
 }
-function addPausePopup(text) {
-    const div = document.createElement("div");
-    div.textContent = text + " s";
-    div.classList = "pausePopup";
-    document.querySelector(".wr__pause").appendChild(div);
-    setTimeout(()=> div.remove(), 2000);
+async function changePause(event) {
+    if (isChangingPause) return;
+    switch (event.key) {
+        case "ArrowUp": pauseInput.value = await fetchPause(true); break;
+        case "ArrowDown": pauseInput.value = await fetchPause(false); break;
+    }
+    isChangingPause = false;
 }
 
 
 // создать исходный массив вопросов
 function createListOfQuestion() {
-    let textareaArray = document.querySelector(".wr__area").value.split("\n"); // текст стал массивом
+    let textareaArray = textArea.value.split("\n");
     textareaArray.forEach((e,index)=> !e && textareaArray.splice(index,1)); // удалить пустые строки
 
     // если каждая из англ и рус фраз записаны в отдельном абзаце - преобразовать два абзаца в один (англ+рус)
@@ -97,15 +106,13 @@ function getRussianAndEnglishExpressions(string) {
 // ============================  Sidebar - кнопки с номерами ===========
 
 // очистить originListOfWords и скрыть выбранную кнопку
-const sidebar__info__numberOfList = document.querySelector(".sidebar__info__numberOfList");
 function chooseThisList(elem) {
     originListOfWords = [];
     howManyQuestionsIsNow__repeatGame = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
     howManyQuestionsIsNow__writingGame = 0;
-    document.querySelector(".questions").classList.remove("green");
-    document.querySelector(".txtArea").outerHTML = '<textarea id="myTextarea" class="txtArea wr__area" placeholder="вопросы" rows="5"></textarea>';
-    sidebar__info__numberOfList.innerHTML = `this is the list # ${elem.textContent}`;
+    questionContainer.classList.remove("green");
+    infoContainer.innerHTML = `this is the list # ${elem.textContent}`;
     showQuestions(`./public/${elem.textContent}.txt`);
 }
 
@@ -113,7 +120,7 @@ function chooseThisList(elem) {
 function showQuestions(url) {
     fetch(url)
     .then(response => response.text())
-    .then(data => document.querySelector(".txtArea").innerHTML = data)
+    .then(data => textArea.value = data)
 }
 async function addClickListener() {
     await drawButtons();   
@@ -123,15 +130,14 @@ async function addClickListener() {
 }
 
 // ============================ кнопка "Очистить" ===============================
-const wr__btn_clear = document.querySelector(".wr__btn-clear");
-wr__btn_clear.addEventListener("click", clearContext);
+clearBtn.addEventListener("click", clearContext);
 function clearContext() {
     originListOfWords = [];
     howManyQuestionsIsNow__repeatGame = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
     howManyQuestionsIsNow__writingGame = 0;
-    document.querySelector(".txtArea").value = "";
-    document.querySelector(".txtArea").innerHTML = "";
+    textArea.value = "";
+    textArea.innerHTML = "";
 }
 
 
@@ -141,53 +147,52 @@ function clearContext() {
 let howManyQuestionsIsNow__repeatGame = 0;
 let repeatGame__timer;
 const MAX_NUMBERS_OF_WORDS = 11;
-document.querySelector(".wr__btn-remember").addEventListener("click", translateGame);
+rememberGameBtn.addEventListener("click", translateGame);
 function translateGame() {
     // если показ вопросов будет начат во время предыдщей итерации, предыдущая будет остановлена
     clearInterval(repeatGame__timer);
 
     // create questions list
     if (originListOfWords.length === 0) {
-        questionsScene.classList.remove("green");
+        questionContainer.classList.remove("green");
         originListOfWords = createListOfQuestion();
     }
 
     // take first N questions
-    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? questionsScene.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
+    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? questionContainer.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
     arr_for_asking = originListOfWords.slice(0, howManyQuestionsIsNow__repeatGame);
     shuffle(arr_for_asking);
     
     // show first N questions
     let i = 0;
     repeatGame__show();
-    const pause = parseFloat(document.querySelector(".wr__pause-btn").value) || 2;
+    const pause = parseFloat(pauseInput.value) || 2;
     repeatGame__timer = setInterval(repeatGame__show, pause * 1000);
     function repeatGame__show() {
         if (i == arr_for_asking.length) {
-            questionsScene.textContent = "well done!";
-            questions_answer.textContent = null;
+            questionContainer.textContent = "well done!";
+            answerContainer.textContent = null;
             clearInterval(repeatGame__timer);
         }
         else {
-            questionsScene.textContent = arr_for_asking[i][0];
-            questions_answer.textContent = arr_for_asking[i][1];
+            questionContainer.textContent = arr_for_asking[i][0];
+            answerContainer.textContent = arr_for_asking[i][1];
         }
         i++;
     }
 }
-const trashBtn = document.querySelector('.fa-trash-can');
 trashBtn.addEventListener("click", deleteQuestion);
 function deleteQuestion() {
-    questionsScene.classList.remove("green");
+    questionContainer.classList.remove("green");
     let i = 0;
     originListOfWords.forEach(
         (e, index) => {
-            if (e[0] === questionsScene.textContent) i = index;
+            if (e[0] === questionContainer.textContent) i = index;
         }
     )
     originListOfWords.splice(i, 1);
     howManyQuestionsIsNow__repeatGame--;
-    document.querySelector(".wr__btn-remember").focus();
+    rememberGameBtn.focus();
 }
 
 
@@ -195,7 +200,7 @@ function deleteQuestion() {
 // ============================ кнопка "Перемешать слова" ===========
 
 let howManyQuestionsIsNow__shuffleGame = 0;
-document.querySelector(".wr__btn-shuffle-words").addEventListener("click", shuffleGameButton);
+shuffleGameBtn.addEventListener("click", shuffleGameButton);
 function shuffleGameButton() {
     // если эта игра будет вызвана во время игры "переводить карточки", показ будет остановлен
     clearInterval(repeatGame__timer);
@@ -205,8 +210,8 @@ function shuffleGameButton() {
 
     // если закончились вопросы - Well done
     if (howManyQuestionsIsNow__shuffleGame === originListOfWords.length) {
-        questionsScene.innerHTML = "Well done!";
-        questions_answer.innerHTML = null;
+        questionContainer.innerHTML = "Well done!";
+        answerContainer.innerHTML = null;
         howManyQuestionsIsNow__shuffleGame = 0;
         return;
     }
@@ -217,13 +222,11 @@ function shuffleGameButton() {
     let englishText = originListOfWords[i][1];
     englishText = englishText.replace(/[^a-zA-Z]$/g, "");
 
-    // рисуем на экране перевод и англиские слова
-    questionsScene.innerHTML = russianText;
-    
-    // рисуем на экране англиские слова
+    // выводим на экран русский перевод и англиские слова
+    questionContainer.innerHTML = russianText;
     let div = document.createElement("div");
     div.classList.add("parent");
-    questionsScene.append(div);
+    questionContainer.append(div);
     let englishTextArray = englishText.split(" ");
     shuffle(englishTextArray);
     for (let i = 0; i<englishTextArray.length; i++) {
@@ -232,7 +235,8 @@ function shuffleGameButton() {
 
     // move buttons
     let target;
-    document.querySelector(".parent").addEventListener("mousemove", shuffleGame__moveTarget);
+    const parent = document.querySelector(".parent");
+    parent.addEventListener("mousemove", shuffleGame__moveTarget);
     function shuffleGame__moveTarget(event) {
         if (target) {
             if ([...target.classList] == "shuffleGame__moveIt-btn") {
@@ -242,7 +246,7 @@ function shuffleGameButton() {
             }
         }
     }
-    document.querySelector(".parent").addEventListener("mousedown", shuffleGame__findAndDropTarget);
+    parent.addEventListener("mousedown", shuffleGame__findAndDropTarget);
     function shuffleGame__findAndDropTarget(e) {
         if ([...e.target.classList].find(e=>e==="shuffleGame__moveIt-btn")) {
             target = e.target;
@@ -256,8 +260,8 @@ function shuffleGameButton() {
     }
 
     // check result
-    if (document.querySelector(".shuffleGame__checkResult-btn")) document.querySelector(".shuffleGame__checkResult-btn").removeEventListener("click", shuffleGameButton);
-    questions_answer.innerHTML = '<button class="shuffleGame__checkResult-btn"></button>';
+    if (document.querySelector(".shuffleGame__checkResult-btn")) shuffleGame__checkResult_btn.removeEventListener("click", shuffleGameButton);
+    answerContainer.innerHTML = '<button class="shuffleGame__checkResult-btn"></button>';
     const shuffleGame__checkResult_btn = document.querySelector(".shuffleGame__checkResult-btn");
     shuffleGame__checkResult_btn.classList = "shuffleGame__checkResult-btn";
     shuffleGame__checkResult_btn.textContent = "check it";
@@ -295,7 +299,7 @@ function shuffleGameButton() {
 // ============================ кнопка "написание" ===========
 
 let howManyQuestionsIsNow__writingGame = 0;
-document.querySelector(".wr__btn-writing").addEventListener("click", writingGame);
+writingGameBtn.addEventListener("click", writingGame);
 function writingGame() {
     // если эта игра будет вызвана во время игры "переводить карточки", показ будет остановлен
     clearInterval(repeatGame__timer);
@@ -305,8 +309,8 @@ function writingGame() {
 
     // если закончились вопросы, Well done
     if (howManyQuestionsIsNow__writingGame === originListOfWords.length) {
-        questionsScene.innerHTML = "Well done!";
-        questions_answer.innerHTML = null;
+        questionContainer.innerHTML = "Well done!";
+        answerContainer.innerHTML = null;
         howManyQuestionsIsNow__writingGame = 0;
         return;
     }
@@ -317,14 +321,14 @@ function writingGame() {
     let englishText = originListOfWords[i][1];
 
     // ask a question
-    questionsScene.innerHTML = englishText;    
+    questionContainer.innerHTML = englishText;    
     let input_writing = document.createElement("input");
     input_writing.classList.add("wr__pause-btn");
     input_writing.addEventListener("keyup", listenEnter);
     let div = document.createElement("div");
     div.classList.add("parent");
     div.append(input_writing);
-    questionsScene.append(div);
+    questionContainer.append(div);
     input_writing.focus();
 
     // check result
@@ -338,9 +342,9 @@ function writingGame() {
     }
 
     // next button function
-    questions_answer.innerHTML = `
-    <button class="shuffleGame__checkResult-btn nextButton">next</button>
-    <span>${russianText}</span>
+    answerContainer.innerHTML = `
+        <button class="shuffleGame__checkResult-btn nextButton">next</button>
+        <span>${russianText}</span>
     `;
     const nextButton = document.querySelector(".nextButton");
     nextButton.addEventListener("click", function() {writingGame()});
