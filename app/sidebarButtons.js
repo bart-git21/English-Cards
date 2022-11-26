@@ -1,9 +1,9 @@
 import {shuffle,
         shuffleBtn,
+        whereButtonsShouldBeCreated,
 } from "./global.js";
 import {addClickListener} from "./script.js";
 
-const whereButtonsShouldBeCreated = document.querySelector(".english__buttons");
 const themesArray = [
     "words",
     "two words",
@@ -35,16 +35,8 @@ class wordsSet {
         addClickListener();
     }
 }
-
-let newDesk = new wordsSet(themesArray);
-function drawButtons() {
-    return new Promise(
-        res => {
-            setTimeout(()=>{res(newDesk.createButtons())}, 100);
-        }
-    );
-}
-
+const newDesk = new wordsSet(themesArray);
 shuffleBtn.addEventListener("click", () => {newDesk.shuffleButtons()});
 
-export {drawButtons};
+export {newDesk,
+};
