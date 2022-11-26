@@ -23,6 +23,7 @@ const pauseContainer = document.querySelector(".wr__pause");
 const questionContainer = document.querySelector(".questions");
 const answerContainer = document.querySelector(".questions_answer");
 const infoContainer = document.querySelector(".sidebar__info__numberOfList");
+const whereButtonsShouldBeCreated = document.querySelector(".english__buttons");
 
 
 export {
@@ -40,4 +41,5 @@ export {
     infoContainer,
     textArea,
     writingGameBtn,
+    whereButtonsShouldBeCreated,
 };
