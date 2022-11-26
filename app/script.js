@@ -13,7 +13,6 @@ import {
     textArea,
     writingGameBtn,
 } from "./global.js";
-import {drawButtons} from "./sidebarButtons.js";
 
 
 let originListOfWords = [];
@@ -95,9 +94,10 @@ function getRussianAndEnglishExpressions(string) {
     }
     // чистим фразы от мусора (лишние пробелы, запятые, точки и проч.)
     engExpression = engExpression.replace(/\s{2,}/g, "");
-    engExpression = engExpression.replace(/\s+$/g, "");
     engExpression = engExpression.replace(/[—\.,]/g, "");
     engExpression = engExpression.replace(/\s-/g, "");
+    engExpression = engExpression.replace(/\s*$/g,"");
+    engExpression = engExpression.trimEnd();
     russianExpression = russianExpression.replace(/[()\.\d]/g, "");
     return {russianExpression, engExpression};
 }
@@ -105,6 +105,12 @@ function getRussianAndEnglishExpressions(string) {
 
 // ============================  Sidebar - кнопки с номерами ===========
 
+// заполнить textArea
+function showQuestions(url) {
+    fetch(url)
+    .then(response => response.text())
+    .then(data => textArea.value = data)
+}
 // очистить originListOfWords и скрыть выбранную кнопку
 function chooseThisList(elem) {
     originListOfWords = [];
@@ -115,15 +121,7 @@ function chooseThisList(elem) {
     infoContainer.innerHTML = `this is the list # ${elem.textContent}`;
     showQuestions(`./public/${elem.textContent}.txt`);
 }
-
-// заполнить textArea
-function showQuestions(url) {
-    fetch(url)
-    .then(response => response.text())
-    .then(data => textArea.value = data)
-}
-async function addClickListener() {
-    await drawButtons();   
+function addClickListener() {
     document.querySelectorAll(".btn-small").forEach(e => {
         e.addEventListener("click", function(){chooseThisList(this)});
     })
@@ -260,7 +258,7 @@ function shuffleGameButton() {
     }
 
     // check result
-    if (document.querySelector(".shuffleGame__checkResult-btn")) shuffleGame__checkResult_btn.removeEventListener("click", shuffleGameButton);
+    if (document.querySelector(".shuffleGame__checkResult-btn")) document.querySelector(".shuffleGame__checkResult-btn").removeEventListener("click", shuffleGameButton);
     answerContainer.innerHTML = '<button class="shuffleGame__checkResult-btn"></button>';
     const shuffleGame__checkResult_btn = document.querySelector(".shuffleGame__checkResult-btn");
     shuffleGame__checkResult_btn.classList = "shuffleGame__checkResult-btn";
@@ -321,7 +319,7 @@ function writingGame() {
     let englishText = originListOfWords[i][1];
 
     // ask a question
-    questionContainer.innerHTML = englishText;    
+    questionContainer.textContent = englishText;    
     let input_writing = document.createElement("input");
     input_writing.classList.add("wr__pause-btn");
     input_writing.addEventListener("keyup", listenEnter);
@@ -330,13 +328,13 @@ function writingGame() {
     div.append(input_writing);
     questionContainer.append(div);
     input_writing.focus();
-
+    
     // check result
     function listenEnter(e) {
         if (e.key === "Enter") checkWords();
     }
     function checkWords() {
-        if (input_writing.value.toLowerCase() == englishText.toLowerCase()) {
+        if (input_writing.value.toLowerCase() === englishText.toLowerCase()) {
             writingGame();
         }
     }
