@@ -152,7 +152,7 @@ input[type=number] {
     font-weight: 800;
     top: 20%;
     font-size: 25px;
-    height: 20vh;
+    height: 10vh;
 }
 
 /* ========================== info sidebar ===========================*/
@@ -164,14 +164,11 @@ input[type=number] {
     font-weight: 800;
     top: 80%;
     font-size: 25px;
-    height: 20vh;
+    height: 10vh;
 }
 
-.english__sidebar__info .icon {
-    color: white;
-    font-size: 33px;
-}
-.english__sidebar__info .sidebar__info__numberOfList {
+.english__sidebar__info .icon,
+.sidebar__info__numberOfList {
     color: white;
     font-size: 33px;
 }
