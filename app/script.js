@@ -1,6 +1,5 @@
 import {
     shuffle,
-    clearBtn,
     rememberGameBtn,
     shuffleGameBtn,
     trashBtn,
@@ -52,23 +51,23 @@ async function changePause(event) {
 
 // создать исходный массив вопросов
 function createListOfQuestion() {
-    let textareaArray = textArea.value.split("\n");
-    textareaArray.forEach((e,index)=> !e && textareaArray.splice(index,1)); // удалить пустые строки
+    let phrasesList = textArea.value.split("\n");
+    phrasesList.forEach((e,index)=> e==="" && phrasesList.splice(index,1)); // удалить пустые строки
 
     // если каждая из англ и рус фраз записаны в отдельном абзаце - преобразовать два абзаца в один (англ+рус)
-    for (let i = 1; i<textareaArray.length; i++) {
-        if(textareaArray[i].search(/[а-яА-Я]/g) == 0 && textareaArray[i-1].search(/[а-яА-Я]/g) == -1) {
-            textareaArray[i-1] = textareaArray[i-1].concat(textareaArray[i]);
-            textareaArray.splice(i,1);
+    for (let i = 1; i<phrasesList.length; i++) {
+        if(phrasesList[i].search(/[а-яА-Я]/g) == 0 && phrasesList[i-1].search(/[а-яА-Я]/g) == -1) {
+            phrasesList[i-1] = phrasesList[i-1].concat(phrasesList[i]);
+            phrasesList.splice(i,1);
         }
-        else if(textareaArray[i].search(/[a-zA-Z]/g) == 0 && textareaArray[i-1].search(/[a-zA-Z]/g) == -1) {
-            textareaArray[i-1] = textareaArray[i-1].concat(textareaArray[i]);
-            textareaArray.splice(i,1);
+        else if(phrasesList[i].search(/[a-zA-Z]/g) == 0 && phrasesList[i-1].search(/[a-zA-Z]/g) == -1) {
+            phrasesList[i-1] = phrasesList[i-1].concat(phrasesList[i]);
+            phrasesList.splice(i,1);
         }
     }
 
     // преобразовываем каждую строку в массив [рус, англ]
-    let newList = textareaArray.map(
+    let newList = phrasesList.map(
         e => {
             const {russianExpression, engExpression} = getRussianAndEnglishExpressions(e);
             return [russianExpression, engExpression];
@@ -126,15 +125,13 @@ function addClickListener() {
     })
 }
 
-// ============================ кнопка "Очистить" ===============================
-clearBtn.addEventListener("click", clearContext);
-function clearContext() {
-    originListOfWords = [];
+// ============================ если пользователь изменил textArea, список тоже меняется ===============================
+textArea.addEventListener("input", listenAreaChanging);
+function listenAreaChanging() {
+    originListOfWords = createListOfQuestion();
     howManyQuestionsIsNow__repeatGame = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
     howManyQuestionsIsNow__writingGame = 0;
-    textArea.value = "";
-    textArea.innerHTML = "";
 }
 
 

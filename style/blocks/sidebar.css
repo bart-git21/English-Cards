@@ -51,7 +51,7 @@
     content: "\2261";
     top: 50%;
     font-size: 40px;
-    height: 250px;
+    height: 30vh;
 }
 
 
@@ -152,7 +152,7 @@ input[type=number] {
     font-weight: 800;
     top: 20%;
     font-size: 25px;
-    height: 150px;
+    height: 20vh;
 }
 
 /* ========================== info sidebar ===========================*/
@@ -164,7 +164,7 @@ input[type=number] {
     font-weight: 800;
     top: 80%;
     font-size: 25px;
-    height: 150px;
+    height: 20vh;
 }
 
 .english__sidebar__info .icon {
