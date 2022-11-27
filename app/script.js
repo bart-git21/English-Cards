@@ -17,6 +17,7 @@ import {
 let originListOfWords = [];
 let arr_for_asking = [];
 let isChangingPause = false;
+let deletedCardsCounter = 0;
 
 html.addEventListener("keyup", changePause);
 function addPausePopup(text) {
@@ -96,7 +97,7 @@ function getRussianAndEnglishExpressions(string) {
     engExpression = engExpression.replace(/\s-/g, "");
     engExpression = engExpression.replace(/\s*$/g,"");
     engExpression = engExpression.trimEnd();
-    russianExpression = russianExpression.replace(/[()\.\d]/g, "");
+    russianExpression = russianExpression.replace(/[\.\d]/g, "");
     return {russianExpression, engExpression};
 }
 
@@ -161,7 +162,10 @@ function translateGame() {
     repeatGame__timer = setInterval(repeatGame__show, pause * 1000);
     function repeatGame__show() {
         if (i == arr_for_asking.length) {
-            questionContainer.textContent = "well done!";
+            questionContainer.textContent = `
+                Well done!
+                You deleted ${deletedCardsCounter} cards!
+            `;
             answerContainer.textContent = null;
             clearInterval(repeatGame__timer);
         }
@@ -174,12 +178,11 @@ function translateGame() {
 }
 trashBtn.addEventListener("click", deleteQuestion);
 function deleteQuestion() {
+    deletedCardsCounter += 1;
     questionContainer.classList.remove("green");
     let i = 0;
     originListOfWords.forEach(
-        (e, index) => {
-            if (e[0] === questionContainer.textContent) i = index;
-        }
+        (e, index) => (e[0] === questionContainer.textContent) && (i = index)
     )
     originListOfWords.splice(i, 1);
     howManyQuestionsIsNow__repeatGame--;
