@@ -103,35 +103,32 @@ function getRussianAndEnglishExpressions(string) {
 
 // ============================  Sidebar - кнопки с номерами ===========
 
-// заполнить textArea
-function showQuestions(url) {
+// start position
+function moveToStart() {
+    originListOfWords = [];
+    questionContainer.classList.remove("green");
+    howManyQuestionsIsNow__repeatGame = 0;
+    howManyQuestionsIsNow__shuffleGame = 0;
+    howManyQuestionsIsNow__writingGame = 0;
+
+}
+// пользователь заполнил textArea
+textArea.addEventListener("input", moveToStart);
+// заполнить textArea с помощью кнопки
+function fetchQuestions(url) {
     fetch(url)
     .then(response => response.text())
     .then(data => textArea.value = data)
 }
-// очистить originListOfWords и скрыть выбранную кнопку
 function chooseThisList(elem) {
-    originListOfWords = [];
-    howManyQuestionsIsNow__repeatGame = 0;
-    howManyQuestionsIsNow__shuffleGame = 0;
-    howManyQuestionsIsNow__writingGame = 0;
-    questionContainer.classList.remove("green");
+    moveToStart();
     infoContainer.innerHTML = `this is the list # ${elem.textContent}`;
-    showQuestions(`./public/${elem.textContent}.txt`);
+    fetchQuestions(`./public/${elem.textContent}.txt`);
 }
 function addClickListener() {
     document.querySelectorAll(".btn-small").forEach(e => {
         e.addEventListener("click", function(){chooseThisList(this)});
     })
-}
-
-// ============================ если пользователь изменил textArea, список тоже меняется ===============================
-textArea.addEventListener("input", listenAreaChanging);
-function listenAreaChanging() {
-    originListOfWords = createListOfQuestion();
-    howManyQuestionsIsNow__repeatGame = 0;
-    howManyQuestionsIsNow__shuffleGame = 0;
-    howManyQuestionsIsNow__writingGame = 0;
 }
 
 
@@ -153,7 +150,7 @@ function translateGame() {
     }
 
     // take first N questions
-    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS) ? questionContainer.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
+    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS || howManyQuestionsIsNow__repeatGame === originListOfWords.length) ? questionContainer.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
     arr_for_asking = originListOfWords.slice(0, howManyQuestionsIsNow__repeatGame);
     shuffle(arr_for_asking);
     
