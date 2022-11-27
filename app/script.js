@@ -30,8 +30,7 @@ function addPausePopup(text) {
 function fetchPause(isPauseUp) {
     isChangingPause = true;    
     let pauseValue = +pauseInput.value || 2;
-    isPauseUp ? pauseValue += 0.1 : pauseValue -= 0.1;
-    pauseValue = parseInt(pauseValue * 10) / 10;
+    isPauseUp ? pauseValue = ( Math.ceil(pauseValue * 10 + 1)/10 ) : pauseValue = ( Math.floor(pauseValue * 10 - 1)/10 );
     addPausePopup(pauseValue);
     return new Promise(
         resolve => {
