@@ -22,7 +22,7 @@
 
 .btn-small {
     font-size: 75%;
-    min-width: 40px;
+    width: max(40px, 100%);
     border-radius: 4px;
     cursor: pointer;
     padding: 0.5rem;

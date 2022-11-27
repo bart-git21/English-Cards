@@ -61,14 +61,17 @@
 }
 
 .english__buttons__wrapper {
+    width: 100%;
     margin: 20px 0;
     position: relative;
 }
 
 .english__buttons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+
 }
 
 .english__shuffle {
