@@ -51,7 +51,7 @@ async function changePause(event) {
 
 
 // создать исходный массив вопросов
-function createListOfQuestion() {
+function createQuestionsList() {
     let phrasesList = textArea.value.split("\n");
     phrasesList.forEach((e,index)=> e==="" && phrasesList.splice(index,1)); // удалить пустые строки
 
@@ -111,24 +111,39 @@ function moveToStart() {
     howManyQuestionsIsNow__repeatGame = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
     howManyQuestionsIsNow__writingGame = 0;
-
+}
+function inputSidebar(text) {
+    originListOfWords = createQuestionsList();
+    infoContainer.innerHTML = null;
+    const listNameDiv = document.createElement("div");
+    listNameDiv.textContent = `this is the list of "${text}"`;
+    const listLengthDiv = document.createElement("div");
+    listLengthDiv.textContent = `${originListOfWords.length} elements are in the list`;
+    infoContainer.appendChild(listNameDiv);
+    infoContainer.appendChild(listLengthDiv);
 }
 // пользователь заполнил textArea
-textArea.addEventListener("input", moveToStart);
-// заполнить textArea с помощью кнопки
-function fetchQuestions(url) {
-    fetch(url)
-    .then(response => response.text())
-    .then(data => textArea.value = data)
-}
-function chooseThisList(elem) {
+textArea.addEventListener("input", function() {
     moveToStart();
-    infoContainer.innerHTML = `this is the list # ${elem.textContent}`;
-    fetchQuestions(`./public/${elem.textContent}.txt`);
+    inputSidebar("user");
+});
+// заполнить textArea с помощью кнопки
+async function inputTextarea(text) {
+    const response = await fetch(`./public/${text}.txt`);
+    const data = await response.text();
+    return new Promise(
+        res => {
+            setTimeout(()=>{res(textArea.value = data)}, 100)
+        }
+    )
 }
 function addClickListener() {
     document.querySelectorAll(".btn-small").forEach(e => {
-        e.addEventListener("click", function(){chooseThisList(this)});
+        e.addEventListener("click", async function(){
+            moveToStart();
+            await inputTextarea(this.textContent);
+            inputSidebar(this.textContent);
+        });
     })
 }
 
@@ -147,7 +162,7 @@ function translateGame() {
     // create questions list
     if (originListOfWords.length === 0) {
         questionContainer.classList.remove("green");
-        originListOfWords = createListOfQuestion();
+        originListOfWords = createQuestionsList();
     }
 
     // take first N questions
@@ -200,7 +215,7 @@ function shuffleGameButton() {
     clearInterval(repeatGame__timer);
 
     // список вопросов
-    if (originListOfWords.length == 0) originListOfWords = createListOfQuestion();
+    if (originListOfWords.length == 0) originListOfWords = createQuestionsList();
 
     // если закончились вопросы - Well done
     if (howManyQuestionsIsNow__shuffleGame === originListOfWords.length) {
@@ -299,7 +314,7 @@ function writingGame() {
     clearInterval(repeatGame__timer);
 
     // список вопросов
-    if (!originListOfWords.length) originListOfWords = createListOfQuestion();
+    if (!originListOfWords.length) originListOfWords = createQuestionsList();
 
     // если закончились вопросы, Well done
     if (howManyQuestionsIsNow__writingGame === originListOfWords.length) {
