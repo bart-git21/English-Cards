@@ -45,6 +45,8 @@ async function changePause(event) {
     switch (event.key) {
         case "ArrowUp": pauseInput.value = await fetchPause(true); break;
         case "ArrowDown": pauseInput.value = await fetchPause(false); break;
+        case "ArrowLeft": translate_prevPhrase(); break;
+        case "ArrowRight": translate_nextPhrase(); break;
     }
     isChangingPause = false;
 }
@@ -108,7 +110,7 @@ function getRussianAndEnglishExpressions(string) {
 function moveToStart() {
     originListOfWords = [];
     questionContainer.classList.remove("green");
-    howManyQuestionsIsNow__repeatGame = 0;
+    translate_howManyQuestionsIsNow = 0;
     howManyQuestionsIsNow__shuffleGame = 0;
     howManyQuestionsIsNow__writingGame = 0;
 }
@@ -151,13 +153,41 @@ function addClickListener() {
 
 // ============================ кнопка "переводить карточки" ===============================
 
-let howManyQuestionsIsNow__repeatGame = 0;
-let repeatGame__timer;
+let translate_howManyQuestionsIsNow = 0;
+let translate_getCounter = null;
+let translate_timer;
 const MAX_NUMBERS_OF_WORDS = 11;
-rememberGameBtn.addEventListener("click", translateGame);
-function translateGame() {
-    // если показ вопросов будет начат во время предыдщей итерации, предыдущая будет остановлена
-    clearInterval(repeatGame__timer);
+function translate_showFirstNQuestions(counter) {
+    if (counter === arr_for_asking.length) {
+        questionContainer.textContent = `
+            Well done!
+            You deleted ${deletedCardsCounter} cards!
+        `;
+        answerContainer.textContent = null;
+        translate_getCounter = null;
+    }
+    else {
+        questionContainer.textContent = arr_for_asking[counter][0];
+        answerContainer.textContent = arr_for_asking[counter][1];
+        translate_getCounter = ++counter;
+        const pause = parseFloat(pauseInput.value) || 2;
+        translate_timer = setTimeout(()=>{translate_showFirstNQuestions(counter)}, pause * 1000);
+    }
+}
+function translate_prevPhrase() {
+    if ((translate_getCounter -= 2) >= 0) {
+        clearTimeout(translate_timer);
+        translate_showFirstNQuestions(translate_getCounter);
+    }
+}
+function translate_nextPhrase() {
+    clearTimeout(translate_timer);
+    if (translate_getCounter === null) return;
+    translate_showFirstNQuestions(translate_getCounter);
+}
+function translate_start() {
+    // если показ вопросов будет начат во время предыдущей итерации, итерация будет остановлена
+    clearTimeout(translate_timer);
 
     // create questions list
     if (originListOfWords.length === 0) {
@@ -166,32 +196,11 @@ function translateGame() {
     }
 
     // take first N questions
-    (howManyQuestionsIsNow__repeatGame === MAX_NUMBERS_OF_WORDS || howManyQuestionsIsNow__repeatGame === originListOfWords.length) ? questionContainer.classList.add("green") : howManyQuestionsIsNow__repeatGame++;
-    arr_for_asking = originListOfWords.slice(0, howManyQuestionsIsNow__repeatGame);
+    (translate_howManyQuestionsIsNow === MAX_NUMBERS_OF_WORDS || translate_howManyQuestionsIsNow === originListOfWords.length) ? questionContainer.classList.add("green") : translate_howManyQuestionsIsNow++;
+    arr_for_asking = originListOfWords.slice(0, translate_howManyQuestionsIsNow);
     shuffle(arr_for_asking);
-    
-    // show first N questions
-    let i = 0;
-    repeatGame__show();
-    const pause = parseFloat(pauseInput.value) || 2;
-    repeatGame__timer = setInterval(repeatGame__show, pause * 1000);
-    function repeatGame__show() {
-        if (i == arr_for_asking.length) {
-            questionContainer.textContent = `
-                Well done!
-                You deleted ${deletedCardsCounter} cards!
-            `;
-            answerContainer.textContent = null;
-            clearInterval(repeatGame__timer);
-        }
-        else {
-            questionContainer.textContent = arr_for_asking[i][0];
-            answerContainer.textContent = arr_for_asking[i][1];
-        }
-        i++;
-    }
+    translate_showFirstNQuestions(0);
 }
-trashBtn.addEventListener("click", deleteQuestion);
 function deleteQuestion() {
     deletedCardsCounter += 1;
     questionContainer.classList.remove("green");
@@ -200,9 +209,11 @@ function deleteQuestion() {
         (e, index) => (e[0] === questionContainer.textContent) && (i = index)
     )
     originListOfWords.splice(i, 1);
-    howManyQuestionsIsNow__repeatGame--;
+    translate_howManyQuestionsIsNow--;
     rememberGameBtn.focus();
 }
+rememberGameBtn.addEventListener("click", translate_start);
+trashBtn.addEventListener("click", deleteQuestion);
 
 
 
@@ -212,7 +223,7 @@ let howManyQuestionsIsNow__shuffleGame = 0;
 shuffleGameBtn.addEventListener("click", shuffleGameButton);
 function shuffleGameButton() {
     // если эта игра будет вызвана во время игры "переводить карточки", показ будет остановлен
-    clearInterval(repeatGame__timer);
+    clearTimeout(translate_timer);
 
     // список вопросов
     if (originListOfWords.length == 0) originListOfWords = createQuestionsList();
@@ -311,7 +322,7 @@ let howManyQuestionsIsNow__writingGame = 0;
 writingGameBtn.addEventListener("click", writingGame);
 function writingGame() {
     // если эта игра будет вызвана во время игры "переводить карточки", показ будет остановлен
-    clearInterval(repeatGame__timer);
+    clearTimeout(translate_timer);
 
     // список вопросов
     if (!originListOfWords.length) originListOfWords = createQuestionsList();
