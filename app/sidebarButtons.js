@@ -1,8 +1,6 @@
 import {shuffle,
-        shuffleBtn,
         whereButtonsShouldBeCreated,
 } from "./global.js";
-import {enterTextareaAndSidebar} from "./script.js";
 
 const themesArray = [
     "words",
@@ -37,8 +35,6 @@ class buttonsSet {
 }
 const newDesk = new buttonsSet(themesArray);
 
-shuffleBtn.addEventListener("click", () => {newDesk.shuffleButtons()});
-whereButtonsShouldBeCreated.addEventListener("click", enterTextareaAndSidebar);
-
-export {newDesk,
+export {
+    newDesk,
 };

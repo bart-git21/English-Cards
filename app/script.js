@@ -3,9 +3,7 @@ import {
     rememberGameBtn,
     shuffleGameBtn,
     trashBtn,
-    html,
     pauseInput,
-    pauseContainer,
     questionContainer,
     answerContainer,
     infoContainer,
@@ -16,41 +14,7 @@ import {
 
 let originListOfWords = [];
 let arr_for_asking = [];
-let isChangingPause = false;
 let deletedCardsCounter = 0;
-
-html.addEventListener("keyup", changePause);
-function addPausePopup(text) {
-    const div = document.createElement("div");
-    div.textContent = `${text} s`;
-    div.classList = "pausePopup";
-    pauseContainer.appendChild(div);
-    setTimeout(()=> div.remove(), 2000);
-}
-function fetchPause(isPauseUp) {
-    isChangingPause = true;    
-    let pauseValue = +pauseInput.value || 2;
-    pauseValue = isPauseUp ? ( Math.ceil(pauseValue * 10 + 1)/10 ) : ( Math.floor(pauseValue * 10 - 1)/10 );
-    addPausePopup(pauseValue);
-    return new Promise(
-        resolve => {
-            setTimeout(()=>{
-                resolve(pauseValue)
-            },2000)
-        }
-    )
-}
-async function changePause(event) {
-    if (isChangingPause) return;
-    switch (event.key) {
-        case "ArrowUp": pauseInput.value = await fetchPause(true); break;
-        case "ArrowDown": pauseInput.value = await fetchPause(false); break;
-        case "ArrowLeft": translate_prevPhrase(); break;
-        case "ArrowRight": translate_nextPhrase(); break;
-    }
-    isChangingPause = false;
-}
-
 
 // создать исходный массив вопросов
 function createQuestionsList() {
@@ -366,4 +330,8 @@ function writingGame() {
     nextButton.addEventListener("click", function() {writingGame()});
 }
 
-export {enterTextareaAndSidebar};
+export {
+    enterTextareaAndSidebar,
+    translate_prevPhrase,
+    translate_nextPhrase
+};

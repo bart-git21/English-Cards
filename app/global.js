@@ -6,6 +6,7 @@ function shuffle(arr) {
 }
 
 // buttons
+const backToTopBtn = document.querySelector(".backToTop__btn");
 const rememberGameBtn = document.querySelector(".wr__btn-remember");
 const shuffleGameBtn = document.querySelector(".wr__btn-shuffle-words");
 const writingGameBtn = document.querySelector(".wr__btn-writing");
@@ -27,6 +28,7 @@ const whereButtonsShouldBeCreated = document.querySelector(".english__buttons");
 
 export {
     shuffle,
+    backToTopBtn,
     rememberGameBtn,
     shuffleGameBtn,
     shuffleBtn,
