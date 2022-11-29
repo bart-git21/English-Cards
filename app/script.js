@@ -139,14 +139,10 @@ async function inputTextarea(text) {
         }
     )
 }
-function addClickListener() {
-    document.querySelectorAll(".btn-small").forEach(e => {
-        e.addEventListener("click", async function(){
-            moveToStart();
-            await inputTextarea(this.textContent);
-            inputSidebar(this.textContent);
-        });
-    })
+async function (e) {
+    moveToStart();
+    await inputTextarea(e.target.textContent);
+    inputSidebar(e.target.textContent);
 }
 
 
@@ -370,4 +366,4 @@ function writingGame() {
     nextButton.addEventListener("click", function() {writingGame()});
 }
 
-export {addClickListener};
+export {enterTextareaAndSidebar};

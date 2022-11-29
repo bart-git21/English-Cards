@@ -2,7 +2,7 @@ import {shuffle,
         shuffleBtn,
         whereButtonsShouldBeCreated,
 } from "./global.js";
-import {addClickListener} from "./script.js";
+import {enterTextareaAndSidebar} from "./script.js";
 
 const themesArray = [
     "words",
@@ -13,7 +13,7 @@ const themesArray = [
     "the Cat",
 ]
 
-class wordsSet {
+class buttonsSet {
     constructor(array) {
         this.themes = array;
     }
@@ -21,10 +21,11 @@ class wordsSet {
     // ***************** create buttons ******************************
     createButtons = () => {
         whereButtonsShouldBeCreated.innerHTML = null;
-        for (let themeName of this.themes) {
-            whereButtonsShouldBeCreated.innerHTML += `
-            <button class="btn-small">${themeName}</button>
-            `
+        for (let name of this.themes) {
+            const btn = document.createElement("button");
+            btn.classList = "btn-small";
+            btn.textContent = name;
+            whereButtonsShouldBeCreated.appendChild(btn);
         }
     }
 
@@ -32,11 +33,12 @@ class wordsSet {
     shuffleButtons() {
         shuffle(themesArray);
         this.createButtons();
-        addClickListener();
     }
 }
-const newDesk = new wordsSet(themesArray);
+const newDesk = new buttonsSet(themesArray);
+
 shuffleBtn.addEventListener("click", () => {newDesk.shuffleButtons()});
+whereButtonsShouldBeCreated.addEventListener("click", enterTextareaAndSidebar);
 
 export {newDesk,
 };
