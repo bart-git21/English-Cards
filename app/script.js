@@ -139,7 +139,7 @@ async function inputTextarea(text) {
         }
     )
 }
-async function (e) {
+async function enterTextareaAndSidebar(e) {
     moveToStart();
     await inputTextarea(e.target.textContent);
     inputSidebar(e.target.textContent);
