@@ -23,11 +23,11 @@ function createQuestionsList() {
 
     // если каждая из англ и рус фраз записаны в отдельном абзаце - преобразовать два абзаца в один (англ+рус)
     for (let i = 1; i<phrasesList.length; i++) {
-        if(phrasesList[i].search(/[а-яА-Я]/g) == 0 && phrasesList[i-1].search(/[а-яА-Я]/g) == -1) {
+        if(phrasesList[i].search(/[а-яА-Я]/g) === 0 && phrasesList[i-1].search(/[а-яА-Я]/g) === -1) {
             phrasesList[i-1] = phrasesList[i-1].concat(phrasesList[i]);
             phrasesList.splice(i,1);
         }
-        else if(phrasesList[i].search(/[a-zA-Z]/g) == 0 && phrasesList[i-1].search(/[a-zA-Z]/g) == -1) {
+        else if(phrasesList[i].search(/[a-zA-Z]/g) === 0 && phrasesList[i-1].search(/[a-zA-Z]/g) === -1) {
             phrasesList[i-1] = phrasesList[i-1].concat(phrasesList[i]);
             phrasesList.splice(i,1);
         }
@@ -183,7 +183,7 @@ function shuffleGameButton() {
     clearTimeout(translate_timer);
 
     // список вопросов
-    if (originListOfWords.length == 0) originListOfWords = createQuestionsList();
+    if (originListOfWords.length === 0) originListOfWords = createQuestionsList();
 
     // если закончились вопросы - Well done
     if (howManyQuestionsIsNow__shuffleGame === originListOfWords.length) {
@@ -216,7 +216,7 @@ function shuffleGameButton() {
     parent.addEventListener("mousemove", shuffleGame__moveTarget);
     function shuffleGame__moveTarget(event) {
         if (target) {
-            if ([...target.classList] == "shuffleGame__moveIt-btn") {
+            if ([...target.classList] === "shuffleGame__moveIt-btn") {
                 target.style.position = "absolute";
                 target.style.left = `${event.clientX - event.target.getBoundingClientRect().x}px`;
                 target.style.top = `${event.clientY - event.target.getBoundingClientRect().y}px`;
