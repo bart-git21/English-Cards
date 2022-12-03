@@ -164,11 +164,8 @@ function translate_start() {
 function deleteQuestion() {
     deletedCardsCounter += 1;
     questionContainer.classList.remove("green");
-    let i = 0;
-    originListOfWords.forEach(
-        (e, index) => (e[0] === questionContainer.textContent) && (i = index)
-    )
-    originListOfWords.splice(i, 1);
+    const index = originListOfWords.findIndex(e => e[0] === questionContainer.textContent);
+    originListOfWords.splice(index, 1);
     translate_howManyQuestionsIsNow--;
     rememberGameBtn.focus();
 }
