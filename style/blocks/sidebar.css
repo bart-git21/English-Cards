@@ -82,7 +82,7 @@
     padding: 20px;
     border-radius: 12px;
     background-color: var(--button-color);
-    color: white;
+    color: var(--light-text-color);
 }
 .english__shuffle:hover {
     cursor: pointer;
@@ -121,7 +121,7 @@ input[type=number] {
     border-radius: 10px;
 }
 .wr__pause-btn:focus {
-    border: 2px solid white;
+    border: 2px solid var(--light-text-color);
     background-color: var(--dark-active-color);
 }
 
@@ -172,6 +172,6 @@ input[type=number] {
 
 .english__sidebar__info .icon,
 .sidebar__info__numberOfList {
-    color: white;
+    color: var(--light-text-color);
     font-size: 33px;
 }

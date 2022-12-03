@@ -5,6 +5,8 @@
     --bg-color: #FEC8D8;
     --bg-dark-color: #93668e;
     --button-color: #D291BC;
-    --active-color: #c6fced;
-    --dark-active-color: #00a987;
+    /* --active-color: #c6fced; */
+    --active-color: #a1e512;
+    /* --dark-active-color: #00a987; */
+    --dark-active-color: #71a00d;
 }
