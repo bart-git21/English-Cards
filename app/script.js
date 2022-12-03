@@ -116,23 +116,27 @@ async function enterTextareaAndSidebar(e) {
 let translate_howManyQuestionsIsNow = 0;
 let translate_getCounter = null;
 let translate_timer;
+let isShowCards = false;
+let deletedCardText = "";
 const MAX_NUMBERS_OF_WORDS = 11;
 function translate_showFirstNQuestions(counter) {
     if (counter === arr_for_asking.length) {
+        questionContainer.classList.remove("deleteAnimation");
         questionContainer.textContent = `
             Well done!
             You deleted ${deletedCardsCounter} cards!
         `;
         answerContainer.textContent = null;
         translate_getCounter = null;
+        isShowCards = false;
+        return;
     }
-    else {
-        questionContainer.textContent = arr_for_asking[counter][0];
-        answerContainer.textContent = arr_for_asking[counter][1];
-        translate_getCounter = ++counter;
-        const pause = parseFloat(pauseInput.value) || 2;
-        translate_timer = setTimeout(()=>{translate_showFirstNQuestions(counter)}, pause * 1000);
-    }
+    isShowCards = true;
+    questionContainer.textContent = arr_for_asking[counter][0];
+    answerContainer.textContent = arr_for_asking[counter][1];
+    translate_getCounter = ++counter;
+    const pause = parseFloat(pauseInput.value) || 2;
+    translate_timer = setTimeout(()=>{translate_showFirstNQuestions(counter)}, pause * 1000);
 }
 function translate_prevPhrase() {
     if ((translate_getCounter -= 2) >= 0) {
@@ -162,11 +166,23 @@ function translate_start() {
     translate_showFirstNQuestions(0);
 }
 function deleteQuestion() {
+    if (isShowCards === false || deletedCardText === questionContainer.textContent) {
+        rememberGameBtn.focus();
+        return;
+    };
+    deletedCardText = questionContainer.textContent;
     deletedCardsCounter += 1;
     questionContainer.classList.remove("green");
+    questionContainer.classList.add("deleteAnimation");
+    setTimeout(()=>{
+        questionContainer.classList.remove("deleteAnimation");
+    }, 1000);
+
     const index = originListOfWords.findIndex(e => e[0] === questionContainer.textContent);
     originListOfWords.splice(index, 1);
+    
     translate_howManyQuestionsIsNow--;
+
     rememberGameBtn.focus();
 }
 rememberGameBtn.addEventListener("click", translate_start);
