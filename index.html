@@ -23,23 +23,33 @@
             </span>
         </div>
 
-        <button class="btn_css wr__btn-remember">переводить карточки</button>
+        <button class="btn_css wr__btn-remember">translate the card</button>
         <button class="btn_css wr__btn-shuffle-words">перемешать слова в карточке</button>
         <button class="btn_css wr__btn-writing">написание карточек</button>
     </div>
 
     <div class="sidebar english__sidebar__settings">
-        <i class="fa-solid fa-gear"></i>
-        
-        <div class="wr__pause">
-            <label for="pause">Пауза между карточками (секунд):</label>
-            <input id="pause" class="wr__pause-btn" type="number" placeholder="pause duration">
+        <i class="fa-solid fa-gear"></i>        
+        <div class="wr__pause sidebar__row">
+            <h4>Delay time in seconds:</h4>
+            <label>
+                <input id="pause" class="wr__pause-btn" type="number" placeholder="pause duration">
+            </label>
         </div>
     </div>
 
     <div class="sidebar english__sidebar__info">
         <i class="icon fa-solid fa-circle-info"></i>
-        <div class="sidebar__info__numberOfList"></div>
+        <div class="sidebar__info__control sidebar__row">
+            <h4>Keyboard buttons control:</h4>
+            <div class="sidebar__info__control__content">
+                <span><i class="fa-solid fa-square-caret-left"></i></span><span> - return last card</span>
+                <span><i class="fa-solid fa-square-caret-right"></i></span><span> - call next card</span>
+                <span><i class="fa-solid fa-square-caret-up"></i><i class="fa-solid fa-square-caret-down"></i></span><span> - decrease / increase delay time in 0.1 sec increments</span>
+                <span>Spacebar</span><span> - start from begining</span>
+            </div>
+        </div>
+        <div class="sidebar__info__numberOfList sidebar__row"></div>
     </div>
 
     <main>
