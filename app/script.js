@@ -104,9 +104,11 @@ async function inputTextarea(text) {
     )
 }
 async function enterTextareaAndSidebar(e) {
-    moveToStart();
-    await inputTextarea(e.target.textContent);
-    inputSidebar(e.target.textContent);
+    if (e.target && e.target.tagName === "BUTTON") {
+        moveToStart();
+        await inputTextarea(e.target.textContent);
+        inputSidebar(e.target.textContent);
+    }
 }
 
 
@@ -120,8 +122,8 @@ let isShowCards = false;
 let deletedCardText = "";
 const MAX_NUMBERS_OF_WORDS = 11;
 function translate_showFirstNQuestions(counter) {
+    questionContainer.classList.remove("deleteAnimation");
     if (counter === arr_for_asking.length) {
-        questionContainer.classList.remove("deleteAnimation");
         questionContainer.textContent = `
             Well done!
             You deleted ${deletedCardsCounter} cards!
@@ -174,9 +176,6 @@ function deleteQuestion() {
     deletedCardsCounter += 1;
     questionContainer.classList.remove("green");
     questionContainer.classList.add("deleteAnimation");
-    setTimeout(()=>{
-        questionContainer.classList.remove("deleteAnimation");
-    }, 1000);
 
     const index = originListOfWords.findIndex(e => e[0] === questionContainer.textContent);
     originListOfWords.splice(index, 1);
