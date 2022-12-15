@@ -40,6 +40,15 @@
     transition: all 1s;
 }
 
+.sidebar__row {
+    font-size: 18px;
+    color: var(--dark-text-color);
+    background: var(--bg-color);
+    border: 2px solid var(--button-color);
+    margin-block: 10px;
+    padding: 10px;
+}
+
 /* ========================== english buttons ===========================*/
 .english__sidebar {    
     display: flex;
@@ -95,7 +104,6 @@
     position: relative;
     display: inline-block;
     margin: 30px 0;
-    font-size: 22px;
 }
 
 /* Remove Arrows/Spinners */
@@ -115,7 +123,7 @@ input[type=number] {
     font-size: 22px;
     text-align: center;
     padding: 10px;
-    margin: 0 0 50px;
+    margin-block: 10px;
     appearance: none;
     outline: none;
     border-radius: 10px;
@@ -168,10 +176,21 @@ input[type=number] {
     top: 80%;
     font-size: 25px;
     height: 10vh;
+    color: black;
 }
 
-.english__sidebar__info .icon,
-.sidebar__info__numberOfList {
+.english__sidebar__info .icon {
     color: var(--light-text-color);
     font-size: 33px;
+}
+
+.sidebar__info__control__content {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, auto);
+}
+.sidebar__info__control__content span:nth-child(odd) {
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
