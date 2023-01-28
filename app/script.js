@@ -243,7 +243,7 @@ function shuffleGameButton() {
         if ([...e.target.classList].find(e=>e==="shuffleGame__moveIt-btn")) {
             target = e.target;
         }
-        else {
+        else if (target) {
             target.style.position = "absolute";
             target.style.left = `${e.clientX - e.target.getBoundingClientRect().x - parseInt(window.getComputedStyle(target).marginLeft)}px`;
             target.style.top = `${e.clientY - e.target.getBoundingClientRect().y - parseInt(window.getComputedStyle(target).marginTop)}px`;
