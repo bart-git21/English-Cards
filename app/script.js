@@ -231,7 +231,7 @@ function shuffleGameButton() {
     parent.addEventListener("mousemove", shuffleGame__moveTarget);
     function shuffleGame__moveTarget(event) {
         if (target) {
-            if ([...target.classList] === "shuffleGame__moveIt-btn") {
+            if (target.className === "shuffleGame__moveIt-btn") {
                 target.style.position = "absolute";
                 target.style.left = `${event.clientX - event.target.getBoundingClientRect().x}px`;
                 target.style.top = `${event.clientY - event.target.getBoundingClientRect().y}px`;
