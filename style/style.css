@@ -70,7 +70,8 @@ main {
 }
 .questions.green {
     color: var(--dark-active-color);
-    font-weight: 500;
+    font-weight: 900;
+    font-size: 300%;
 }
 .questions.deleteAnimation {
     animation: deleteAnimation 0.6s linear;

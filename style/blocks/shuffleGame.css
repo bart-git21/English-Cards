@@ -1,6 +1,3 @@
-
-
-
 .parent {
     width: 100%;
     height: 40%;
@@ -32,11 +29,11 @@
     box-shadow: 5px 5px 10px #f17c99, -5px -5px 10px #ccb0dd;
 }
 
-.shuffleGame__wrong-btn {
+.shuffleGame--wrongBtn {
     background-color: var(--bg-dark-color);
     color: var(--light-text-color);
 }
-.shuffleGame__correct-btn {
+.shuffleGame--correctBtn {
     background-color: var(--dark-active-color);
     color: var(--light-text-color);
 }
