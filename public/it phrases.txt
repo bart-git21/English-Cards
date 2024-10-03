@@ -1,90 +1,69 @@
 ﻿console debugger — диалоговый отладчик
-a device driver	драйвер устройства
-a graphical user interface (GUI)	графический пользовательский интерфейс
-a kernel	ядро (например, операционной системы)
-a mobile application/app	мобильное приложение
-a plug-in block - дополнительный блок, дополнительный программный модуль
-a programming language	язык программирования
-a scroll bar	полоса прокрутки
-a snapshot	снимок состояния системы
-a spreadsheet	электронная таблица
-a status bar	строка состояния
-to select a template — выбирать шаблон 
-virtual synchrony — виртуальная синхронность
+device driver	драйвер устройства
+graphical user interface графический пользовательский интерфейс
+kernel	ядро (например, операционной системы)
+mobile application мобильное приложение
+plug-in block - дополнительный блок, дополнительный программный модуль
+scroll bar полоса прокрутки
+snapshot снимок состояния системы
+spreadsheet электронная таблица
+status bar строка состояния
+select a template — выбирать шаблон
 Local Area Network — локальная вычислительная сеть
+Booting is the process of starting the computer. Загрузка — это процесс запуска компьютера
+malicious software (malware) вредоносное программное обеспечение
 localhost — локальное имя домена
-loopback interface — сетевая заглушка
-need to be careful - нужно быть осторожным
-processing of the data - обработка данных
-the experienced |ɪkˈspɪrɪənst| programmer - опытный программист
-bandwidth	пропускная способность (канала передачи данных)
-initialize	приводить в исходное состояние
-integrate	объединять в одну систему
-central processing unit (CPU) - центральный процессор
+experienced programmer - опытный программист
+version control system система контроля версий
+bandwidth пропускная способность (канала передачи данных)
+initialize приводить в исходное состояние
+integrate объединять в одну систему
 plug in	подключать
-broadband	широкополосный доступ в интернет
+This rule does not always apply. Это правило не всегда применимо
 Simple and powerful text editor	Простой и мощный текстовый редактор
-a sound card, an audio card	звуковая карта
-a storage device	запоминающее устройство, накопитель
-a touch screen	сенсорный экран
-programming language — язык программирования
+sound card звуковая карта
+storage device запоминающее устройство, накопитель
+touch screen сенсорный экран
 query language — язык запросов
 Acceptance Testing is the last phase of software testing Приемочное тестирование — это последний этап тестирования программного обеспечения
 At the Confirm deletion prompt, click Yes — При выводе Подсказки подтвердить удаление щелкните Да
 web application is launched. веб-приложение запускается
-graphics processing unit (GPU)	графический процессор
-air cooling	воздушное охлаждение
-the paper in the printer. бумага в принтере
-random-access memory (RAM)	оперативная память (ОЗУ)
-read-only memory (ROM)	постоянное запоминающее устройство (ПЗУ)
+graphics processing unit графический процессор
+air cooling воздушное охлаждение
+paper in the printer. бумага в принтере
+random-access memory оперативная память (ОЗУ)
 removable media	съемные носители информации
 water cooling	водяное охлаждение
 the ranking is gonna change? рейтинг поменяется? 
 an expansion card	карта (плата) расширения
-an uninterruptible power source (UPS)	источник бесперебойного питания
 graphics card	видеокарта (графический адаптер)
-hard disk drive (HDD)	жесткий диск
-network card	сетевой адаптер (сетевая карта, сетевая плата)
-solid-state drive (SSD)	твердотельный накопитель
+network card	сетевой адаптер (сетевая карта, сетевая плата)	
 client-server architecture	клиент-серверная архитектура
 cloud computing	облачные вычисления
 cloud storage	облачное хранилище данных
-dynamic host configuration protocol (DHCP)	протокол динамической настройки узла
-domain name system (DNS)	система доменных имен
-instant messaging (IM)	обмен мгновенными сообщениями
-Internet service provider (ISP)	интернет-провайдер
-local area network (LAN)	локальная сеть
+domain name system система доменных имен
+local area network локальная сеть
 latency	задержка, период ожидания
-media access control (MAC) address	аппаратный адрес, MAC-адрес
-peer-to-peer (P2P)	одноранговая сеть, пиринговая сеть
 twisted pair	витая пара
-voice over IP (VoIP)	голосовая связь через интернет, IP-телефония
-wide area network (WAN)	глобальная сеть, широкомасштабная сеть
-to develop a new product — разрабатывать новый продукт 
+develop a new product — разрабатывать новый продукт 
 The developer of software. разработчик программного обеспечения
 distributed system — распределенная система
 hard disk — жесткий диск
-leaf node — вершина дерева, не имеющая дочерних вершин
-ledger — программа финансового учёта
-life-cycle — жизненный цикл
-line switching — коммутация каналов (линий связи)
+life cycle — жизненный цикл
 line terminator — завершитель строки
 Line Feed — перевод строки
 links bar — панель ссылок
 high availability — высокая доступность
 high performance — высокая производительность
 Integrated Development Environment — интегрированная среда разработки
-Last In First Out — последним пришёл — 1 обслужен
-Linux Security Modules — интерфейс модулей безопасности
-list headed by size — список с указанием размера
-I'm upgrading my firmware. Я обновляю свою прошивку
+Last In First Out — последним пришёл, первым ушел
+I'm upgrading. Я обновляю
 fault-tolerant — отказоустойчивость
-arge folder — большая папка (на компьютере)
+large folder — большая папка (на компьютере)
 free access — свободный доступ, открытый доступ
-courses in computing. курс по вычислительной технике
+course in computing. курс по вычислительной технике
 customization — настройка
 in the database. в базе данных
-debugger — отладчик (программа для отладки кода)
 scroll up/down	прокручивать вверх/вниз веб-страницу
 switch on/off	включать/выключать
 not updated regularly. не обновляется регулярно
@@ -93,5 +72,4 @@ binary data	двоичные данные
 commercial software	платное программное обеспечение
 What sort of data is it? — Что это за информация (данные)?
 data processing	обработка данных
-extreme programming	экстремальное программирование
 freeware	бесплатное программное обеспечение

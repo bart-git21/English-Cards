@@ -1,10 +1,44 @@
 ﻿The boy is rather tall for his age.  Мальчик весьма высок для своего возраста
 The surface of the lake was completely calm.  Поверхность озера была идеально спокойной
 The child dug a deep hole in the sand.  Ребёнок выкопал глубокую яму в песке
+to cover a wall with paper — оклеивать стену обоями
 magnetic attraction — магнитное притяжение
 She has a good sense of balance. У неё хорошее чувство равновесия
+She designed a new logo for the company. Она разработала новый логотип для этой компании
+Berries are a Cooking Ingredient - Ягоды — кулинарный ингредиент
+figuring things out on your own разобраться во всем самостоятельно
+The shark is a large fish. Акула - крупная рыба
+Try not to rely on it too much Старайтесь не слишком полагаться на это
+The zoo is open daily. Зоопарк открыт ежедневно
+This letter bears no date. На этом письме нет даты
+The surface of the lake was completely calm.  Поверхность озера была идеально спокойной
+What color is the sun? Какого цвета солнце?
+What is the largest dragonfly ? - Какая самая большая стрекоза
+look for an apartment — присматривать себе квартиру
+What time frame ? Какие временные рамки ?
+They kindly invited us to come in. Они любезно пригласили нас войти
+The best employee of the month will get a reward.  Лучший работник месяца получит награду
+The child dug a deep hole in the sand.  Ребёнок выкопал глубокую яму в песке
 load balancing — балансировка нагрузки
+Steps for brushing wet hair. Этапы расчесывания мокрых волос
+The old empty house looks scary.  Старый пустой дом выглядит устрашающе
+High mountains surrounded the castle.  Замок окружали высокие горы
+My hammer is made of iron.  Мой молоток изготовлен из железа
+She won the competition outright. Она выиграла соревнование
+I fixed the shelves. Я закрепил полки
+I have friendly relations with my colleagues.  У меня дружеские отношения с коллегами
+I have no time to spare. У меня нет свободного времени
+I need to ask a question. Мне нужно задать вопрос
+I put the fruit in a bag.  Я положил фрукты в сумку
+He took all precaution measures.  Он принял все меры предосторожности
+The bananas are still green. Бананы всё еще зеленые
+attempt a difficult task — пробовать выполнить трудную задачу
+Call me when you get home. Позвоните мне, когда придете домой
+He became king at a young age. Он стал королём в молодом возрасте
+A vase fell off the shelf. С полки упала ваза
+She phoned the hospital daily. Она звонила в больницу каждый день
 birds build nests — птицы строят гнёзда
+how to implement a hyperlink effectively? как эффективно реализовать гиперссылку?
 primary color — основной цвет
 Use the synonyms from the text. — Используй синонимы из текста.
 I can show you how to uninstall the game. Я могу вам показать, как удалить игру
@@ -16,7 +50,10 @@ Fill in the nouns from the text. — Вставь существительные
 Fill in the prepositions if necessary. — Вставь, если нужно, предлоги.
 Fill in the words from the box. — Вставь слова из рамки. 
 Imagine that you're… — Представь, что ты…
+She has three small children. У неё трое маленьких детей
+She put her baby to sleep. Она уложила спать своего ребёнка
 See page 11. Смотрите на странице 11. 
+We won by just one point. Мы выиграли с разницей всего в одно очко
 Make up sentences. — Составь предложения.
 Put the sentences in the right order. — Расставь предложения в правильном порядке.
 Put the verbs in brackets in the right form. — Поставь глаголы в скобках в нужную форму.
