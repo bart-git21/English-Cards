@@ -8,7 +8,6 @@ scroll bar полоса прокрутки
 snapshot снимок состояния системы
 spreadsheet электронная таблица
 status bar строка состояния
-select a template — выбирать шаблон
 Local Area Network — локальная вычислительная сеть
 Booting is the process of starting the computer. Загрузка — это процесс запуска компьютера
 malicious software (malware) вредоносное программное обеспечение
