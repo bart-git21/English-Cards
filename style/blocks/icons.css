@@ -1,9 +1,0 @@
-
-.fa-trash-can {
-    position: absolute;
-}
-
-.fa-trash-can:hover {
-    cursor: pointer;
-    color: var(--dark-active-color);
-}

@@ -1,7 +1,9 @@
 :root {
-    --text-color: #957DAD;
+    --text-color: #2E4053;
     --dark-text-color: #78618f;
-    --light-text-color: #ecd0fc;
+    /* --light-text-color: #ecd0fc; */
+    --light-text-color: #957DAD;
+    --hover-text-color: #fff;
     --bg-color: #FEC8D8;
     --bg-dark-color: #93668e;
     --button-color: #D291BC;
