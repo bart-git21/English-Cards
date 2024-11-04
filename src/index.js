@@ -46,8 +46,7 @@ tabs.forEach((e) =>
 textArea.addEventListener("input", function () {
   translateBody.innerHTML = "The new sentences have come into being!";
   if (JSON.stringify(controllers.translateGame) === "{}") return;
-  controllers.translateGame.stop();
-  controllers.stopGames();
+  controllers.translateStop();
 });
 textArea.addEventListener("click", function () {
   html.removeEventListener("keyup", keyboardListener);

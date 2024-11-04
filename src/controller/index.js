@@ -65,6 +65,9 @@ const controllers_translate = {
     this.translateGame = new TranslateModel(originList.list);
     this.translateGame.play();
   },
+  translateStop() {
+    this.translateGame.stop();
+  },
   async deleteElem() {
     JSON.stringify(this.translateGame) !== "{}" &&
       (await this.translateGame.excludeElement());
