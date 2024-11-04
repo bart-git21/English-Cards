@@ -94,7 +94,6 @@ const controllers_drag_drop = {
     originList.shuffled();
     this.dragdropGame = new dragdropModel(originList.list);
     this.dragdropGame.play();
-    //   (dragdropQuestion.textContent = "Well done! You are finished!");
   },
   dragdropCheck() {
     if (this.dragdropGame.check()) {
@@ -114,7 +113,9 @@ const controllers_drag_drop = {
     if ([...event.target.classList].includes("dragdrop__word")) {
       this.dragdropGame.drag(event);
       const self = this;
-      dragdropAnswer.onmousemove = (e)=>{self.move(e)};
+      dragdropAnswer.onmousemove = (e) => {
+        self.move(e);
+      };
     } else {
       this.dragdropGame.drop(event);
       dragdropAnswer.onmousemove = null;
