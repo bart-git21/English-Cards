@@ -113,8 +113,11 @@ const controllers_drag_drop = {
   dragdrop(event) {
     if ([...event.target.classList].includes("dragdrop__word")) {
       this.dragdropGame.drag(event);
+      const self = this;
+      dragdropAnswer.onmousemove = (e)=>{self.move(e)};
     } else {
       this.dragdropGame.drop(event);
+      dragdropAnswer.onmousemove = null;
     }
   },
 };

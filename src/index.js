@@ -71,9 +71,6 @@ dragDropBtnCheck.addEventListener("click", function () {
 dragdropAnswer.addEventListener("mousedown", function (e) {
   controllers.dragdrop(e);
 });
-dragdropAnswer.addEventListener("mousemove", function (e) {
-  controllers.move(e);
-});
 
 writingBtn.addEventListener("click", function () {
   controllers.writingStart();
