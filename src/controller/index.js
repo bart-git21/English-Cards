@@ -18,6 +18,9 @@ const controllers_delay = {
     if (JSON.stringify(this.translateGame) === "{}") {
       translatePopup.textContent = "Start the game";
       translatePopup.classList.add("show");
+      setTimeout(() => {
+        translatePopup.classList.remove("show");
+      }, 2000);
       return;
     }
     controllers.translateGame.updateDelay(true);
