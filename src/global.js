@@ -23,7 +23,9 @@ const dragDropBtnStart = document.querySelector("#dragdrop_btn_start");
 const dragDropBtnCheck = document.querySelector("#dragdrop_btn_check");
 const dragdropQuestion = document.querySelector("#dragdrop_question");
 const dragdropAnswer = document.querySelector("#dragdrop_answer");
-const writingBtn = document.querySelector("#writing_btn");
+
+const writingBtnStart = document.querySelector("#writing_start");
+const writingBtnNext = document.querySelector("#writing_next");
 
 export {
   shuffle,
@@ -43,5 +45,6 @@ export {
   dragDropBtnCheck,
   dragdropQuestion,
   dragdropAnswer,
-  writingBtn,
+  writingBtnStart,
+  writingBtnNext,
 };

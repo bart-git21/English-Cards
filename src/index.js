@@ -6,7 +6,7 @@ import {
   dragDropBtnStart,
   dragDropBtnCheck,
   dragdropAnswer,
-  writingBtn,
+  writingBtnStart,
   backToTopBtn,
   textArea,
   translateBody,
@@ -19,25 +19,6 @@ document.addEventListener("scroll", visibleBactToTopButton);
 backToTopBtn.addEventListener("click", backToTop);
 backToTop();
 
-async function keyboardListener(event) {
-  switch (event.key) {
-    case "ArrowUp":
-      controllers.incrementDelay();
-      break;
-    case "ArrowDown":
-      controllers.decrementDelay();
-      break;
-    case "ArrowLeft":
-      controllers.prevElem();
-      break;
-    case "ArrowRight":
-      controllers.nextElem();
-      break;
-    case "Delete":
-      controllers.deleteElem();
-      break;
-  }
-}
 tabs.forEach((e) =>
   e.addEventListener("keydown", (e) => {
     e.stopImmediatePropagation();
@@ -71,6 +52,6 @@ dragdropAnswer.addEventListener("mousedown", function (e) {
   controllers.dragdrop(e);
 });
 
-writingBtn.addEventListener("click", function () {
+writingBtnStart.addEventListener("click", function () {
   controllers.writingStart();
 });
