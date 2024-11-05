@@ -85,7 +85,7 @@ const originList = {
 };
 
 class TranslateModel {
-  constructor(array) {
+  constructor(array = []) {
     this.motherList = JSON.parse(JSON.stringify(array)) || [];
     this.trainingList = [];
     this.counter = 0;
@@ -191,6 +191,7 @@ class TranslateModel {
     translateAnswer.textContent = null;
   }
   async display() {
+    if (!this.isPlay) return;
     this.isPlay = true;
     while (this.counter < this.trainingList.length) {
       await this.displayElement();
@@ -216,7 +217,7 @@ class TranslateModel {
 }
 
 class dragdropModel {
-  constructor(array) {
+  constructor(array = []) {
     this.list = JSON.parse(JSON.stringify(array)) || [];
     this.counter = 0;
     this.target = null;
