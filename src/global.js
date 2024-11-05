@@ -24,6 +24,8 @@ const dragDropBtnCheck = document.querySelector("#dragdrop_btn_check");
 const dragdropQuestion = document.querySelector("#dragdrop_question");
 const dragdropAnswer = document.querySelector("#dragdrop_answer");
 
+const writingQuestion = document.querySelector("#writing_question");
+const writingAnswer = document.querySelector("#writing_answer");
 const writingBtnStart = document.querySelector("#writing_start");
 const writingBtnNext = document.querySelector("#writing_next");
 
@@ -45,6 +47,8 @@ export {
   dragDropBtnCheck,
   dragdropQuestion,
   dragdropAnswer,
+  writingQuestion,
+  writingAnswer,
   writingBtnStart,
   writingBtnNext,
 };
