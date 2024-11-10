@@ -143,12 +143,15 @@ class TView {
   }
   bindToStop(handler: () => void) {
     this.translateBtnStop.addEventListener("click", () => {
-      this.removeKeyListener();
-      this.translateQuestion.textContent =
-        "The game is stopped. Click to continue";
-      this.translateAnswer.textContent = "";
+      this.stop();
       handler();
     });
+  }
+  stop() {
+    this.removeKeyListener();
+    this.translateQuestion.textContent =
+      "The game is stopped. Click to continue";
+    this.translateAnswer.textContent = "";
   }
 
   sentence(question: string, answer: string) {

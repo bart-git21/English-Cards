@@ -1,4 +1,4 @@
-import { tabs, translationTab, dragdropTab, writingTab, dragDropBtnStart, dragDropBtnCheck, dragdropAnswer, writingAnswer, writingBtnStart, writingBtnNext, writingBtnCheck, backToTopBtn, textArea, } from "./global.js";
+import { tabs, dragdropTab, writingTab, dragDropBtnStart, dragDropBtnCheck, dragdropAnswer, writingAnswer, writingBtnStart, writingBtnNext, writingBtnCheck, backToTopBtn, textArea, } from "./global.js";
 import { appTranslate } from "./controller/translate_controller.js";
 import { visibleBactToTopButton, backToTop } from "./components/backtotop.js";
 import controllers from "./controller/index.js";
@@ -13,9 +13,6 @@ tabs.forEach((e) => {
     e.addEventListener("click", () => {
         controllers.removeKeyListeners();
     });
-});
-translationTab?.addEventListener("click", () => {
-    appTranslate.handleKeyListener();
 });
 dragdropTab?.addEventListener("click", () => {
     appTranslate.stop();

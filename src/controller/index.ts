@@ -178,7 +178,6 @@ const controllers_writing = {
 
 export default {
   removeKeyListeners() {
-    console.log("key listeners are removed");
     this.dragdropRemoveKeyListener();
     this.writingRemoveKeyListener();
   },

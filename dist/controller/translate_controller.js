@@ -27,7 +27,8 @@ class TController {
         this.view.subscribeToKeyup(this.model.updateDelay.bind(this.model), this.model.prev.bind(this.model), this.model.next.bind(this.model), this.model.delete.bind(this.model), this.handleStart);
     }
     stop() {
-        this.model.stop;
+        this.view.stop();
+        this.model.stop();
     }
 }
 function translateGame() {

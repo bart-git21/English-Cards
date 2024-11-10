@@ -46,7 +46,8 @@ class TController {
     );
   }
   stop() {
-    this.model.stop;
+    this.view.stop();
+    this.model.stop();
   }
 }
 

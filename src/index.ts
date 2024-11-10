@@ -30,9 +30,6 @@ tabs.forEach((e) => {
     controllers.removeKeyListeners();
   });
 });
-translationTab?.addEventListener("click", () => {
-  appTranslate.handleKeyListener();
-});
 dragdropTab?.addEventListener("click", () => {
   appTranslate.stop();
   controllers.dragdropAddKeyListener();
