@@ -24,7 +24,7 @@ class TController {
     this.view.onClickTextarea();
     this.view.bindToDelay(this.model.updateDelay.bind(this.model));
     this.view.bindToStart(this.handleStart);
-    this.view.bindToNextLevel(this.model.nextLevel.bind(this.model));
+    this.view.bindToNextLevel(this.model.play.bind(this.model));
     this.view.bindToStop(this.model.stop.bind(this.model));
   }
 
