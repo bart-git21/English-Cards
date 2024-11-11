@@ -51,13 +51,14 @@ class TModel {
     this.updateProgress();
     this.play();
   }
-  updateDelay(value: number = 0) {
-    if (this.isChangingDelay) return;
+  updateDelay(value: number = 0): boolean {
+    if (this.isChangingDelay) return false;
     this.isChangingDelay = true;
     this.ms = value;
     setTimeout(() => {
       this.isChangingDelay = false;
     }, 2000);
+    return true;
   }
   async start(failOriginCallback: () => void, delayCallback: () => number) {
     try {

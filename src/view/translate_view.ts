@@ -42,7 +42,7 @@ class TView {
   }
 
   subscribeToKeyup(
-    delayCallback: (number: number) => void,
+    delayCallback: (number: number) => boolean,
     preventCallback: () => void,
     nextCallback: () => void,
     deleteCallback: () => void,
@@ -54,17 +54,15 @@ class TView {
         switch (event.key) {
           case "ArrowUp":
             ms += 0.5;
-            delayCallback(ms);
-            this.translatePopup.textContent = this.translateDelay.value =
-              ms.toString();
-            this.showPopup();
+            delayCallback(ms) &&
+              (this.translatePopup.textContent = this.translateDelay.value =
+                ms.toString()) && this.showPopup();
             break;
           case "ArrowDown":
             ms -= 0.5;
-            delayCallback(ms);
-            this.translatePopup.textContent = this.translateDelay.value =
-              ms.toString();
-            this.showPopup();
+            delayCallback(ms) &&
+              (this.translatePopup.textContent = this.translateDelay.value =
+                ms.toString()) && this.showPopup();
             break;
           case "ArrowLeft":
             preventCallback();

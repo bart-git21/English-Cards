@@ -53,12 +53,13 @@ class TModel {
     }
     updateDelay(value = 0) {
         if (this.isChangingDelay)
-            return;
+            return false;
         this.isChangingDelay = true;
         this.ms = value;
         setTimeout(() => {
             this.isChangingDelay = false;
         }, 2000);
+        return true;
     }
     async start(failOriginCallback, delayCallback) {
         try {
