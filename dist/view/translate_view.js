@@ -131,22 +131,21 @@ class TView {
     }
     result(number) {
         switch (true) {
-            case !number:
+            case number === 0:
                 this.translateQuestion.textContent = "Keep going!";
                 break;
             case number > 0: {
-                const text = `
+                this.translateQuestion.textContent = `
             Well done!
             You deleted ${number} ${number === 1 ? "card" : "cards"}!
-            `;
-                this.translateQuestion.textContent = text;
+        `;
                 break;
             }
             default:
-                this.translateQuestion.textContent = "Congratulations! You are win!";
+                this.translateQuestion.textContent = "Congratulations! You've won!";
                 break;
         }
-        this.translateAnswer.textContent = null;
+        this.translateAnswer.textContent = "";
     }
     updateProgress(count = 0, max = count) {
         if (!count) {
