@@ -29,7 +29,7 @@ class TController {
   }
 
   handleStart = async (): Promise<void> => {
-    this.model.motherList = getOrigin();
+    this.model.motherList = originList.getShallowList();
     this.model.trainingList = [];
     await this.model.start(
       this.view.failOriginList.bind(this.view),
@@ -52,13 +52,9 @@ class TController {
 }
 
 function translateGame() {
-  return new TController(new TModel(getOrigin()), new TView());
+  return new TController(new TModel(originList.getShallowList()), new TView());
 }
-function getOrigin() {
-  originList.create();
-  originList.shuffled();
-  return originList.list;
-}
+
 const appTranslate = translateGame();
 
 export { appTranslate };
