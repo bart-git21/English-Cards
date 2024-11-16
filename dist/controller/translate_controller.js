@@ -34,11 +34,6 @@ class TController {
 function translateGame() {
     return new TController(new TModel(originList.getShallowList()), new TView());
 }
-// function getOrigin() {
-//   originList.create();
-//   originList.shuffled();
-//   return originList.list;
-// }
 const appTranslate = translateGame();
 export { appTranslate };
 //# sourceMappingURL=translate_controller.js.map

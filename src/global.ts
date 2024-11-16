@@ -19,12 +19,6 @@ const dragDropBtnCheck: HTMLElement | null = document.querySelector("#dragdrop_b
 const dragdropQuestion: HTMLElement | null = document.querySelector("#dragdrop_question");
 const dragdropAnswer: HTMLElement | null = document.querySelector("#dragdrop_answer");
 
-const writingQuestion: HTMLElement | null = document.querySelector("#writing_question");
-const writingAnswer: HTMLInputElement | null = document.querySelector("#writing_answer");
-const writingBtnStart: HTMLButtonElement | null = document.querySelector("#writing_start");
-const writingBtnNext: HTMLButtonElement | null = document.querySelector("#writing_next");
-const writingBtnCheck: HTMLButtonElement | null = document.querySelector("#writing_check");
-
 export {
   shuffle,
   html,
@@ -38,9 +32,4 @@ export {
   dragDropBtnCheck,
   dragdropQuestion,
   dragdropAnswer,
-  writingQuestion,
-  writingAnswer,
-  writingBtnStart,
-  writingBtnNext,
-  writingBtnCheck,
 };

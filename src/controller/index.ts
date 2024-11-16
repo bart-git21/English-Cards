@@ -1,9 +1,5 @@
 import { textArea } from "../global.js";
-import {
-  originList,
-  dragdropModel,
-  writingModel,
-} from "../model/expressionsModel.js";
+import { originList, dragdropModel } from "../model/expressionsModel.js";
 
 const controllers_drag_drop = {
   html: document.querySelector("html") as HTMLElement,
@@ -103,89 +99,13 @@ const controllers_drag_drop = {
   },
 };
 
-const controllers_writing = {
-  html: document.querySelector("html") as HTMLElement,
-  writingQuestion: document.querySelector("#writing_question") as HTMLElement,
-  writingBtnStart: document.querySelector(
-    "#writing_start"
-  ) as HTMLButtonElement,
-  writingBtnNext: document.querySelector("#writing_start") as HTMLButtonElement,
-  stopTranslateBtn: document.querySelector(
-    "#translate_btn_stop"
-  ) as HTMLButtonElement,
-  writingGame: new writingModel() || null,
-  writingClearMode() {
-    this.writingGame = new writingModel();
-  },
-  writingKeyListener(event: KeyboardEvent): void {
-    console.log("listener is added");
-    switch (event.key) {
-      case "ArrowLeft":
-        this.writingPrev();
-        break;
-      case "ArrowRight":
-        this.writingNext();
-        break;
-      case " ":
-        this.writingStart();
-        break;
-    }
-  },
-  writingAddKeyListener() {
-    this.html.onkeyup = (event) => {
-      this.writingKeyListener(event);
-    };
-  },
-  writingRemoveKeyListener() {
-    this.html.onkeyup = null;
-  },
-  onInput() {
-    this.writingGame.setUserText();
-  },
-  writingStart() {
-    // this.stopTranslateBtn.click();
-    this.writingBtnNext.focus();
-
-    originList.create();
-    originList.shuffled();
-
-    if (originList.list.length) {
-      this.writingGame = new writingModel(originList.list);
-      this.writingGame.play();
-    } else {
-      this.writingGame.fail();
-    }
-  },
-  writingCheck() {
-    // this.writingGame.writingSetUserText();
-    this.writingGame.check() && this.writingGame.next();
-  },
-  writingNext() {
-    if (!this.writingGame.writingList.length) {
-      this.writingQuestion.textContent = "Start the game first!";
-      return;
-    }
-    this.writingGame.next();
-  },
-  writingPrev() {
-    if (!this.writingGame.writingList.length) {
-      this.writingQuestion.textContent = "Start the game first!";
-      return;
-    }
-    this.writingGame.prev();
-  },
-};
-
 export default {
   removeKeyListeners() {
     this.dragdropRemoveKeyListener();
-    this.writingRemoveKeyListener();
   },
   clearGames() {
     console.log("games are stopped");
     this.dragdropClearMode();
-    this.writingClearMode();
   },
   ...(controllers_drag_drop as typeof controllers_drag_drop),
-  ...(controllers_writing as typeof controllers_writing),
 };

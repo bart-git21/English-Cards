@@ -15,10 +15,5 @@ const dragDropBtnStart = document.querySelector("#dragdrop_btn_start");
 const dragDropBtnCheck = document.querySelector("#dragdrop_btn_check");
 const dragdropQuestion = document.querySelector("#dragdrop_question");
 const dragdropAnswer = document.querySelector("#dragdrop_answer");
-const writingQuestion = document.querySelector("#writing_question");
-const writingAnswer = document.querySelector("#writing_answer");
-const writingBtnStart = document.querySelector("#writing_start");
-const writingBtnNext = document.querySelector("#writing_next");
-const writingBtnCheck = document.querySelector("#writing_check");
-export { shuffle, html, backToTopBtn, textArea, tabs, translationTab, dragdropTab, writingTab, dragDropBtnStart, dragDropBtnCheck, dragdropQuestion, dragdropAnswer, writingQuestion, writingAnswer, writingBtnStart, writingBtnNext, writingBtnCheck, };
+export { shuffle, html, backToTopBtn, textArea, tabs, translationTab, dragdropTab, writingTab, dragDropBtnStart, dragDropBtnCheck, dragdropQuestion, dragdropAnswer, };
 //# sourceMappingURL=global.js.map
