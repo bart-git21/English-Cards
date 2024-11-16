@@ -84,7 +84,7 @@ main {
   }
 }
 .tab-pane .card-body {
-  height: max(20vh, 300px);
+  height: max(30vh, 400px);
 }
 
 .btn--red {
