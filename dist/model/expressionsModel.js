@@ -65,144 +65,12 @@ const originList = {
     clear() {
         this.list = [];
     },
+    getShallowList() {
+        this.create();
+        this.shuffled();
+        return JSON.parse(JSON.stringify(this.list));
+    },
 };
-// class translateModel {
-//   translateQuestion: HTMLElement;
-//   translateAnswer: HTMLElement;
-//   motherList: string[][];
-//   trainingList: string[][];
-//   counter: number;
-//   timerId: number;
-//   ms: number;
-//   amount: number;
-//   progress: number;
-//   isPlay: boolean;
-//   constructor(array = [] as string[][]) {
-//     this.translateQuestion = document.querySelector(
-//       "#translate_question"
-//     ) as HTMLElement;
-//     this.translateAnswer = document.querySelector(
-//       "#translate_answer"
-//     ) as HTMLElement;
-//     this.motherList = JSON.parse(JSON.stringify(array)) || [];
-//     this.trainingList = [];
-//     this.counter = 0;
-//     this.timerId = 0;
-//     this.ms = 5;
-//     this.amount = this.motherList.length;
-//     this.progress = 0;
-//     this.isPlay = false;
-//   }
-//   add() {
-//     if (this.motherList.length) {
-//       const element: string[] = this.motherList.pop() as string[];
-//       this.trainingList.push(element);
-//     }
-//   }
-//   shuffleTrainingList() {
-//     shuffle(this.trainingList);
-//   }
-//   getDelay() {
-//     return this.ms;
-//   }
-//   updateDelay(ms: number) {
-//     this.ms = ms;
-//   }
-//   stop() {
-//     clearTimeout(this.timerId);
-//     this.isPlay = false;
-//   }
-//   updateProgress() {
-// const translateProgressbar = document.querySelector(
-//   "#translate_progress_bar"
-// ) as HTMLInputElement;
-// if (!this.motherList.length && !this.trainingList.length) {
-//   this.progress = 0;
-//   translateProgressbar.style.width = "0%";
-//   translateProgressbar.textContent = "";
-//   return;
-// }
-// this.progress =
-//   this.amount - this.motherList.length - this.trainingList.length;
-// translateProgressbar.style.width = `${
-//   (this.progress / this.amount) * 100
-// }%`;
-// translateProgressbar.textContent =
-//   this.progress === 1
-//     ? `1 sentence is learned`
-//     : `${this.progress} sentences are learned`;
-//   }
-//   excludeElement() {
-// if (!this.isPlay) return;
-// this.stop();
-// this.trainingList.splice(this.counter, 1);
-// this.updateProgress();
-// this.playGame();
-//   }
-//   nextElement() {
-//     // this.stop();
-//     if (this.counter < this.trainingList.length) {
-//       this.counter++;
-//       this.playGame();
-//     } else {
-//       this.updateList();
-//     }
-//   }
-//   previewElement() {
-//     if (!this.isPlay) return;
-//     this.stop();
-//     this.counter > 0 && (this.counter -= 1);
-//     this.playGame();
-//   }
-//   displayElement() {
-// this.translateQuestion.textContent = this.trainingList[this.counter][0];
-// this.translateAnswer.textContent = this.trainingList[this.counter][1];
-// return new Promise<void>((resolve) => {
-//     console.log("from promise this.ms = ", this.ms);
-//   this.timerId = setTimeout(() => resolve(), this.ms * 1000);
-// });
-//   }
-//   displayResult() {
-//     if (!this.motherList.length && !this.trainingList.length) {
-//       this.translateQuestion.textContent = "Congratulations! You are win!";
-//       return;
-//     }
-//     this.progress =
-//       this.amount - this.motherList.length - this.trainingList.length;
-//     const text = `
-//                     Well done!
-//                     You deleted ${this.progress} ${
-//       this.progress === 1 ? "card" : "cards"
-//     }!
-//         `;
-//     this.translateQuestion.textContent = this.progress ? text : "Keep going!";
-//     this.translateAnswer.textContent = null;
-//   }
-//   async playGame() {
-// try {
-//   this.isPlay = true;
-//   while (this.counter < this.trainingList.length) {
-// await this.displayElement();
-// this.counter += 1;
-//   }
-//   this.displayResult();
-//   this.isPlay = false;
-// } catch (err) {
-//   console.log(err);
-// }
-//   }
-//   async updateList() {
-// try {
-//   this.stop();
-//   this.motherList.length && this.trainingList.length < 11 && this.add();
-//   this.trainingList.length > 1 && this.shuffleTrainingList();
-//   this.updateProgress();
-//   this.counter = 0;
-// } catch (err) {
-//   console.log(err);
-// }
-//   }
-// }
 class dragdropModel {
     dragdropAnswer;
     dragdropQuestion;
@@ -210,6 +78,7 @@ class dragdropModel {
     counter;
     target;
     isMove;
+    text;
     constructor(array = []) {
         this.dragdropAnswer = document.querySelector("#dragdrop_answer");
         this.dragdropQuestion = document.querySelector("#dragdrop_question");
@@ -217,15 +86,18 @@ class dragdropModel {
         this.counter = 0;
         this.target = null;
         this.isMove = false;
+        this.text = "";
     }
     play() {
         if (this.counter >= this.list.length)
             return true;
         this.dragdropAnswer.textContent = null;
         this.dragdropQuestion.textContent = this.list[this.counter][0];
-        let englishText = this.list[this.counter][1];
-        englishText = englishText.replace(/[^a-zA-Z]$/g, "");
-        let words = englishText.split(" ");
+        this.text = this.list[this.counter][1]
+            .toLowerCase()
+            .replace(/[^a-zA-Z]$/g, "");
+        // this.text = this.text
+        let words = this.text.split(" ");
         shuffle(words);
         for (let word of words) {
             if (word.search(/[a-zA-Z0-9]/g) > -1)
@@ -264,8 +136,8 @@ class dragdropModel {
             const key = Math.floor(xCoord);
             userOrder[key] = e.textContent ?? "";
         });
-        const string = Object.values(userOrder).join(" ");
-        if (this.list[this.counter][1].toLowerCase() === string) {
+        const string = Object.values(userOrder).join(" ").toLowerCase();
+        if (this.text === string) {
             this.counter += 1;
             return true;
         }
@@ -282,57 +154,5 @@ class dragdropModel {
         this.play();
     }
 }
-class writingModel {
-    writingQuestion;
-    writingAnswer;
-    writingList;
-    counter;
-    text;
-    userText;
-    constructor(array = []) {
-        this.writingQuestion = document.querySelector("#writing_question");
-        this.writingAnswer = document.querySelector("#writing_answer");
-        this.writingList = JSON.parse(JSON.stringify(array)) || [];
-        this.counter = 0;
-        this.text = "";
-        this.userText = "";
-    }
-    play() {
-        this.writingAnswer.value = "";
-        this.writingAnswer.focus();
-        if (this.counter >= this.writingList.length) {
-            this.writingQuestion.textContent = "You are finish!";
-            this.counter = 0;
-            return;
-        }
-        this.writingQuestion.textContent = this.writingList[this.counter][0];
-        this.text = this.writingList[this.counter][1].toLowerCase();
-    }
-    fail() {
-        this.writingQuestion.textContent = "Enter the sentences first!";
-    }
-    setUserText() {
-        this.userText = this.writingAnswer.value.toLowerCase();
-    }
-    check() {
-        console.log(this.text);
-        this.writingAnswer.value = "";
-        return this.userText.localeCompare(this.text) === 0;
-        // if (this.userText === this.text) {
-        //   return true;
-        // } else {
-        //   return false;
-        // }
-    }
-    next() {
-        this.counter++;
-        this.play();
-    }
-    prev() {
-        this.counter > 0 && this.counter--;
-        this.play();
-    }
-}
-// export { originList, translateModel, dragdropModel, writingModel };
-export { originList, dragdropModel, writingModel };
+export { originList, dragdropModel };
 //# sourceMappingURL=expressionsModel.js.map
