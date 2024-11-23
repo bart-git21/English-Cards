@@ -1,5 +1,5 @@
 import { textArea } from "../global.js";
-import { originList, dragdropModel } from "../model/expressionsModel.js";
+import { originList, dragdropModel } from "../model/origin_model.js";
 const controllers_drag_drop = {
     html: document.querySelector("html"),
     dragdropQuestion: document.querySelector("#dragdrop_question"),

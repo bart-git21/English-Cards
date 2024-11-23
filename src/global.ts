@@ -5,31 +5,14 @@ function shuffle(arr: string[] | string[][]) {
   }
 }
 
-const html: HTMLHtmlElement | null = document.querySelector("html");
-const backToTopBtn: HTMLButtonElement | null = document.querySelector(".backToTop__btn");
-const textArea: HTMLTextAreaElement | null = document.querySelector("#textarea");
+const backToTopBtn: HTMLButtonElement | null =
+  document.querySelector(".backToTop__btn");
 const tabs: NodeListOf<HTMLElement> = document.querySelectorAll(".nav-link");
+const translationTab: HTMLButtonElement | null =
+  document.querySelector("#translation-tab");
+const dragdropTab: HTMLButtonElement | null =
+  document.querySelector("#dragdrop-tab");
+const writingTab: HTMLButtonElement | null =
+  document.querySelector("#writing-tab");
 
-const translationTab: HTMLButtonElement | null = document.querySelector("#translation-tab");
-const dragdropTab: HTMLButtonElement | null = document.querySelector("#dragdrop-tab");
-const writingTab: HTMLButtonElement | null = document.querySelector("#writing-tab");
-
-const dragDropBtnStart: HTMLElement | null = document.querySelector("#dragdrop_btn_start");
-const dragDropBtnCheck: HTMLElement | null = document.querySelector("#dragdrop_btn_check");
-const dragdropQuestion: HTMLElement | null = document.querySelector("#dragdrop_question");
-const dragdropAnswer: HTMLElement | null = document.querySelector("#dragdrop_answer");
-
-export {
-  shuffle,
-  html,
-  backToTopBtn,
-  textArea,
-  tabs,
-  translationTab,
-  dragdropTab,
-  writingTab,
-  dragDropBtnStart,
-  dragDropBtnCheck,
-  dragdropQuestion,
-  dragdropAnswer,
-};
+export { shuffle, backToTopBtn, tabs, translationTab, dragdropTab, writingTab };
