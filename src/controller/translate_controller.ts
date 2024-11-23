@@ -1,4 +1,4 @@
-import { originList } from "../model/expressionsModel.js";
+import { originList } from "../model/origin_model.js";
 import { TView } from "../view/translate_view.js";
 import { TModel } from "../model/translate_model.js";
 
