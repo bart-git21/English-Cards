@@ -1,4 +1,4 @@
-import { originList } from "../model/expressionsModel.js";
+import { originList } from "../model/origin_model.js";
 import { WModel } from "../model/writing_model.js";
 import { WView } from "../view/writing_view.js";
 class WController {
