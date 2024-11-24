@@ -1,4 +1,4 @@
-.backToTop__btn {
+.scroll-to-top__btn {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -14,14 +14,14 @@
 
     display: none;
 }
-.backToTop__btn:hover {
+.scroll-to-top__btn:hover {
     opacity: 1;
 }
-.backToTop__btn:before {
+.scroll-to-top__btn:before {
     content: "\21E7";
     font-size: 40px;
     position: absolute;
-    top: -5px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
 }

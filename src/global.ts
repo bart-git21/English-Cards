@@ -6,7 +6,7 @@ function shuffle(arr: string[] | string[][]) {
 }
 
 const backToTopBtn: HTMLButtonElement | null =
-  document.querySelector(".backToTop__btn");
+  document.querySelector(".scroll-to-top__btn");
 const tabs: NodeListOf<HTMLElement> = document.querySelectorAll(".nav-link");
 const translationTab: HTMLButtonElement | null =
   document.querySelector("#translation-tab");

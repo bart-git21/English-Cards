@@ -4,7 +4,7 @@ function shuffle(arr) {
         [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 }
-const backToTopBtn = document.querySelector(".backToTop__btn");
+const backToTopBtn = document.querySelector(".scroll-to-top__btn");
 const tabs = document.querySelectorAll(".nav-link");
 const translationTab = document.querySelector("#translation-tab");
 const dragdropTab = document.querySelector("#dragdrop-tab");
