@@ -85,16 +85,10 @@ class TView {
   removeKeyListener() {
     this.html.onkeyup = null;
   }
-  onClickTextarea() {
+  onClickTextarea(handle: ()=>void) {
     this.textArea.addEventListener("click", () => {
-      this.removeKeyListener();
-    });
-  }
-  onBlurTextarea() {
-    this.textArea.addEventListener("blur", () => {
-      this.translateQuestion.textContent =
-        "Sentences are changed. The game is over. Click to start!";
-      this.translateAnswer.textContent = "";
+      this.stop();
+      handle();
     });
   }
   failTexarea() {

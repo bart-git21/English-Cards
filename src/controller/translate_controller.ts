@@ -20,8 +20,7 @@ class TController {
     );
 
     this.handleKeyListener();
-    this.view.onBlurTextarea();
-    this.view.onClickTextarea();
+    this.view.onClickTextarea(this.model.stop.bind(this.model));
     this.view.bindToDelay(this.model.updateDelay.bind(this.model));
     this.view.bindToStart(this.handleStart);
     this.view.bindToNextLevel(this.model.play.bind(this.model));

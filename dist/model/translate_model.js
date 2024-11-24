@@ -100,6 +100,10 @@ class TModel {
     async play() {
         try {
             this.isPlay = true;
+            if (this.counter === this.trainingList.length) {
+                this.nextLevel();
+                return;
+            }
             while (this.counter < this.trainingList.length) {
                 this.displaySentence(this.trainingList[this.counter][0], this.trainingList[this.counter][1]);
                 await new Promise((resolve) => {

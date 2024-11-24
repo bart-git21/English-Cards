@@ -11,8 +11,7 @@ class TController {
         this.model.subscribeToDisplayResult((number) => this.view.result(number));
         this.model.subscribeToDisplayProgress(this.view.updateProgress.bind(this.view));
         this.handleKeyListener();
-        this.view.onBlurTextarea();
-        this.view.onClickTextarea();
+        this.view.onClickTextarea(this.model.stop.bind(this.model));
         this.view.bindToDelay(this.model.updateDelay.bind(this.model));
         this.view.bindToStart(this.handleStart);
         this.view.bindToNextLevel(this.model.play.bind(this.model));
