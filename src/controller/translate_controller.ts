@@ -21,6 +21,7 @@ class TController {
 
     this.handleKeyListener();
     this.view.onClickTextarea(this.model.stop.bind(this.model));
+    this.view.onInputTextarea(this.model.clear.bind(this.model));
     this.view.bindToDelay(this.model.updateDelay.bind(this.model));
     this.view.bindToStart(this.handleStart);
     this.view.bindToNextLevel(this.model.play.bind(this.model));

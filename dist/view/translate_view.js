@@ -67,6 +67,13 @@ class TView {
             handle();
         });
     }
+    onInputTextarea(handle) {
+        this.textArea.addEventListener("input", () => {
+            this.translateQuestion.textContent =
+                "The Sentences are changed. Click to start!";
+            handle();
+        });
+    }
     failTexarea() {
         this.translateQuestion.textContent =
             "Write pairs of English and Russian sentences in the area first!";
@@ -138,7 +145,7 @@ class TView {
                 break;
             }
             default:
-                this.translateQuestion.textContent = "Congratulations! You've won!";
+                this.translateQuestion.textContent = "Click to start!";
                 break;
         }
         this.translateAnswer.textContent = "";

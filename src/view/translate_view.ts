@@ -85,9 +85,16 @@ class TView {
   removeKeyListener() {
     this.html.onkeyup = null;
   }
-  onClickTextarea(handle: ()=>void) {
+  onClickTextarea(handle: () => void) {
     this.textArea.addEventListener("click", () => {
       this.stop();
+      handle();
+    });
+  }
+  onInputTextarea(handle: () => void) {
+    this.textArea.addEventListener("input", () => {
+      this.translateQuestion.textContent =
+        "The Sentences are changed. Click to start!";
       handle();
     });
   }
@@ -165,7 +172,7 @@ class TView {
         break;
       }
       default:
-        this.translateQuestion.textContent = "Congratulations! You've won!";
+        this.translateQuestion.textContent = "Click to start!";
         break;
     }
     this.translateAnswer.textContent = "";

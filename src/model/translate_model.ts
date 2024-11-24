@@ -60,6 +60,9 @@ class TModel {
     }, 2000);
     return true;
   }
+  clear() {
+    this.motherList = this.trainingList = [];
+  }
   async start(failOriginCallback: () => void, delayCallback: () => number) {
     try {
       this.stop();
@@ -94,6 +97,10 @@ class TModel {
   }
   async play() {
     try {
+      if (!this.motherList.length && !this.trainingList.length) {
+        this.displayResult(-1);
+        return;
+      }
       this.isPlay = true;
       if (this.counter === this.trainingList.length) {
         this.nextLevel();
@@ -108,10 +115,6 @@ class TModel {
           this.timerId = setTimeout(() => resolve(), this.ms * 1000);
         });
         this.counter += 1;
-      }
-      if (!this.motherList.length && !this.trainingList.length) {
-        this.displayResult(-1);
-        return;
       }
       this.progress =
         this.amount - this.motherList.length - this.trainingList.length;
