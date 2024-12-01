@@ -1,0 +1,25 @@
+/* cyrillic */
+@font-face {
+  font-family: "Marck Script";
+  src: url("../../fonts/marck-script/marckscript.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* latin */
+@font-face {
+  font-family: "Marck Script";
+  src: url("../../fonts/marck-script/marckscript_latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Marck Script";
+  src: url("../../fonts/marck-script/marckscript_latin_ext.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
