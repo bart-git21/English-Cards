@@ -1,6 +1,5 @@
 class DView {
   html: HTMLHtmlElement;
-  textArea: HTMLTextAreaElement;
   dragDropBtnStart: HTMLElement;
   dragDropBtnCheck: HTMLElement;
   dragdropQuestion: HTMLElement;
@@ -23,7 +22,6 @@ class DView {
       "#dragdrop_answer"
     ) as HTMLElement;
     this.html = document.querySelector("html") as HTMLHtmlElement;
-    this.textArea = document.querySelector("#textarea") as HTMLTextAreaElement;
     this.addKeyListener = () => {};
     this.target = null;
     this.isMove = false;
@@ -48,32 +46,15 @@ class DView {
   removeKeyListener() {
     this.html.onkeyup = null;
   }
-  onBlur() {
-    this.textArea.addEventListener("blur", () => {
-      this.dragdropQuestion.textContent =
-        "The sentences are cnahged. Click to start!";
-      this.dragdropAnswer.textContent = "";
-      this.addKeyListener();
-    });
-  }
-  onClick() {
-    this.textArea.addEventListener("click", () => {
-      this.removeKeyListener();
-    });
-  }
   start(callback: () => void) {
     this.dragDropBtnStart.addEventListener("click", () => {
-      if (!this.textArea.value) {
-        this.message("Enter sentences first!");
-        return;
-      }
+      this.addKeyListener();
       this.dragDropBtnCheck.focus();
       callback();
     });
   }
   check(callback: (arg1: string, arg2: (arg: string) => void) => void) {
     this.dragDropBtnCheck.addEventListener("click", () => {
-      //   callback();
       const nodeList = document.querySelectorAll<HTMLButtonElement>(
         ".dragdrop__word"
       ) as NodeListOf<HTMLButtonElement>;
@@ -132,9 +113,9 @@ class DView {
     this.dragdropAnswer.textContent = "";
   }
   changeCheckBtnTitle(buttonTitle: string): void {
-    this.dragDropBtnCheck.title = buttonTitle;
+    this.dragDropBtnCheck.textContent = buttonTitle;
     setTimeout(() => {
-      this.dragDropBtnCheck.title = "Check and continue";
+      this.dragDropBtnCheck.textContent = "Check and continue";
     }, 500);
   }
   insertWord(word: string) {

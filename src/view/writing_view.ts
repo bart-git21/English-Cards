@@ -1,6 +1,5 @@
 class WView {
   html: HTMLHtmlElement;
-  textArea: HTMLTextAreaElement;
   writingQuestion: HTMLElement;
   writingAnswer: HTMLInputElement;
   writingBtnStart: HTMLButtonElement;
@@ -9,7 +8,6 @@ class WView {
   addKeyListener: () => void;
   constructor() {
     this.html = document.querySelector("html") as HTMLHtmlElement;
-    this.textArea = document.querySelector("#textarea") as HTMLTextAreaElement;
     this.writingQuestion = document.querySelector(
       "#writing_question"
     ) as HTMLElement;
@@ -44,28 +42,7 @@ class WView {
   removeKeyListener() {
     this.html.onkeyup = null;
   }
-  onClickTextarea() {
-    this.textArea.addEventListener("click", () => {
-      this.removeKeyListener();
-    });
-  }
-  onBlurTextarea() {
-    this.textArea.addEventListener("blur", () => {
-      this.writingQuestion.textContent =
-        "Sentences are changed. The game is over. Click to start!";
-      this.writingAnswer.textContent = "";
-    });
-  }
-  failTexarea(): void {
-    this.writingQuestion.textContent =
-      "Write pairs of English and Russian sentences in the area first!";
-    this.writingAnswer.textContent = "";
-  }
-  failStart() {
-    this.writingQuestion.textContent = "Start the game first!";
-    this.writingAnswer.textContent = "";
-  }
-  bindToInput(handler: (arg: string)=> void): void {
+  bindToInput(handler: (arg: string) => void): void {
     this.writingAnswer.addEventListener("keydown", (e) => {
       if (e.key === "Enter") handler(this.writingAnswer.value.toLowerCase());
     });
@@ -81,17 +58,17 @@ class WView {
       handler();
     });
   }
-  bindToCheck(handler: ()=> void) {
+  bindToCheck(handler: () => void) {
     this.writingBtnCheck.addEventListener("click", (e) => {
       e.preventDefault();
       this.writingAnswer.value = "";
       handler();
     });
   }
-  displayQuestion(question: string): void {
+  message(string: string): void {
+    this.writingQuestion.textContent = string;
     this.writingAnswer.value = "";
     this.writingAnswer.focus();
-    this.writingQuestion.textContent = question;
   }
 }
 

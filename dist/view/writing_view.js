@@ -1,6 +1,5 @@
 class WView {
     html;
-    textArea;
     writingQuestion;
     writingAnswer;
     writingBtnStart;
@@ -9,7 +8,6 @@ class WView {
     addKeyListener;
     constructor() {
         this.html = document.querySelector("html");
-        this.textArea = document.querySelector("#textarea");
         this.writingQuestion = document.querySelector("#writing_question");
         this.writingAnswer = document.querySelector("#writing_answer");
         this.writingBtnStart = document.querySelector("#writing_start");
@@ -33,27 +31,6 @@ class WView {
     }
     removeKeyListener() {
         this.html.onkeyup = null;
-    }
-    onClickTextarea() {
-        this.textArea.addEventListener("click", () => {
-            this.removeKeyListener();
-        });
-    }
-    onBlurTextarea() {
-        this.textArea.addEventListener("blur", () => {
-            this.writingQuestion.textContent =
-                "Sentences are changed. The game is over. Click to start!";
-            this.writingAnswer.textContent = "";
-        });
-    }
-    failTexarea() {
-        this.writingQuestion.textContent =
-            "Write pairs of English and Russian sentences in the area first!";
-        this.writingAnswer.textContent = "";
-    }
-    failStart() {
-        this.writingQuestion.textContent = "Start the game first!";
-        this.writingAnswer.textContent = "";
     }
     bindToInput(handler) {
         this.writingAnswer.addEventListener("keydown", (e) => {
@@ -79,10 +56,10 @@ class WView {
             handler();
         });
     }
-    displayQuestion(question) {
+    message(string) {
+        this.writingQuestion.textContent = string;
         this.writingAnswer.value = "";
         this.writingAnswer.focus();
-        this.writingQuestion.textContent = question;
     }
 }
 export { WView };

@@ -8,11 +8,8 @@ class DController {
         this.model = model;
         this.view = view;
         this.view.subscribeToKeyup(this.model.prev.bind(this.model), this.model.next.bind(this.model), this.model.start.bind(this.model));
-        this.view.onBlur();
-        this.view.onClick();
         this.view.start(this.handleStart.bind(this));
         this.view.check(this.model.check.bind(this.model));
-        // this.view.check(this.handleCheck.bind(this));
         this.view.mousedown();
         this.model.subscribeToMessage(this.view.message.bind(this.view));
         this.model.subscribeToInsert(this.view.insertWord.bind(this.view));
@@ -26,6 +23,10 @@ class DController {
     }
     handleRemoveKeyListener() {
         this.view.removeKeyListener();
+    }
+    handleChangedList() {
+        this.model.clear();
+        this.view.message("The sentences are changed. Click to start!");
     }
 }
 const appDragdrop = new DController(new DModel(originList.getShallowList()), new DView());

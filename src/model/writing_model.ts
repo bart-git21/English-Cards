@@ -13,8 +13,8 @@ class WModel {
     this.display = () => {};
   }
 
-  start(handler: () => void): void {
-    this.list.length ? this.play() : handler();
+  start(): void {
+    this.play();
   }
   prev(): void {
     this.counter > 0 && this.counter--;
@@ -27,11 +27,10 @@ class WModel {
   check(): void {
     console.log(this.text);
     this.userText === this.text && this.next();
-    // return this.userText.localeCompare(this.text) === 0;
   }
   play(): void {
     if (this.counter >= this.list.length) {
-      this.display("You are finish!");
+      this.display("Click to Start");
       this.counter = 0;
       return;
     }
@@ -43,6 +42,10 @@ class WModel {
   }
   setUserText(string: string): void {
     this.userText = string;
+  }
+  clear() {
+    this.list = [];
+    this.counter = 0;
   }
 }
 

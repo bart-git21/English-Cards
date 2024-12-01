@@ -20,19 +20,20 @@ class TController {
     );
 
     this.handleKeyListener();
-    this.view.onClickTextarea(this.model.stop.bind(this.model));
-    this.view.onInputTextarea(this.model.clear.bind(this.model));
     this.view.bindToDelay(this.model.updateDelay.bind(this.model));
     this.view.bindToStart(this.handleStart);
-    this.view.bindToNextLevel(this.model.play.bind(this.model));
+    this.view.bindToNextLevel(this.model.nextLevel.bind(this.model));
     this.view.bindToStop(this.model.stop.bind(this.model));
   }
 
   handleStart = async (): Promise<void> => {
     this.model.motherList = originList.getShallowList();
+    if (!this.model.motherList.length) {
+      this.view.message("The list is empty!");
+      return;
+    }
     this.model.trainingList = [];
     await this.model.start(
-      this.view.failOriginList.bind(this.view),
       this.view.getDelay.bind(this.view)
     );
   };
@@ -48,6 +49,10 @@ class TController {
   stop() {
     this.view.stop();
     this.model.stop();
+  }
+  handleChangedList() {
+    this.model.clear();
+    this.view.message("The sentences are changed. Click to start!");
   }
 }
 

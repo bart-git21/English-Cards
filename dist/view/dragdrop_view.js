@@ -1,6 +1,5 @@
 class DView {
     html;
-    textArea;
     dragDropBtnStart;
     dragDropBtnCheck;
     dragdropQuestion;
@@ -14,7 +13,6 @@ class DView {
         this.dragdropQuestion = document.querySelector("#dragdrop_question");
         this.dragdropAnswer = document.querySelector("#dragdrop_answer");
         this.html = document.querySelector("html");
-        this.textArea = document.querySelector("#textarea");
         this.addKeyListener = () => { };
         this.target = null;
         this.isMove = false;
@@ -39,32 +37,15 @@ class DView {
     removeKeyListener() {
         this.html.onkeyup = null;
     }
-    onBlur() {
-        this.textArea.addEventListener("blur", () => {
-            this.dragdropQuestion.textContent =
-                "The sentences are cnahged. Click to start!";
-            this.dragdropAnswer.textContent = "";
-            this.addKeyListener();
-        });
-    }
-    onClick() {
-        this.textArea.addEventListener("click", () => {
-            this.removeKeyListener();
-        });
-    }
     start(callback) {
         this.dragDropBtnStart.addEventListener("click", () => {
-            if (!this.textArea.value) {
-                this.message("Enter sentences first!");
-                return;
-            }
+            this.addKeyListener();
             this.dragDropBtnCheck.focus();
             callback();
         });
     }
     check(callback) {
         this.dragDropBtnCheck.addEventListener("click", () => {
-            //   callback();
             const nodeList = document.querySelectorAll(".dragdrop__word");
             let buttons = [...nodeList];
             const userOrder = {};
@@ -115,9 +96,9 @@ class DView {
         this.dragdropAnswer.textContent = "";
     }
     changeCheckBtnTitle(buttonTitle) {
-        this.dragDropBtnCheck.title = buttonTitle;
+        this.dragDropBtnCheck.textContent = buttonTitle;
         setTimeout(() => {
-            this.dragDropBtnCheck.title = "Check and continue";
+            this.dragDropBtnCheck.textContent = "Check and continue";
         }, 500);
     }
     insertWord(word) {

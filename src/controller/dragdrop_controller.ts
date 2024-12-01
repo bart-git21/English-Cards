@@ -15,11 +15,8 @@ class DController {
       this.model.next.bind(this.model),
       this.model.start.bind(this.model)
     );
-    this.view.onBlur();
-    this.view.onClick();
     this.view.start(this.handleStart.bind(this));
     this.view.check(this.model.check.bind(this.model));
-    // this.view.check(this.handleCheck.bind(this));
     this.view.mousedown();
 
     this.model.subscribeToMessage(this.view.message.bind(this.view));
@@ -35,6 +32,10 @@ class DController {
   }
   handleRemoveKeyListener(): void {
     this.view.removeKeyListener();
+  }
+  handleChangedList() {
+    this.model.clear();
+    this.view.message("The sentences are changed. Click to start!");
   }
 }
 

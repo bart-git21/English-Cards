@@ -13,11 +13,15 @@ class WController {
     this.view.bindToCheck(this.model.check.bind(this.model));
     this.view.bindToStart(this.handleStart);
     this.view.bindToNext(this.model.next.bind(this.model));
-    this.model.subscribeToDsiplay(this.view.displayQuestion.bind(this.view));
+    this.model.subscribeToDsiplay(this.view.message.bind(this.view));
   }
   handleStart = (): void => {
     this.model.list = originList.getShallowList();
-    this.model.start(this.view.failStart.bind(this.view));
+    if (!this.model.list.length) {
+      this.view.message("The list is empty!");
+      return;
+    }
+    this.model.start();
   };
 
   handleAddKeyListener = (): void => {
@@ -26,6 +30,10 @@ class WController {
   handleRemoveKeyListener = (): void => {
     this.view.removeKeyListener();
   };
+  handleChangedList() {
+    this.model.clear();
+    this.view.message("The sentences are changed. Click to start!");
+  }
 }
 
 function writingGame() {

@@ -41,11 +41,19 @@ class DModel {
       callback(`No, try again!`);
     }
   }
+  clear() {
+    this.list = [];
+    this.counter = 0;
+  }
   subscribeToMessage(callback: (arg: string) => void) {
     this.ondisplay = callback;
   }
   subscribeToInsert(callback: (arg: string) => void) {
     this.play = () => {
+      if (!this.list.length) {
+        this.ondisplay("The list is empty!");
+        return;
+      }
       if (this.counter >= this.list.length) {
         this.ondisplay("Finish!");
         return;

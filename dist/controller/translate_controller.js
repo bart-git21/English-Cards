@@ -11,17 +11,19 @@ class TController {
         this.model.subscribeToDisplayResult((number) => this.view.result(number));
         this.model.subscribeToDisplayProgress(this.view.updateProgress.bind(this.view));
         this.handleKeyListener();
-        this.view.onClickTextarea(this.model.stop.bind(this.model));
-        this.view.onInputTextarea(this.model.clear.bind(this.model));
         this.view.bindToDelay(this.model.updateDelay.bind(this.model));
         this.view.bindToStart(this.handleStart);
-        this.view.bindToNextLevel(this.model.play.bind(this.model));
+        this.view.bindToNextLevel(this.model.nextLevel.bind(this.model));
         this.view.bindToStop(this.model.stop.bind(this.model));
     }
     handleStart = async () => {
         this.model.motherList = originList.getShallowList();
+        if (!this.model.motherList.length) {
+            this.view.message("The list is empty!");
+            return;
+        }
         this.model.trainingList = [];
-        await this.model.start(this.view.failOriginList.bind(this.view), this.view.getDelay.bind(this.view));
+        await this.model.start(this.view.getDelay.bind(this.view));
     };
     handleKeyListener() {
         this.view.subscribeToKeyup(this.model.updateDelay.bind(this.model), this.model.prev.bind(this.model), this.model.next.bind(this.model), this.model.delete.bind(this.model), this.handleStart);
@@ -29,6 +31,10 @@ class TController {
     stop() {
         this.view.stop();
         this.model.stop();
+    }
+    handleChangedList() {
+        this.model.clear();
+        this.view.message("The sentences are changed. Click to start!");
     }
 }
 function translateGame() {

@@ -64,13 +64,8 @@ class TModel {
     clear() {
         this.motherList = this.trainingList = [];
     }
-    async start(failOriginCallback, delayCallback) {
+    async start(delayCallback) {
         try {
-            this.stop();
-            if (!this.motherList.length) {
-                failOriginCallback();
-                return;
-            }
             this.updateDelay(delayCallback());
             await this.nextLevel();
         }
@@ -83,9 +78,7 @@ class TModel {
         try {
             this.stop();
             if (this.motherList.length && this.trainingList.length < 11) {
-                if (this.motherList.length) {
-                    this.trainingList.push(this.motherList.pop());
-                }
+                this.trainingList.push(this.motherList.pop());
             }
             this.trainingList.length > 1 && shuffle(this.trainingList);
             this.counter = 0;
@@ -107,16 +100,14 @@ class TModel {
                 return;
             }
             this.isPlay = true;
-            if (this.counter === this.trainingList.length) {
-                this.nextLevel();
-                return;
-            }
             while (this.counter < this.trainingList.length) {
                 this.displaySentence(this.trainingList[this.counter][0], this.trainingList[this.counter][1]);
                 await new Promise((resolve) => {
-                    this.timerId = setTimeout(() => resolve(), this.ms * 1000);
+                    this.timerId = setTimeout(() => {
+                        this.counter += 1;
+                        resolve();
+                    }, this.ms * 1000);
                 });
-                this.counter += 1;
             }
             this.progress =
                 this.amount - this.motherList.length - this.trainingList.length;

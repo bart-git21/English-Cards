@@ -11,8 +11,8 @@ class WModel {
         this.userText = "";
         this.display = () => { };
     }
-    start(handler) {
-        this.list.length ? this.play() : handler();
+    start() {
+        this.play();
     }
     prev() {
         this.counter > 0 && this.counter--;
@@ -25,11 +25,10 @@ class WModel {
     check() {
         console.log(this.text);
         this.userText === this.text && this.next();
-        // return this.userText.localeCompare(this.text) === 0;
     }
     play() {
         if (this.counter >= this.list.length) {
-            this.display("You are finish!");
+            this.display("Click to Start");
             this.counter = 0;
             return;
         }
@@ -41,6 +40,10 @@ class WModel {
     }
     setUserText(string) {
         this.userText = string;
+    }
+    clear() {
+        this.list = [];
+        this.counter = 0;
     }
 }
 export { WModel };

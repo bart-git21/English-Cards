@@ -1,6 +1,5 @@
 class TView {
     html;
-    textArea;
     translateQuestion;
     translateAnswer;
     translateBtnStart;
@@ -12,7 +11,6 @@ class TView {
     addKeyListener;
     constructor() {
         this.html = document.querySelector("html");
-        this.textArea = document.querySelector("#textarea");
         this.translateDelay = document.querySelector("#translate_delay");
         this.translatePopup = document.querySelector(".translate__popup");
         this.translateQuestion = document.querySelector("#translate_question");
@@ -61,28 +59,6 @@ class TView {
     removeKeyListener() {
         this.html.onkeyup = null;
     }
-    onClickTextarea(handle) {
-        this.textArea.addEventListener("click", () => {
-            this.stop();
-            handle();
-        });
-    }
-    onInputTextarea(handle) {
-        this.textArea.addEventListener("input", () => {
-            this.translateQuestion.textContent =
-                "The Sentences are changed. Click to start!";
-            handle();
-        });
-    }
-    failTexarea() {
-        this.translateQuestion.textContent =
-            "Write pairs of English and Russian sentences in the area first!";
-        this.translateAnswer.textContent = "";
-    }
-    failOriginList() {
-        this.translateQuestion.textContent = "Origin list is not created!";
-        this.translateAnswer.textContent = "";
-    }
     bindToDelay(handler) {
         this.translateDelay.addEventListener("blur", () => {
             handler(this.getDelay());
@@ -100,11 +76,6 @@ class TView {
     bindToStart(handler) {
         this.translateBtnStart.addEventListener("click", () => {
             this.addKeyListener();
-            if (!this.textArea?.value) {
-                this.failTexarea();
-                this.removeKeyListener();
-                return;
-            }
             this.translateBtnContinue.focus();
             this.translateDelay.value = this.translateDelay.value || "10";
             handler();
@@ -135,20 +106,19 @@ class TView {
     result(number) {
         switch (true) {
             case number === 0:
-                this.translateQuestion.textContent = "Keep going!";
+                this.message("Keep going!");
                 break;
             case number > 0: {
-                this.translateQuestion.textContent = `
+                this.message(`
             Well done!
             You deleted ${number} ${number === 1 ? "card" : "cards"}!
-        `;
+        `);
                 break;
             }
             default:
-                this.translateQuestion.textContent = "Click to start!";
+                this.message("Click to start!");
                 break;
         }
-        this.translateAnswer.textContent = "";
     }
     updateProgress(count = 0, max = count) {
         if (!count) {
@@ -159,6 +129,10 @@ class TView {
         this.translateProgressbar.style.width = `${(count / max) * 100}%`;
         this.translateProgressbar.textContent =
             count === 1 ? `1 sentence is learned` : `${count} sentences are learned`;
+    }
+    message(string) {
+        this.translateQuestion.textContent = string;
+        this.translateAnswer.textContent = "";
     }
 }
 export { TView };
