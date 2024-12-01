@@ -1,6 +1,6 @@
 import { backToTopBtn } from "../global.js";
 
-function visibleBactToTopButton() {
+function visibleBackToTopButton() {
   if (backToTopBtn && document.documentElement.scrollTop > 20) {
     backToTopBtn.style.display = "inline";
   } else if (backToTopBtn) {
@@ -15,4 +15,4 @@ function backToTop() {
   }, 5);
 }
 
-export { visibleBactToTopButton, backToTop };
+export { visibleBackToTopButton, backToTop };

@@ -4,12 +4,12 @@ import {
   writingTab,
   backToTopBtn,
 } from "./global.js";
-import { visibleBactToTopButton, backToTop } from "./components/backtotop.js";
+import { visibleBackToTopButton, backToTop } from "./components/backtotop.js";
 import { appTranslate } from "./controller/translate_controller.js";
 import { appDragdrop } from "./controller/dragdrop_controller.js";
 import { appWriting } from "./controller/writing_controller.js";
 
-document.addEventListener("scroll", visibleBactToTopButton);
+document.addEventListener("scroll", visibleBackToTopButton);
 backToTopBtn?.addEventListener("click", backToTop);
 backToTop();
 

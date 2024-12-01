@@ -1,5 +1,5 @@
 import { backToTopBtn } from "../global.js";
-function visibleBactToTopButton() {
+function visibleBackToTopButton() {
     if (backToTopBtn && document.documentElement.scrollTop > 20) {
         backToTopBtn.style.display = "inline";
     }
@@ -15,5 +15,5 @@ function backToTop() {
             clearInterval(backToTopTimer);
     }, 5);
 }
-export { visibleBactToTopButton, backToTop };
+export { visibleBackToTopButton, backToTop };
 //# sourceMappingURL=backtotop.js.map
