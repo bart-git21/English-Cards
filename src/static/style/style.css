@@ -150,7 +150,7 @@ main {
   }
 }
 /* Small devices (phones) */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Global styles */
   :root {
     --fontSize: 14px;
@@ -173,7 +173,7 @@ main {
 }
 
 /* Medium devices (tablets) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Global styles */
   :root {
     --fontSize: 14px;
@@ -192,7 +192,7 @@ main {
 }
 
 /* Large devices (desktops) */
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
   /* Global styles */
   :root {
     --fontSize: 16px;
@@ -211,7 +211,7 @@ main {
 }
 
 /* Extra large devices (large desktops) */
-@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
   /* Global styles */
   :root {
     --fontSize: 16px;
@@ -230,16 +230,12 @@ main {
 }
 
 /* XXL devices (extra large desktops) */
-@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
   /* Global styles */
   :root {
     --fontSize: 16px;
     --defaultSize: 60px;
     --defaultPercentage: 80%;
-  }
-
-  body {
-    line-height: 2;
   }
 
   /* Grid styles */
@@ -249,16 +245,12 @@ main {
 }
 
 /* XXXL devices (4K desktops) */
-@media only screen and (min-width: 1680px) {
+@media screen and (min-width: 1680px) {
   /* Global styles */
   :root {
     --fontSize: 16px;
     --defaultSize: 70px;
     --defaultPercentage: 90%;
-  }
-
-  body {
-    line-height: 2.2;
   }
 
   /* Grid styles */
