@@ -65,6 +65,8 @@ class TModel {
   }
   async start(delayCallback: () => number) {
     try {
+      this.progress = 0;
+      this.updateProgress();
       this.updateDelay(delayCallback());
       await this.nextLevel();
     } catch (err) {
@@ -107,8 +109,6 @@ class TModel {
           }, this.ms * 1000);
         });
       }
-      this.progress =
-        this.amount - this.motherList.length - this.trainingList.length;
       this.displayResult(this.progress);
       this.isPlay = false;
     } catch (err) {
@@ -123,11 +123,6 @@ class TModel {
   }
   subscribeToDisplayProgress(callback: (arg1: number, arg2: number) => void) {
     this.updateProgress = () => {
-      if (!this.motherList.length && !this.trainingList.length) {
-        this.progress = 0;
-        callback(this.progress, this.amount);
-        return;
-      }
       this.progress =
         this.amount - this.motherList.length - this.trainingList.length;
       callback(this.progress, this.amount);

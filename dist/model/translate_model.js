@@ -66,6 +66,8 @@ class TModel {
     }
     async start(delayCallback) {
         try {
+            this.progress = 0;
+            this.updateProgress();
             this.updateDelay(delayCallback());
             await this.nextLevel();
         }
@@ -109,8 +111,6 @@ class TModel {
                     }, this.ms * 1000);
                 });
             }
-            this.progress =
-                this.amount - this.motherList.length - this.trainingList.length;
             this.displayResult(this.progress);
             this.isPlay = false;
         }
@@ -126,11 +126,6 @@ class TModel {
     }
     subscribeToDisplayProgress(callback) {
         this.updateProgress = () => {
-            if (!this.motherList.length && !this.trainingList.length) {
-                this.progress = 0;
-                callback(this.progress, this.amount);
-                return;
-            }
             this.progress =
                 this.amount - this.motherList.length - this.trainingList.length;
             callback(this.progress, this.amount);
