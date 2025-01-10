@@ -101,6 +101,7 @@ main {
   border-image-source: var(--gradient) !important;
   text-decoration: none;
   transition: all 0.4s ease;
+  caret-color: #fff;
 
   &:hover,
   &:focus {
