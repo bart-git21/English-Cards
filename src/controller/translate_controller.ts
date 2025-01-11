@@ -32,7 +32,6 @@ class TController {
       this.view.message("The list is empty!");
       return;
     }
-    this.model.trainingList = [];
     await this.model.start(
       this.view.getDelay.bind(this.view)
     );

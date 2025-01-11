@@ -20,7 +20,7 @@ class TModel {
     this.counter = 0;
     this.timerId = 0;
     this.ms = 5;
-    this.amount = this.motherList.length;
+    this.amount = this.motherList.length || 0;
     this.progress = 0;
     this.isPlay = false;
     this.isChangingDelay = false;
@@ -65,7 +65,9 @@ class TModel {
   }
   async start(delayCallback: () => number) {
     try {
+      this.trainingList = [];
       this.progress = 0;
+      this.amount = this.motherList.length;
       this.updateProgress();
       this.updateDelay(delayCallback());
       await this.nextLevel();
@@ -125,6 +127,7 @@ class TModel {
     this.updateProgress = () => {
       this.progress =
         this.amount - this.motherList.length - this.trainingList.length;
+        console.log(this.amount);
       callback(this.progress, this.amount);
     };
   }
