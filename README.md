@@ -1,5 +1,4 @@
 ﻿# This is the [Project for english learning](https://bart-git21.github.io/English-Cards/)
-![screen](https://github.com/bart-git21/English-Cards/blob/master/intro.jpg)
 
 ### Description:
 ```
@@ -10,6 +9,7 @@
 ```
 
 ### Игра "Переводить карточки"
+![screen](https://github.com/bart-git21/English-Cards/blob/master/intro_translation.jpg)
 ```
 На экране начнется показ фраз из набора. 
 В первой итерации будет только одна фраза.
@@ -21,6 +21,7 @@
 ```
 
 ### Игра "Перемешать слова в карточке"
+![screen](https://github.com/bart-git21/English-Cards/blob/master/intro_dragdrop.jpg)
 ```
 На экране отобразится фраза на русском языке.
 Ниже ее перевод на английский язык.
@@ -31,6 +32,7 @@
 ```
 
 ### Игра "Написание карточек"
+![screen](https://github.com/bart-git21/English-Cards/blob/master/intro_writing.jpg)
 ```
 На экране отобразится фраза на русском языке.
 Пользователю необходимо написать ту же фразу на английском языке.
