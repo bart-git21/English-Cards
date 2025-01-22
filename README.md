@@ -1,5 +1,5 @@
 ﻿# This is the [Project for english learning](https://bart-git21.github.io/English-Cards/)
-
+![screen](https://github.com/bart-git21/English-Cards/blob/master/intro.jpg)
 
 ### Description:
 ```
