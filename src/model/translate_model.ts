@@ -127,7 +127,6 @@ class TModel {
     this.updateProgress = () => {
       this.progress =
         this.amount - this.motherList.length - this.trainingList.length;
-        console.log(this.amount);
       callback(this.progress, this.amount);
     };
   }
