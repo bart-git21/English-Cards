@@ -1,11 +1,9 @@
-﻿# Hi, I'm Frontend Developer and this is my [English Project](https://bart-git21.github.io/English-Cards/)
+﻿# This is the [Project for english learning](https://bart-git21.github.io/English-Cards/)
 
 
 ### Description:
 ```
 Это приложение для изучения английского языка.
-В окне боковой навигации можно выбирать,
-какой набор слов или фраз пользователь будет изучать сейчас.
 Пользователь может выбрать как готовые наборы слов, 
 так и указать свои в окне TextArea.
 В окне информации появится название выбранного набора.
