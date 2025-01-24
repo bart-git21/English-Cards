@@ -34,9 +34,9 @@
 <body>
     <main>
         <div class="container ms-auto">
-            <div class="row">
+            <header class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-9">
+                <nav class="col-md-9">
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item flex-fill me-2" role="presentation">
@@ -61,8 +61,8 @@
                             </button>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </nav>
+            </header>
 
             <div class="row">
                 <div class="col-md-3 d-flex flex-column">
