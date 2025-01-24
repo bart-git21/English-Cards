@@ -76,11 +76,11 @@
         </select>
     </div>
     <div class="btn-group d-flex justify-content-around p-2 areaBtn" role="group" aria-label="Basic outlined example">
-        <button type="button" class="btn btn--red" id="saveList">
-            Save the changes
-        </button>
         <button type="button" class="btn btn--red" id="createList">
-            Create the new list
+            Create
+        </button>
+        <button type="button" class="btn btn--red" id="saveList">
+            Edit
         </button>
     </div>
 </div>
