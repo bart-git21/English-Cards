@@ -75,7 +75,7 @@
             ?>
         </select>
     </div>
-    <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <div class="btn-group d-flex justify-content-around p-2 areaBtn" role="group" aria-label="Basic outlined example">
         <button type="button" class="btn btn--red" id="saveList">
             Save the changes
         </button>
@@ -84,3 +84,9 @@
         </button>
     </div>
 </div>
+
+<style scoped>
+    .areaBtn {
+        gap: 15px;
+    }
+</style>
