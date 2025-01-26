@@ -1,12 +1,29 @@
 ﻿# This is the [Project for english learning](https://bart-git21.github.io/English-Cards/)
 
-### Description:
-```
-Это приложение для изучения английского языка.
-Пользователь может выбрать как готовые наборы слов, так и указать свой в текстовом поле.
-Для сохранения нового списка фраз с переводом, кликните на кнопку "Create".
-Для редактирования сохраненного списка, кликните на кнопку "Save".
-```
+# Project Overview:
+The web-based single page application for learning English.
+
+# Technologies Used
+Frontend: JavaScript, TypeScript, CSS, Bootstrap.
+Backend: PHP, PDO.
+Database: MySQL.
+Authentication: JSON Web Tokens (JWT).
+Deployment: GitHub.
+
+# Base URL
+http://localhost/index.php
+
+# Features
+Create, read, update, and delete sets of sentences.
+Allows users to create, read and update sets of sentences.
+It provides a user-friendly interface.
+Responsive design for mobile and desktop.
+The user can choose either ready-made sets 
+of sentences with translation 
+or specify their own in the text field.
+To save a new list of phrases wit translation, 
+click on the 'Create' button.
+To edit the list, click on the 'Edit' button.
 
 ### Игра "Переводить карточки"
 ![screen](https://github.com/bart-git21/English-Cards/blob/master/intro_translation.jpg)
