@@ -56,7 +56,7 @@
 
 <div class="card h-100">
     <div class="card-body">
-        <textarea class="btn--red w-100 h-100 lh-sm p-1" placeholder="Leave the sentences here"
+        <textarea class="btn--red w-100 h-100 lh-sm p-1" spellcheck="false" placeholder="Leave the sentences here"
             id="textarea"></textarea>
     </div>
     <div class="d-flex">
