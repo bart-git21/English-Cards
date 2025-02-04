@@ -7,7 +7,8 @@ The web-based single page application for learning English.
 Frontend: JavaScript, TypeScript, CSS, Bootstrap.
 Backend: PHP, PDO.
 Database: MySQL.
-Authentication: JSON Web Tokens (JWT).
+Authentication: no.
+Data format: JSON.
 Deployment: GitHub.
 
 # Base URL
